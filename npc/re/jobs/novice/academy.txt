@@ -4263,11 +4263,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "∑Á≥™∆Ωƒ´µÂ.bmp", 3;
+				cutin "Î£®ÎÇòÌã±Ïπ¥Îìú.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "∆ƒ∫Í∏£ƒ´µÂ.bmp", 3;
+				cutin "ÌååÎ∏åÎ•¥Ïπ¥Îìú.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4289,11 +4289,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "∆˜∏µƒ´µÂ.bmp", 3;
+				cutin "Ìè¨ÎßÅÏπ¥Îìú.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings, found bouncing around the field outside of Izlude.";
 				next;
-				cutin "∑Á≥™∆Ωƒ´µÂ.bmp", 3;
+				cutin "Î£®ÎÇòÌã±Ïπ¥Îìú.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4315,15 +4315,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "∆˜∏µƒ´µÂ.bmp", 3;
+				cutin "Ìè¨ÎßÅÏπ¥Îìú.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings, found bouncing around the field of Izlude.";
 				next;
-				cutin "∆ƒ∫Í∏£ƒ´µÂ.bmp", 3;
+				cutin "ÌååÎ∏åÎ•¥Ïπ¥Îìú.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "∑Á≥™∆Ωƒ´µÂ.bmp", 3;
+				cutin "Î£®ÎÇòÌã±Ïπ¥Îìú.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4345,11 +4345,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "∆˜∏µƒ´µÂ.bmp", 3;
+				cutin "Ìè¨ÎßÅÏπ¥Îìú.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be gotten from Porings in the field outside of Izlude.";
 				next;
-				cutin "∑Á≥™∆Ωƒ´µÂ.bmp", 3;
+				cutin "Î£®ÎÇòÌã±Ïπ¥Îìú.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;
@@ -9314,35 +9314,35 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 	if (Class == Job_Novice) {
 		if (isbegin_quest(4269) == 2) {
 			mes "[Mage Chuck]";
-			mes "I am the one in charge of magic studies in Criatura Academy";
+			mes "I am in charge of magic studies here in Criatura Academy";
 			mes "^0000FFA genius Mage^000000~!";
-			mes "^0000FFMage Chuck^000000.";
+			mes "^0000FFThey call me Mage Chuck^000000.";
 			next;
 			mes "[Mage Chuck]";
-			mes "Someone like you who has magic talent but doesn't know how to become a Mage.";
-			mes "For a ^FF0000Novice^000000 like you I'm offering my training.";
+			mes "I feel you have magic talent but maybe are unsure of how to become a Mage.";
+			mes "For a ^FF0000Novice^000000 like you, I'm offering my training.";
 			next;
 			mes "[Mage Chuck]";
 			mes "How about it?";
-			mes "Do you wanna try out my priceless lessons?";
+			mes "Will you try out my invaluable lessons?";
 			next;
-			if (select("I will learn.", "No thanks!") == 2) {
+			if (select("I will.", "No thanks!") == 2) {
 				mes "[Mage Chuck]";
-				mes "If you don't listen to me, you'll regret of it.";
+				mes "If you don't learn from me, you'll regret of it.";
 				next;
 				mes "[Mage Chuck]";
 				mes "When you change your mind, come back to me.";
 			} else {
 				mes "[Mage Chuck]";
 				mes "Good! If that's your decision, I will do my best.";
-				mes "How much you learn depends on your own effort.";
+				mes "However, how much you learn will depend on your own effort.";
 				next;
 				mes "[Mage Chuck]";
 				mes "To become a Mage, you need to be very studious.";
-				mes "Ask me what you want to learn!";
+				mes "Ask me about what you want to learn!";
 				while(1) {
 					next;
-					switch(select("What is a Mage's primary role?", "What ^8B4513stats^000000 are good for Mage?", "What are Mage's ^8B4513skill^000000s?", "Can I try some skills?!", "I want to ^8B451Cchange job^000000 to Mage!", "I'll get back to you later")) {
+					switch(select("What is a Mage's primary role?", "What ^8B4513stats^000000 are good for Mage?", "What are Mage's ^8B4513skill^000000s?", "Can I try some skills?!", "I want to ^8B451Cchange my job^000000 to Mage!", "I'll get back to you later")) {
 					case 1:
 						mes "[Mage Chuck]";
 						mes "A Mage's primary role is to use magic to inflict powerful attacks.";
@@ -9352,27 +9352,27 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						mes "Be careful about the damage you take as a Mage.";
 						next;
 						mes "[Mage Chuck]";
-						mes "If you remember these little things you can become a great Mage.";
-						mes "Walk with pride as you grow in magic power~";
+						mes "If you remember these things you can become a great Mage.";
+						mes "Walk with pride as you grow your magic power~";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
 						break;
 					case 2:
 						mes "[Mage Chuck]";
-						mes "Doesn't a Mage remind you something solid?";
+						mes "Doesn't a Mage remind you of something solid?";
 						next;
 						mes "[Mage Chuck]";
 						mes "Sheer physical force is for brutes who increase their ^006400STR^000000.";
-						mes "For a ^0000FFgenius Mage^000000 like myself that's a waste.";
+						mes "For a ^0000FFgenius Mage^000000s like myself, that's a waste.";
 						next;
 						mes "[Mage Chuck]";
 						mes "Become wise and clever with your^006400 mind power^000000.";
-						mes "This is Mage's primary attribute- ^006400INT^000000, it's what's most important!";
+						mes "Mage's primary attribute, ^006400INT^000000, is what's most important!";
 						next;
 						mes "[Mage Chuck]";
-						mes "If you remember these little things you can become a great Mage.";
-						mes "Walk with pride as you grow in magic power~";
+						mes "If you remember these things you can become a great Mage.";
+						mes "Walk with pride as you grow your magic power~";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
@@ -9383,27 +9383,27 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						mes "The basis of these skills are the attributes ^006400<Water, Wind, Earth, Fire>^000000.";
 						next;
 						mes "[Mage Chuck]";
-						mes "As each element has its own^006400 range attack magic^000000, these are useful when dealing with many enemies~!!";
+						mes "As each element has its own^006400 range attack magic^000000, which are useful when dealing with many enemies~!!";
 						next;
 						mes "[Mage Chuck]";
-						mes "Ok enough talk.";
+						mes "Ok, enough talk.";
 						mes "I will show you my power by offering a demonstration.";
 						mes "You should be honored to be witnessing this!";
 						next;
 						mes "[Mage Chuck]";
 						switch(rand(1,7)) {
 						case 1:
-							mes "Detecting hidden enemies";
+							mes "For detecting hidden enemies,";
 							mes "^006400Sight^000000 !!!!";
 							specialeffect EF_SIGHT;
 							break;
 						case 2:
-							mes "Deflect all physical attacks";
+							mes "To deflect all physical attacks,";
 							mes "^006400Safety Wall^000000!!!!";
 							specialeffect EF_GLASSWALL;
 							break;
 						case 3:
-							mes "Fire damage premier ~!!!";
+							mes "Fire damage inflicter ~!!!";
 							mes "^006400Fire Ball^000000!!!!";
 							specialeffect EF_FIREBALL;
 							break;
@@ -9431,8 +9431,8 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						}
 						next;
 						mes "[Mage Chuck]";
-						mes "Doesn't it shake your heart to see my skills?";
-						mes "You won't get hurt so don't worry~!";
+						mes "Does it not shake you to the core to see my skills?";
+						mes "You won't get hurt, don't worry~!";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
@@ -9440,38 +9440,38 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 					case 4:
 						if (isequippedcnt(2824) > 0 || countitem(2824) > 0) {
 							mes "[Mage Chuck]";
-							mes "I think you already received a ^FF0000Mage Manual^000000~!";
+							mes "It looks like you already received a ^FF0000Mage Manual^000000~!";
 							mes "I can't offer you two of them.";
 							mes "One is good enough~!";
 							next;
 							mes "[Mage Chuck]";
 							mes "Try out the skills after equipping the^006400 Mage Manual^000000.";
-							mes "Then hunt with the skills given to you in your skill window.";
+							mes "Then go out to hunt with the skills given to you in your skill window.";
 							next;
 							mes "[Mage Chuck]";
 							mes "Anything else you want to know about Mages?";
 						} else {
 							if (checkweight(607,1)) {
 								mes "[Mage Chuck]";
-								mes "Right, you must be set with your heart firm on becoming a Mage.";
+								mes "Right, your heart must be firmly set on becoming a Mage.";
 								next;
 								mes "[Mage Chuck]";
-								mes "OK! Then I'll give you a chance to taste what it is to become a Mage.";
+								mes "Great! Then I'll give you a taste of what it is to become a Mage.";
 								mes "Take this ^006400Mage Manual^000000.";
-								mes "I'll let you borrow it!";
+								mes "I'll let you borrow it for a while!";
 								next;
 								mes "[Mage Chuck]";
-								mes "Try out the skills after equipping the^006400 Mage Manual^000000.";
-								mes "Then hunt with the skills given to you in your skill window.";
+								mes "Try out some skills after equipping the^006400 Mage Manual^000000.";
+								mes "Then go out to hunt with the skills given to you in your skill window.";
 								next;
 								mes "[Mage Chuck]";
-								mes "It's a valuable item so don't lose it.";
-								mes "If you want to become a genius ^0000FFMage^000000 like me, follow in my path.";
+								mes "It's a valuable item, so don't lose it.";
+								mes "If you want to become a genius ^0000FFMage^000000 like me, follow in my footsteps.";
 								getitem 2824,1;// Mage_Manual
 								break;
 							} else {
 								mes "[Mage Chuck]";
-								mes "If you want to become a Mage lighten up your inventory load.";
+								mes "If you want to become a Mage, lighten up your inventory load first.";
 								next;
 								mes "[Mage Chuck]";
 								mes "Anything else you want to know about Mages?";
@@ -9481,53 +9481,53 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 					case 5:
 						if (isbegin_quest(9264) == 2) {
 							mes "[Mage Chuck]";
-							mes "Ah~ you want to change to a magician?";
+							mes "Ah~ you want to become a Mage?";
 							next;
 							mes "[Mage Chuck]";
-							mes "I seem to have used a great deal of magic sending you before...";
-							mes "Because of too many students like you, I cannot send you again!";
+							mes "I already used a great deal of magic sending you to Geffen so you could do that...";
+							mes "Too many students like you have drained me of my power, I cannot send you again!";
 							next;
 							mes "[Mage Chuck]";
-							mes "If you really want to go, then please go speak to the Kafra Staff and use their Teleport Service.";
+							mes "If you really want to go, please go speak to the Kafra Staff and use their Teleport Service to get you to Geffen.";
 						} else {
 							mes "[Mage Chuck]";
-							mes "Ah~ you want to change to a magician?";
+							mes "Ah~ you want to become a Mage?";
 							next;
 							mes "[Mage Chuck]";
-							mes "To change your job to a magician, you must visit the Magician's Guild.";
-							mes "I can send you close to there, but...";
+							mes "To change your job, you must visit the Magician's Guild.";
+							mes "I can send you to a location that's close to it, but...";
 							next;
 							mes "[Mage Chuck]";
-							mes "You must first reach ^006400Job level 10^000000 and ^006400Basic Skill level 9^000000.";
+							mes "First, you must reach ^006400Job level 10^000000 and have ^006400Basic Skill level 9^000000.";
 							next;
 							if (!callfunc("F_CanChangeJob")) {
 								mes "[Mage Chuck]";
 								mes "You don't seem ready!";
-								mes "If you want to change your job, you must first be ^006400Job level 10^000000 and ^006400Basic Skill level 9^000000.";
-								mes "Then come back and see me!";
+								mes "If you want to change your job, you must first be ^006400Job level 10^000000 and have ^006400Basic Skill level 9^000000.";
+								mes "Come back and see me when you've done that!";
 								next;
 								mes "[Mage Chuck]";
-								mes "What else do you want to know about magicians?";
+								mes "What else do you want to know about Mages?";
 							} else {
 								mes "[Mage Chuck]";
-								mes "Ah, it seems that you already have those requirements!";
+								mes "Ah, it seems that you have already met those requirements!";
 								mes "Do you want to change your job immediately?";
 								next;
 								if (select("No", "Yes") == 1) {
 									mes "[Mage Chuck]";
-									mes "Okay, when you have decided please come back!";
+									mes "Okay, plese come back when you have decided!";
 									next;
 									mes "[Mage Chuck]";
-									mes "What else do you want to know about magicians?";
+									mes "What else do you want to know about Mages?";
 								} else {
 									mes "[Mage Chuck]";
 									mes "In that case, I'll use magic to send you near ^8B4513Geffen^000000, where the Magician's Guild is.";
-									mes "It is there that you will be able to become a magician.";
+									mes "It is there that you will be able to become a Mage.";
 									next;
 									mes "[Mage Chuck]";
-									mes "Once I send you, you will speak to the ^0000FFMage's Guild Guide^000000.";
+									mes "Once I send you, speak to the ^0000FFMage's Guild Guide^000000.";
 									mes "They will be able to assist you further.";
-									mes "Let's go! I'm ready to send you there!";
+									mes "Let's go! I'm ready to send you over!";
 									next;
 									mes "[Mage Chuck]";
 									mes "Whoosh Whoosh";
@@ -9545,11 +9545,11 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						break;
 					case 6:
 						mes "[Mage Chuck]";
-						mes "Yes~ Go meet other teachers then come back.";
-						mes "Of course, Mages are most alluring of them all.~";
+						mes "Yes~ Might as well hear from other teachers before deciding.";
+						mes "But of course, Mage is the most alluring job of them all~";
 						next;
 						mes "[Mage Chuck]";
-						mes "You'll choose Mage again I have no doubt about it~~!!";
+						mes "You'll come back to Mage again, I have no doubt about it~~!!";
 						mes "Haha see you later~";
 						break;
 					}
@@ -9558,13 +9558,13 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 			}
 		} else {
 			mes "[Mage Chuck]";
-			mes "First you'll have to complete your ^8B4513registration^000000 at the Academy front desk.";
-			mes "If you go to the 1st floor of the academy someone will help you register.";
+			mes "First, you need to complete your ^8B4513registration^000000 at the Academy front desk.";
+			mes "If you go to the 1st floor of the Academy, someone will help you register.";
 		}
 	} else {
 		mes "[Mage Chuck]";
-		mes "You're no longer the innocent ^8b4513Novice^000000 who doesn't know anything~?";
-		mes "I don't have anything to teach you~!";
+		mes "You're no longer the naive ^8b4513Novice^000000 who doesn't know anything~?";
+		mes "Then I don't have anything left to teach you~!";
 	}
 	close2;
 	cutin "", 255;
@@ -9588,16 +9588,16 @@ OnTouch:
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "You look a little exhausted...";
-		mes "Though.. to become a magician is exhausting in a way...";
+		mes "I suppose.. becoming a Mage is exhausting, in some ways...";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "First off, my task is to guide you to the Mage's guild!";
+		mes "First off, my task is to guide you to the Magician's Guild.";
 		mes "Go straight to the right!";
 		mes "After ^8B4513crossing the bridge^000000, you will see the entrance to ^FF0000Geffen^000000!";
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "Once there,";
-		mes "You should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
+		mes "you should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
 		mes "Speak to him, he will continue to guide you to the Magician's Guild!";
 		nov_3_magician = 2;
 		completequest 9264;
@@ -9612,13 +9612,13 @@ OnTouch:
 gef_fild07,89,208,6	script	Magician's Guild Guide#1	2_F_MAGICMASTER,{
 	if (isbegin_quest(9265) == 1) {
 		mes "[Magician's Guild Guide]";
-		mes "First off, my task is to guide you to the Mage's guild!";
+		mes "First off, my task is to guide you to the Magician's guild.";
 		mes "Go straight to the right!";
 		mes "After ^8B4513crossing the bridge^000000, you will see the entrance to ^FF0000Geffen^000000!";
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "Once there,";
-		mes "You should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
+		mes "you should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
 		mes "Speak to him, he will continue to guide you to the Magician's Guild!";
 	} else {
 		mes "[Magician's Guild Guide]";
@@ -9638,37 +9638,37 @@ OnInit:
 geffen,43,123,6	script	Magician's Guild Guide#2	2_F_MAGICMASTER,{
 	if (isbegin_quest(9265) == 1) {
 		mes "[Magician's Guild Guide]";
-		mes "Ah, you made it all the way here. Very good for an academy student!";
+		mes "Ah, you made it all the way here. Very good for an Academy student!";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Before this step-by-step guide, they would get lost and frustrated.";
+		mes "Before we were tasked to provide step-by-step navigation, students would get lost and frustrated.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Anyways, let's keep this short.";
-		mes "I will now tell you the route to the Mage's Guild!";
+		mes "Anyway, let's keep this short.";
+		mes "I will give you the route to the Mage's Guild!";
 		mes "The way to go is quite simple...";
-		mes "From here, go toward 11 o'clock, you will see the Mage's Guild.";
+		mes "From here head in the direction of 11 o'clock, until you see the Mage's Guild.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Just go inside, and upstairs a little to find the";
-		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>";
-		mes "From there, he will assist you in becoming a Mage.";
+		mes "Once you go inside, head upstairs a little to find the";
+		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>.";
+		mes "He can assist you in becoming a Mage.";
 		completequest 9265;
 		erasequest 9265;
 		setquest 9266;
 	} else if (isbegin_quest(9266) == 1) {
 		mes "[Magician's Guild Guide]";
 		mes "The way to go is quite simple...";
-		mes "From here, go toward 11 o'clock, you will see the Mage's Guild.";
+		mes "From here head in the direction of 11 o'clock, until you see the Mage's Guild.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Just go inside, and upstairs a little to find the";
-		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>";
-		mes "From there, he will assist you in becoming a Mage.";
+		mes "Once you go inside, head upstairs a little to find the";
+		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>.";
+		mes "He can assist you in becoming a Mage.";
 	} else {
 		mes "[Magician's Guild Guide]";
 		mes "I am in charge of bringing ^8B4513Criatura Academy^000000 students to the Mage's guild.";
-		mes "These days the academy has a lot of new students so I'm happy to be working.";
+		mes "These days the academy has a lot of new students, so I'm happy to be working.";
 	}
 	close;
 

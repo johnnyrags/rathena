@@ -6811,11 +6811,11 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	next;
 	mes "'Aaaahh!! Don't hurt me ~'";
 	next;
-	mes "You run to the place and see someone surrounded by punks. Because of your sudden appearace, the punks are surprised.";
+	mes "You run toward the sound and see someone surrounded by Thief Bugs. Because of your sudden appearace, the Thief Bugs are surprised.";
 	next;
 	mes "What would be your reaction to this situation?";
 	next;
-	switch(select("Fight against the punks", "Cast Magic.", "Call for Guards.", "Throw rocks at them.")) {
+	switch(select("Fight against the Thief Bugs", "Cast Magic.", "Call for Guards.", "Throw rocks at them.")) {
 	case 1:
 		.@question_01$ = "You subdue them easily.";
 		.@swordman_p = .@swordman_p + 1;
@@ -6839,7 +6839,7 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	mes ""+.@question_01$+"";
 	next;
 	mes "After clearing up the mess, you approach the person who was being attacked.";
-	mes "Do you think the person who was surrounded by punks is a man or a woman?";
+	mes "Do you think the person who was surrounded by Thief Bugs is a man or a woman?";
 	next;
 	if (select("Man", "Woman") == 1) {
 		.@question_02_01$ = "he";
@@ -6850,7 +6850,7 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	}
 	mes "From talking, you find out the encounter happened like this...";
 	next;
-	mes "Turns out that "+.@question_02_01$+" is the "+.@question_02_02$+" of a very rich family in Alberta and the punks attacked while "+.@question_02_01$+" was on an errand for the family.";
+	mes "Turns out that "+.@question_02_01$+" is the "+.@question_02_02$+" of a very rich family in Alberta and the Thief Bugs attacked while "+.@question_02_01$+" was on an errand for the family.";
 	next;
 	mes "What kind of errand was it?";
 	next;
@@ -10205,7 +10205,7 @@ iz_ac02,53,171,3	script	Steward Aydin#ac	4_M_MANAGER,{
 		}
 	} else {
 		mes "[Steward Aydin]";
-		mes "I am very busy clearing our account book just now, how coming back another time?";
+		mes "I am very busy clearing our account book just now, how about coming back another time?";
 		close;
 	}
 }
@@ -10232,94 +10232,94 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 	if (isbegin_quest(4269) > 0 && Class == Job_Novice) {
 		if (!isbegin_quest(7480)) {
 			mes "[Lumin]";
-			mes ".......... Then";
+			mes ".......... Huh.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "gc_mayssel05.bmp", 1;
 			mes "[Mayssel]";
-			mes "I see, Lu make it as you want.";
+			mes "Okay, Lu, do as you please.";
 			next;
 			select("Uh, hi...");
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "I am sorry...";
-			mes "Are you a student of Criatura Academy?";
+			mes "Sorry...";
 			mes "I didn't intend to ignore you.";
-			mes "He is also one of the students in this class.";
+			mes "Are you a student of Criatura Academy?";
+			mes "Lu here is also a student in this class.";
 			next;
 			mes "[Mayssel]";
-			mes "Hello " + strcharinfo(0) + "";
-			mes "I am Mayssel  the section chief of the Veins section of the Assassin Guild.";
-			mes "I came here to give you some information about the Thief class.";
+			mes "Nice to meet you, " + strcharinfo(0) + ".";
+			mes "I am Mayssel, the section chief of the Veins division of the Assassin Guild.";
+			mes "I came to provide students information about the Thief class.";
 			next;
 			mes "[Mayssel]";
-			mes "Do you want to know about the Thief class?";
+			mes "Do you want to learn about Thief class?";
 			next;
 			if (select("Yes, please.", "No, I won't be a Thief.") == 2) {
 				mes "[Mayssel]";
-				mes "If you want it....";
+				mes "If that's what you decide....";
 				cutin "gc_mayssel05.bmp", 1;
 				close2;
 				cutin "", 255;
 				end;
 			}
 			mes "[Mayssel]";
-			mes "Well a thief is commonly thought of as a criminal.";
-			mes "But our guild is not about taking from those that are in need of it.";
+			mes "Well, a thief is commonly thought of as a criminal.";
+			mes "But our guild is not about taking from those that are in need.";
 			next;
 			mes "[Mayssel]";
-			mes "First, we should make it clear.";
-			mes "We don't steal other's belongings.";
+			mes "First, to be clear...";
+			mes "we don't steal the belongings of others.";
 			next;
 			mes "[Lumin]";
-			mes "How about monsters?";
+			mes "What about of monsters?";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "", 255;
 			mes "[Mayssel]";
-			mes "Now monsters...";
+			mes "Um, monsters...";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			mes "[Verkhasel]";
-			mes "Hey, take it easy.";
-			mes "You said it was a mission for something important. But only a place like this...";
+			mes "Come on, take it easy.";
+			mes "You said this mission would be a big deal. But it's only a place like this, so...";
 			cutin "gc_verkhasel01.bmp", 2;
 			next;
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "I was upset...";
-			mes "Let me continue.";
-			mes "A Thief uses techniques that common thieves use to be fast and nimble.";
+			mes "I got nervous...";
+			mes "Okay, I'll continue.";
+			mes "A Thief uses techniques to be fast and nimble.";
 			next;
 			mes "[Mayssel]";
 			mes "We use stealth to blend into our surroundings and strike our foes.";
 			next;
 			mes "[Mayssel]";
-			mes "Our primary weapon is a dagger and we compensate their attack strength by adding poison property to our attacks.";
+			mes "Our primary weapon is a dagger, and we compensate for attack strength by adding a poison property to our attacks.";
 			next;
 			mes "[Mayssel]";
-			mes "The higher class jobs in Thief class are Assassin and Rogue.";
-			mes "Verkhasel is a Guillotine Cross which is the third class of the Assassin Job.";
-			mes "and......";
+			mes "Moving up from Thief, the higher class jobs are Assassin and Rogue.";
+			mes "Verkhasel here is a Guillotine Cross, which is the third class of the Assassin job.";
+			mes "He can tell you more about Assassins. And......";
 			next;
 			mes "[Mayssel]";
-			mes "Mr. Vicente... I called Dumk..";
+			mes "Mr. Vicente, who I call Dumk..";
 			cutin "gc_mayssel02.bmp", 1;
 			next;
 			mes "[Vicente]";
-			mes "Ah, that is... Mayssel..";
-			mes "As you know well about Master.";
-			mes "I can explain about Rogues to you.";
+			mes "Ahem... Mayssel..";
+			mes "As I am a master,";
+			mes "I can provide information about Rogues.";
 			next;
 			mes "[Mayssel]";
 			mes "I see...";
-			mes "" + strcharinfo(0) + " Sorry but you can learn about the Shadow Chaser class from them.";
+			mes "" + strcharinfo(0) + ", you can learn about the Shadow Chaser class as you get information about Rogues.";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "Anyway, these two gentlemen will help you.";
-			mes "^4d4dffCome back to me after speaking to Verkhasel and Vicente.^000000";
+			mes "So these two gentlemen will help you with the next steps.";
+			mes "^4d4dffTalk to me again after speaking to Verkhasel and Vicente.^000000";
 			setquest 7480;
 			close2;
 			cutin "", 255;
@@ -10327,25 +10327,25 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else if (isbegin_quest(7480) == 1) {
 			if (isbegin_quest(7481) > 0 && isbegin_quest(7482) > 0) {
 				mes "[Mayssel]";
-				mes "Have you learned something about Thief, Assassin and Rogue?";
-				mes "You don't need to understand everything right now.";
+				mes "Have you learned what you need about Thief, Assassin and Rogue?";
+				mes "You don't need to understand everything just yet.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				if (BaseLevel > 12) {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "The next course is how to use the experience guide... Let's skim it over.";
+					mes "My only role is to inform you of the options...";
+					mes "The next lesson is using the Manual... just a little information first, then.";
 					next;
 					mes "[Mayssel]";
-					mes "The guide for skill experience provided by the academy can be used up to level 12.";
-					mes "Regretfully, only the explanation is available for you.";
+					mes "The Thief Manual provided by the Academy to test out the job's skills can be used up to level 12.";
+					mes "Unfortunately, that's all I can tell you.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help direct you to the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "Thank you for your hard work.";
+					mes "You're doing good so far.";
 					cutin "gc_mayssel02.bmp", 1;
 					completequest 7480;
 					erasequest 7481;
@@ -10357,15 +10357,15 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					getitem 12325,20;// N_Magnifier
 				} else {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "Then, let's talk about the Thief's skills.";
+					mes "My only role is to inform you of the options...";
+					mes "But about using Thief skills.";
 					next;
 					mes "[Mayssel]";
-					mes "I will give you the guide to borrow the thief's skill temporarily.";
-					mes "Organize the guide items, you can see the useful skills on the 'ETC' skill window.";
+					mes "I will give you a Manual so you can test out Thief skills temporarily.";
+					mes "Equip the Thief's Manual and open the skills window to the section labeled 'ETC'.";
 					next;
 					mes "[Mayssel]";
-					mes "By making use of the guide, you may take the missions being asked by Verkhasel and Vicente.";
+					mes "By making use of the Manual, you can try the assignments set out by Verkhasel and Vicente.";
 					completequest 7480;
 					erasequest 7481;
 					erasequest 7482;
@@ -10377,21 +10377,21 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				end;
 			} else {
 				mes "[Mayssel]";
-				mes "Verkhasel and Vicente will give you various information related to the higher class jobs.";
-				mes "So, come back to me after listening to them.";
+				mes "Verkhasel and Vicente can give you information related to the higher class jobs for Thief.";
+				mes "Come back to me after hearing them out.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
-				mes "Preparation for real battle is next.";
+				mes "That should prepare you for what comes next.";
 				next;
 				if (select("I see...", "I won't do it.") == 1) {
 					mes "[Mayssel]";
-					mes "I will compensate for you when your mission is completed.";
+					mes "I have something for you when your assignments are completed.";
 					mes "Come back to me after speaking to Verkhasel and Vicente.";
 				} else {
 					mes "[Mayssel]";
-					mes "I see..";
-					mes "This course is now cancelled.";
+					mes "I see...";
+					mes "I'll cancel your lessons, then.";
 					erasequest 7480;
 				}
 				close2;
@@ -10401,25 +10401,25 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else {
 			if (!isbegin_quest(7483)) {
 				mes "[Mayssel]";
-				mes "Have you learned something about Thief, Assassin and Rogue?";
-				mes "You don't need to understand everything right now.";
+				mes "Have you learned what you need about Thief, Assassin and Rogue?";
+				mes "You don't need to understand everything just yet.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				if (BaseLevel > 12) {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...?";
-					mes "The next course is how to use the experience guide... Let's skim it over.";
+					mes "My only role is to inform you of the options...";
+					mes "The next lesson is using the Manual... just a little information first, then.";
 					next;
 					mes "[Mayssel]";
-					mes "The  guide for skill experience provided by the academy can be used up to level 12.";
-					mes "Regretfully, only the explanation is available for you.";
+					mes "The Thief Manual provided by the Academy to test out the job's skills can be used up to level 12.";
+					mes "Unfortunately, that's all I can tell you.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help you with the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "You've worked hard.";
+					mes "You're doing good so far.";
 					cutin "gc_mayssel02.bmp", 1;
 					completequest 7480;
 					erasequest 7481;
@@ -10431,15 +10431,15 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					getitem 12325,20;// N_Magnifier
 				} else {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "Then, let's talk about the Thief's skills.";
+					mes "My only role is to inform you of the options...";
+					mes "But about using Thief skills.";
 					next;
 					mes "[Mayssel]";
-					mes "I will give you the guide to borrow the thief's skill temporarily.";
-					mes "Organize the guide items, you can see the useful skills on the 'ETC' skill window.";
+					mes "I will give you a Manual so you can test out Thief skills temporarily.";
+					mes "Equip the Thief's Manual and open the skills window to the section labeled 'ETC'.";
 					next;
 					mes "[Mayssel]";
-					mes "By making use of the guide, you may take the missions being asked by Verkhasel and Vicente.";
+					mes "By making use of the Manual, you can try the assignments set out by Verkhasel and Vicente.";
 					completequest 7480;
 					erasequest 7481;
 					erasequest 7482;
@@ -10453,26 +10453,26 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				if (isbegin_quest(7484) > 1 && isbegin_quest(7485) > 1) {
 					cutin "gc_mayssel01.bmp", 1;
 					mes "[Mayssel]";
-					mes "Have you got a sense what it is to be a Thief?";
-					mes "If you want to use the skill like double attack, visit ^4d4dffMr. Subino on the 1st floor^000000.";
+					mes "Have you got a sense of what it is to be a Thief?";
+					mes "If you want to try using a skill like Double Attack, visit ^4d4dffMr. Subino on the 1st floor^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "<NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> will give you several battle missions.";
+					mes "<NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> will give you some battle missions.";
 					next;
 					mes "[Mayssel]";
-					mes "I hope you experience other skills with battle Quests.";
-					mes "Double attack is somewhat an exciting skill.";
+					mes "I hope you get to experience new skills with his battle Quests.";
+					mes "Double Attack is a prtty exciting skill.";
 					next;
 					mes "[Mayssel]";
-					mes "Make a decision after you've at least experienced it.";
-					mes "You still have a long way and enough time before you make a decision... Think of it deeply.";
+					mes "It's best to make a decision after you've gotten a chance to experience.";
+					mes "You still have a long way and plenty of time before you need to make a decision... so consider carefully.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help direct you to the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "Thank you for you hard work.";
+					mes "Good job thus far.";
 					completequest 7483;
 					getexp 800,50;
 					getitem 569,30;// Novice_Potion
@@ -10484,35 +10484,35 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					cutin "gc_mayssel01.bmp", 1;
 					mes "[Mayssel]";
 					mes "In the battle training, the actual fighting is more important than theory.";
-					mes "To use the skill once is better than all this talking.";
+					mes "Experiencing a skill is better than just talking about it.";
 					next;
 					mes "[Mayssel]";
-					mes "If you carry out the mission asked by Verkhasel and Vicente, I will go to the next class.";
+					mes "If you carry out the assignments by Verkhasel and Vicente, we can move on to the next lesson.";
 					next;
 					if (select("I see.", "I won't do it.") == 1) {
 						mes "[Mayssel]";
-						mes "I will compensate for you when your mission is complete.";
-						mes "Come back to me after listening to Verkhasel and Vicente.";
+						mes "I have something for you when your assignments are completed.";
+						mes "Come back to me after speaking to Verkhasel and Vicente.";
 						close2;
 						cutin "", 255;
 						end;
 					} else {
 						mes "[Mayssel]";
 						mes "I see.";
-						mes "This course is now cancelled.";
-						mes "The ongoing lower courses are cancelled.";
+						mes "Let's cancel, then.";
+						mes "Any ongoing lessons will be cancelled.";
 						next;
-						if (select("No.", "Yes, cancel the course.") == 1) {
+						if (select("Nevermind.", "Yes, cancel the course.") == 1) {
 							mes "[Mayssel]";
-							mes "Fortunately...";
-							mes "Good to see you have patience.";
+							mes "Oh, good...";
+							mes "Glad to see you do have some patience.";
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Mayssel]";
-						mes "All the ongoing courses are cancelled.";
-						mes "These are not your aptitude.";
+						mes "All the ongoing lessons have been cancelled.";
+						mes "This course is clearly not for you.";
 						nude;
 						if (countitem(2820) > 0)
 							delitem 2820,countitem(2820);// Thief_Manual
@@ -10528,45 +10528,45 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				cutin "gc_mayssel01.bmp", 1;
 				mes "[Mayssel]";
 				mes "What are you curious about?";
-				mes "If you want to know about battle, visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01_c,59,83</INFO></NAVI>.";
+				mes "If you want to try out skills in battle, visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01_c,59,83</INFO></NAVI>.";
 				next;
-				switch(select("Change job to Thief.", "Thief Stat Explanation", "Thief Skill Explanation", "Not curious about it.")) {
+				switch(select("Change job to Thief.", "Thief Stats Explanation", "Thief Skill Explanation", "Not curious about anything.")) {
 				case 1:
 					if (JobLevel > 9) {
 						mes "[Mayssel]";
-						mes "You made up your mind.";
+						mes "So you made up your mind.";
 						mes "Welcome to the world of shadows.";
 						cutin "gc_mayssel02.bmp", 1;
 						next;
 						cutin "gc_mayssel01.bmp", 1;
 						mes "[Mayssel]";
-						mes "If you are ready, I will send you to the deserts of Morroc to embrace the shadows.";
+						mes "If you are ready, I'll send you to the deserts of Morroc where you can officially embrace the shadows.";
 						mes "The journey will be both strange and challenging.";
 						next;
-						if (select("At once please.", "I need more time.") == 2) {
+						if (select("At once, please.", "I need more time.") == 2) {
 							mes "[Mayssel]";
-							mes "Yes, after a sufficient survey of other jobs, you may make a decision.";
+							mes "Sure. After you've sufficiently surveyed other jobs, you can make a final decision.";
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Mayssel]";
-						mes "^4d4dffFind the Pyramid^000000 in the ^4d4dffNorthwest^000000 of Morroc.";
+						mes "Go and ^4d4dfffind the Pyramid^000000 in the ^4d4dffNorthwest^000000 of the Morroc desert. I'll send you there.";
 						close2;
 						cutin "", 255;
 						warp "morocc", 30, 290;
 						end;
 					} else {
 						mes "[Mayssel]";
-						mes "I'm sorry but you are short of job levels to change your job.";
+						mes "I'm sorry but you have not reached the required job level to change your job.";
 						next;
 						mes "[Mayssel]";
-						mes "Level composes of Base level and Job level.";
+						mes "Levels are composed of Base level and Job level.";
 						mes "Job level is what determines your current job.";
 						next;
 						mes "[Mayssel]";
-						mes "^4d4dffThe 1st job condition condition is job level 10.^000000";
-						mes "You need more experience so fight more and level up first.";
+						mes "^4d4dffThe condition to change to a 1st job is to reach job level 10.^000000";
+						mes "You need more experience still, so fight some more and level up first.";
 						close2;
 						cutin "", 255;
 						end;
@@ -10574,27 +10574,27 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				case 2:
 					mes "[Mayssel]";
 					mes "You want to know more about stats?";
-					mes "As Vicente already told you, stats don't have a fixed answer.";
+					mes "As Vicente already told you, stats don't have a fixed course.";
 					cutin "gc_mayssel01.bmp", 1;
 					next;
 					mes "[Mayssel]";
-					mes "If I choose one among them,";
-					mes "^4d4dffAGI is related to flee ability^000000,";
-					mes "^4d4dffDex is related with hit ratio";
-					mes "STR raises physical attacking power^000000";
+					mes "If I had to choose one among them,";
+					mes "^4d4dffAGI is related to evasion^000000,";
+					mes "^4d4dffDex is for improving hit ratio,";
+					mes "and STR raises physical attacking power^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "Vit, Luk, Int are valued according your target chosen.";
-					mes "For your reference, Verkhasel has high level of Luk.";
+					mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+					mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 					mes "A weapon called Katar is good for Critical.";
 					next;
 					mes "[Mayssel]";
-					mes "But thief's primary weapon is a dagger.";
-					mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+					mes "But the Thief's primary weapon is a dagger.";
+					mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 					next;
 					mes "[Mayssel]";
-					mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-					mes "Hope you find the right stats that are suitable to your fighting style.";
+					mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+					mes "I hope you find the right stats that are suitable to your fighting style.";
 					close2;
 					cutin "", 255;
 					end;
@@ -10607,38 +10607,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 						switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 						case 1:
 							mes "[Mayssel]";
-							mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-							mes "You want to avoid taking damage from enemy attack, don't you?";
+							mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000.";
+							mes "You want to avoid taking damage from enemy attacks, don't you?";
 							next;
 							break;
 						case 2:
 							mes "[Mayssel]";
-							mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-							mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+							mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+							mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 							next;
 							break;
 						case 3:
 							mes "[Mayssel]";
-							mes "^4d4dffHiding means exactly that... to hide.^000000";
+							mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 							next;
 							mes "[Mayssel]";
-							mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+							mes "^4d4dffSteal is a skill used to steal an enemy's items.^000000";
 							mes "You can steal one item from one enemy.";
 							next;
 							break;
 						case 4:
 							mes "[Mayssel]";
 							mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-							mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+							mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 							next;
 							mes "[Mayssel]";
-							mes "Oppositely, the name implies, Detoxify removes poison status.";
+							mes "On the other hand, as the name implies, Detoxify removes poison status.";
 							next;
 							break;
 						case 5:
 							mes "[Mayssel]";
-							mes "It is good you have enough knowledge.";
-							mes "Supplementary the field experiences will make you perfect.";
+							mes "It's good to have come into this knowledge.";
+							mes "Together with field experience, you can come to be great.";
 							close2;
 							cutin "", 255;
 							end;
@@ -10647,8 +10647,8 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				case 4:
 					mes "[Mayssel]";
 					mes "Is that so?";
-					mes "Like other job guilds, there is a limit learned through theory.";
-					mes "I would like to recommend you to experience battle first-hand.";
+					mes "Like other job guilds, there is a limit to what can be learned through theory.";
+					mes "I recommend you experience battle first-hand.";
 					cutin "gc_mayssel01.bmp", 1;
 					close2;
 					cutin "", 255;
@@ -10659,45 +10659,45 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 	} else {
 		if (!isbegin_quest(4269)) {
 			mes "[Mayssel]";
-			mes "You are a stranger.";
-			mes "Excuse me but I was invited to explain about the jobs for the students,";
-			mes "I have no words to tell you.";
+			mes "I don't believe I know you.";
+			mes "Sorry, but I was invited to teach students about our jobs,";
+			mes "so I'm not sure I can be of much help.";
 			cutin "gc_mayssel01.bmp", 1;
 			next;
 			mes "[Mayssel]";
-			mes "It is almost miracle to meet you and me living far away from the light of ground.";
-			mes "We should abide by the regulations.";
+			mes "It's quite something that you find me here today, as I'm normally living far away from the light of the sun.";
+			mes "In order to participate in these lessons, you must first become a student of Criatura Academy.";
 			next;
 			mes "[Mayssel]";
-			mes "Attending the class, first you may be a student of Criatura Academy.";
+			mes "We should abide by the Academy's regulations.";
 			next;
 			mes "[Mayssel]";
-			mes "However, if you want the information about the thief job itself, I will let you know.";
+			mes "However if you only want a little information about the Thief job for now, I can help with what you want to know.";
 			next;
 			switch(select("About the useful stats for a Thief", "About Thief's primary skills", "Not curious about it.")) {
 			case 1:
 				mes "[Mayssel]";
 				mes "You want to know more about stats?";
-				mes "As Vicente already told you, stats don't have a fixed answer.";
+				mes "As Vicente already told you, stats don't have a fixed course.";
 				next;
 				mes "[Mayssel]";
-				mes "If I choose one among them,";
-				mes "^4d4dffAGI is related to flee ability^000000,";
-				mes "^4d4dffDex is related with hit ratio";
-				mes "STR raises physical attacking power^000000";
+				mes "If I had to choose one among them,";
+				mes "^4d4dffAGI is related to evasion^000000,";
+				mes "^4d4dffDex is for improving hit ratio,";
+				mes "and STR raises physical attacking power^000000.";
 				next;
 				mes "[Mayssel]";
-				mes "Vit, Luk, Int are valued according your target chosen.";
-				mes "For your reference, Verkhasel has high level of Luk.";
+				mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+				mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 				mes "A weapon called Katar is good for Critical.";
 				next;
 				mes "[Mayssel]";
-				mes "But thief's primary weapon is a dagger.";
-				mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+				mes "But the Thief's primary weapon is a dagger.";
+				mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 				next;
 				mes "[Mayssel]";
-				mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-				mes "Hope you find the right stats that are suitable to your fighting style.";
+				mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+				mes "I hope you find the right stats that are suitable to your fighting style.";
 				close2;
 				cutin "", 255;
 				end;
@@ -10709,38 +10709,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 					case 1:
 						mes "[Mayssel]";
-						mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-						mes "You want to avoid taking damage from enemy attack, don't you?";
+						mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000.";
+						mes "You want to avoid taking damage from enemy attacks, don't you?";
 						next;
 						break;
 					case 2:
 						mes "[Mayssel]";
-						mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-						mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+						mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+						mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 						next;
 						break;
 					case 3:
 						mes "[Mayssel]";
-						mes "^4d4dffHiding means exactly that... to hide.^000000";
+						mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 						next;
 						mes "[Mayssel]";
-						mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+						mes "^4d4dffSteal is a skill used to steal an enemy's items.^000000";
 						mes "You can steal one item from one enemy.";
 						next;
 						break;
 					case 4:
 						mes "[Mayssel]";
 						mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-						mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+						mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 						next;
 						mes "[Mayssel]";
-						mes "Oppositely, the name implies, Detoxify removes poison status.";
+						mes "On the other hand, as the name implies, Detoxify removes poison status.";
 						next;
 						break;
 					case 5:
 						mes "[Mayssel]";
-						mes "It is good you have enough knowledge.";
-						mes "Supplementary the field experiences will make you perfect.";
+						mes "It's good to have come into this knowledge.";
+						mes "Together with field experience, you can come to be great.";
 						cutin "gc_mayssel05.bmp", 1;
 						close2;
 						cutin "", 255;
@@ -10749,7 +10749,7 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				}
 			case 3:
 				mes "[Mayssel]";
-				mes "After you register as a student, you can take lessons and gain more experience.";
+				mes "After you register as a student, you can come take lessons and gain some experience.";
 				cutin "gc_mayssel01.bmp", 1;
 				close2;
 				cutin "", 255;
@@ -10758,13 +10758,13 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else {
 			if (Class == Job_Thief) {
 				mes "[Mayssel]";
-				mes "You are on the way of thief.";
+				mes "You have taken on the way of the Thief.";
 				mes "Thief is the 1st job.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
-				mes "Someday, you would transfer to the 2nd job.";
-				mes "It would be better to think of whether becoming  a Log or an Assassin now.";
+				mes "Someday, you will transfer to a 2nd job.";
+				mes "It's a good idea to start thinking about whether you want that job to be Rogue or Assassin.";
 				cutin "gc_mayssel02.bmp", 1;
 				close2;
 				cutin "", 255;
@@ -10772,36 +10772,36 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 			} else {
 				mes "[Mayssel]";
 				mes "You don't look familiar.";
-				mes "In order to attend this class, you must first become a student of Criatura Academy.";
+				mes "In order to participate in these lessons, you must first become a student of Criatura Academy.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
 				mes "What information would you like to know about the Thief job?";
 				next;
-				switch(select("About the useful stats for a Thief", "About Thief's primary skills", "Not curious about it.")) {
+				switch(select("About the useful stats for a Thief", "About a Thief's primary skills", "Not curious about it.")) {
 				case 1:
 					mes "[Mayssel]";
 					mes "You want to know more about stats?";
-					mes "There are no perfect answers for useful stats.";
+					mes "There is no one answer for what stats are best.";
 					next;
 					mes "[Mayssel]";
-					mes "If I choose one among them,";
-					mes "^4d4dffAGI is related to flee ability^000000,";
-					mes "^4d4dffDex is related with hit ratio";
-					mes "STR raises physical attacking power^000000";
+					mes ""If I had to choose one among them,";
+					mes "^4d4dffAGI is related to evasion^000000,";
+					mes "^4d4dffDex is for improving hit ratio,";
+					mes "and STR raises physical attacking power^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "Vit, Luk, Int are valued according your target chosen.";
-					mes "For your reference, Verkhasel has high level of Luk.";
+					mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+					mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 					mes "A weapon called Katar is good for Critical.";
 					next;
 					mes "[Mayssel]";
-					mes "But thief's primary weapon is a dagger.";
-					mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+					mes "But the Thief's primary weapon is a dagger.";
+					mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 					next;
 					mes "[Mayssel]";
-					mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-					mes "Hope you find the right stats that are suitable to your fighting style.";
+					mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+					mes "I hope you find the right stats that are suitable to your fighting style.";
 					close2;
 					cutin "", 255;
 					end;
@@ -10813,38 +10813,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 						switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 						case 1:
 							mes "[Mayssel]";
-							mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-							mes "You want to avoid taking damage from enemy attack, don't you?";
+							mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000";
+							mes "You want to avoid taking damage from enemy attacks, don't you?";
 							next;
 							break;
 						case 2:
 							mes "[Mayssel]";
-							mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-							mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+							mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+							mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 							next;
 							break;
 						case 3:
 							mes "[Mayssel]";
-							mes "^4d4dffHiding means exactly that... to hide.^000000";
+							mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 							next;
 							mes "[Mayssel]";
-							mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+							mes "^4d4dffSteal is the skill used to steal an enemy's items.^000000";
 							mes "You can steal one item from one enemy.";
 							next;
 							break;
 						case 4:
 							mes "[Mayssel]";
 							mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-							mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+							mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 							next;
 							mes "[Mayssel]";
-							mes "Oppositely, the name implies, Detoxify removes poison status.";
+							mes "On the other hand, as the name implies, Detoxify removes poison status.";
 							next;
 							break;
 						case 5:
 							mes "[Mayssel]";
-							mes "It is good you have enough knwledge.";
-							mes "Supplementary the field experiences will make you perfect.";
+							mes "It's good to have come into this knowledge.";
+							mes "Together with field experience, you can come to be great.";
 							close2;
 							cutin "", 255;
 							end;
@@ -10853,7 +10853,7 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					break;
 				case 3:
 					mes "[Mayssel]";
-					mes "After you register as a student, you can take lessons and gain more experience.";
+					mes "After you register as a student, you can come take lessons and gain some experience.";
 					cutin "gc_mayssel01.bmp", 1;
 					close2;
 					cutin "", 255;

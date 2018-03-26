@@ -10785,7 +10785,7 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					mes "There is no one answer for what stats are best.";
 					next;
 					mes "[Mayssel]";
-					mes ""If I had to choose one among them,";
+					mes "If I had to choose one among them,";
 					mes "^4d4dffAGI is related to evasion^000000,";
 					mes "^4d4dffDex is for improving hit ratio,";
 					mes "and STR raises physical attacking power^000000.";

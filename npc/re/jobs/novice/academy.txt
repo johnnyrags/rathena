@@ -11150,8 +11150,7 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 							cutin "sc_vicente01.bmp", 2;
 							mes "[Vicente]";
 							mes "Hmmm. So about using thief skills with the Manual.";
-							mes "anual.";
-						mes "And by the way this manual is can only be used up to level 12, is it's just for temporary use.";
+							mes "And by the way this manual is can only be used up to level 12, is it's just for temporary use.";
 							next;
 							mes "[Vicente]";
 							mes "An actual exercise for ^4d4dffstealing a monster's items^000000 using the Steal skill was planned";
@@ -11192,7 +11191,7 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 							next;
 							mes "[Vicente]";
 							mes "Anyway, that's the end of my lessons.";
-							mes ""There's nothing more to do from here... your level is too high.";
+							mes "There's nothing more to do from here... your level is too high.";
 							setquest 7484;
 							completequest 7484;
 							close2;
@@ -11412,7 +11411,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 	if (isbegin_quest(4269) > 0 && Class == Job_Novice) {
 		if (!isbegin_quest(7480)) {
 			mes "[Verkhasel]";
-			mes "What? It interrupts me.";
+			mes "What? I was interrupted.";
 			cutin "gc_verkhasel01.bmp", 0;
 			close2;
 			cutin "", 255;
@@ -11420,31 +11419,31 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 		} else if (isbegin_quest(7480) == 1) {
 			if (!isbegin_quest(7482)) {
 				mes "[Verkhasel]";
-				mes "Eheee, Eheee, It can't be a joke.";
-				mes "Mayssel's class...";
-				mes "Did you call upon me for this kind of nasty thing?";
+				mes "Eheee, eheee, you're kidding me.";
+				mes "Mayssel's lessons...";
+				mes "that's what you're here about?";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
-				select("...Let's keep working?");
+				select("...Let's work together?");
 				mes "[Lumin]";
-				mes "It's a pity. That man is scary.";
+				mes "Unfortunate that the man is scary.";
 				mes "But as long as I am with you, don't be afraid of him.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				mes "[Verkhasel]";
-				mes "What are you talking about this time?";
-				mes "In the beginning, Lue.. You should not be here...";
+				mes "What are you on about?";
+				mes "To start with, Lu.. you should not be here...";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				cutin "nov_lumin01.bmp", 2;
 				mes "[Lumin]";
-				mes ".........Who am I?";
+				mes ".........Who am I to warrant being here?";
 				mes "Assistant.... Trainer?";
 				next;
 				cutin "gc_verkhasel02.bmp", 0;
 				mes "[Verkhasel]";
-				mes "Zt...";
-				mes "Well, which one are you curious about?";
+				mes "Tch...";
+				mes "Well, what do you want to know more about?";
 				next;
 				cutin "gc_verkhasel01.bmp", 0;
 				.@ok_chk = 0;
@@ -11452,54 +11451,54 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					switch(select("Double Attack", "Envenom", "Improve Dodge and Hide", "About you", "That's enough.")) {
 					case 1:
 						mes "[Verkhasel]";
-						mes "You  may already know the primary weapon of a Thief is a dagger.";
-						mes "A Thief's specialty is the ^4d4dffDouble Attack^000000 by a dagger.";
+						mes "As you may know, the primary weapon of a Thief is a dagger.";
+						mes "A Thief's specialty is tp ^4d4dffDouble Attack^000000 with a dagger.";
 						next;
 						mes "[Verkhasel]";
-						mes "If you are short of attacking power, it can be covered at a certain degree.";
+						mes "If you are lacking attack power, this skill can make up for it to an extent.";
 						mes "Any other questions?";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
 					case 2:
 						mes "[Verkhasel]";
-						mes "There is a skill called ^4d4dffEnvenom^000000 to intoxicate your enemy with poison and";
-						mes "the other skill called ^4d4dffDetoxify^000000 to remove the poisoned status.";
+						mes "There is a skill called ^4d4dffEnvenom^000000 used to intoxicate an enemy with poison,";
+						mes "and another skill called ^4d4dffDetoxify^000000 to remove a poison status.";
 						next;
 						mes "[Verkhasel]";
-						mes "You can tell the poisoned status by its very pretty purple color.";
+						mes "Poisoned status marks someone by its very pretty purple color.";
 						next;
 						mes "[Verkhasel]";
-						mes "In case, you are poisoned, venom will decrease your vitality rapidly,";
-						mes "you either detoxify right away or take the antidote potion.";
+						mes "If you are poisoned, venom will decrease your health rapidly,";
+						mes "you should either Detoxify right away or take an antidote potion.";
 						next;
 						mes "[Verkhasel]";
-						mes "If you have more interest in poison, you may be an assassin.";
-						mes "They officially use poison.";
-						mes "Then next!";
+						mes "If you have more interest in poison, you may be interested in Assassin.";
+						mes "They specialize in poison.";
+						mes "Next!";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
 					case 3:
 						mes "[Verkhasel]";
-						mes "Thiefs train the skill called ^4d4dffImprove Dodge^000000.";
-						mes "This makes the enemy powerless by evading its attack.";
+						mes "Thief's use a skill called ^4d4dffImprove Dodge^000000.";
+						mes "By evading an enemy's attacks, you can render them powerless.";
 						next;
 						mes "[Verkhasel]";
-						mes "Rather than being patient after being hit, it is more suitable for a less defensive thief to avoid from it fast.";
-						mes "Being this reason, agility [AGI] can't be neglected.";
+						mes "Rather patiently recovering after being hit, a Thief who has less defense is more suited to avoid being hit as much as possible.";
+						mes "Because of this, agility [AGI] should not be neglected.";
 						next;
 						mes "[Verkhasel]";
-						mes "^4d4dffHiding^000000 is the skill for refuge.";
-						mes "If successful, others can't see you.";
+						mes "^4d4dffHiding^000000 is a skill for refuge.";
+						mes "If successful, monsters and fellow adventurers won't be able to see you.";
 						next;
 						mes "[Verkhasel]";
-						mes "Ah, as it is said you can't cheat a ghost.... You would be found by evil.";
-						mes "Also sensitive insects recognize it...";
+						mes "Ah, but it's said that you can't cheat a ghost.... you would be found.";
+						mes "Also, sensitive insects may detect you even when hidden...";
 						next;
 						mes "[Verkhasel]";
-						mes "Other than these, it will be useful for avoiding emergency situations.";
-						mes "When you become higher jobs like Rogue or Assassin, you can learn more useful skills like Refuge.";
+						mes "Other than those exceptions, it's useful for getting out of emergency situations.";
+						mes "Then when you move to higher jobs like Rogue or Assassin, you can learn even more useful skills like Refuge.";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
@@ -11510,17 +11509,17 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						next;
 						cutin "nov_lumin01.bmp", 2;
 						mes "[Lumin]";
-						mes "As one of the assassins, I am in charge of punishing the law violators, as the member of the execution group.";
-						mes "For your reference, the primary weapon of Verkhasel is Katar.";
+						mes "As an Assassin and member of the execution class, I am in charge of punishing violators of the law.";
+						mes "And by the way, Verkhasel's primary weapon is the Katar.";
 						next;
 						select("How do you know that?");
 						mes "[Lumin]";
-						mes "That's my hope.";
+						mes "I aim to be in his place.";
 						cutin "nov_lumin03.bmp", 2;
 						next;
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Oh.. Smart funk~~";
+						mes "Oh.. Smart alec~~";
 						mes "That's enough, Lu.";
 						mes "Any more questions?";
 						next;
@@ -11528,13 +11527,13 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					case 5:
 						if (.@ok_chk == 0) {
 							mes "[Verkhasel]";
-							mes "You can steal one item from one enemy.";
-							mes "I feel mortified at stopping here, but it's worse to be neglected...";
+							mes "With this skill you can steal one item from one enemy at a time.";
+							mes "It sucks to stop at that, but better than nothing...";
 							next;
 						} else {
 							mes "[Verkhasel]";
 							mes "OK.";
-							mes "Considering your favor not to ignore me, let's finish it now.";
+							mes "Well considering you don't seem to have interest, let's stop here.";
 							next;
 						}
 						break;
@@ -11543,11 +11542,11 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				}
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
-				mes "Honestly, I don't think you need to know the details about the thief's skills.";
-				mes "Then, just be aware there is something like that..";
+				mes "Honestly, I don't think you need to know the details of a Thief's skills.";
+				mes "Just be aware of the general points..";
 				next;
 				mes "[Verkhasel]";
-				mes "I mean it is good enough now.";
+				mes "So, good enough for now.";
 				setquest 7482;
 				close2;
 				cutin "", 255;
@@ -11556,21 +11555,21 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
 				mes "Anything else you're curious about?";
-				mes "I will give you an answer after you finish Mayssel's class.";
+				mes "I can tell you more after you finish Mayssel's lessons.";
 				next;
 				mes "[Verkhasel]";
-				mes "I mean that she knows it.";
-				mes "Mayssel will do it for you.";
+				mes "She knows things.";
+				mes "Mayssel will fill you in.";
 				next;
 				cutin "nov_lumin01.bmp", 2;
 				mes "[Lumin]";
-				mes "Lazy boy.";
-				mes "Tell me the truth... You are annoying..";
+				mes "Lazy.";
+				mes "Tell me the truth... you know you are annoying..";
 				next;
 				cutin "gc_verkhasel02.bmp", 0;
 				mes "[Verkhasel]";
 				mes ".......You........";
-				mes "Zt.. I don't know the enemy..";
+				mes "Tch.. I don't know my own enemy..";
 				close2;
 				cutin "", 255;
 				end;
@@ -11581,23 +11580,23 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					if (!isbegin_quest(7485)) {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Actual experience assignments about the skill?";
-						mes "To do it, your level is too high.";
-						mes "I can't use the guide.";
+						mes "Assignments to test out the skill?";
+						mes "Your level is too high.";
+						mes "You can't use the Thief Manual now.";
 						next;
 						mes "[Verkhasel]";
-						mes "Originally, I will let you hunt porings with envenom.";
-						mes "No way, if I can't use the skill....";
+						mes "Originally, I wanted you to hunt Porings with Envenom.";
+						mes "But there's no way, if you can't use the skill....";
 						next;
 						mes "[Verkhasel]";
 						mes "Envenom is the skill to poison.";
-						mes "If not poison him, you can damage to him due to the characteristic of venom.";
+						mes "If you can't poison it, you can't damage it with the characteristics of venom.";
 						next;
 						mes "[Verkhasel]";
-						mes "Keep in mind of these. That might be good enough for you.";
-						mes "As it is the class to let you know what you can do.";
-						mes "Let's finish the skill experience.";
-						mes "Check with Mayssel.";
+						mes "But if you take in that information, that might be good enough for you.";
+						mes "That's what the practical lessons would have tought you.";
+						mes "So let's finish the skill experience.";
+						mes "Check in with Mayssel.";
 						setquest 7485;
 						completequest 7485;
 						close2;
@@ -11607,12 +11606,12 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						if (checkquest(7485,HUNTING) == 2) {
 							cutin "gc_verkhasel01.bmp", 0;
 							mes "[Verkhasel]";
-							mes "You are doing well.";
-							mes "Envenom has the poison effect and can damage from venom itself.";
+							mes "You're doing well.";
+							mes "Envenom has the effect of poison creates the continual damage characteristics of venom.";
 							next;
 							mes "[Verkhasel]";
-							mes "The skill experience is now enough.";
-							mes "Check it with Mayssel.";
+							mes "Your skill experience is sufficient.";
+							mes "Check in with Mayssel.";
 							completequest 7485;
 							getexp 800,0;
 							close2;
@@ -11623,17 +11622,17 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 							mes "[Verkhasel]";
 							mes "You can't equip the Thief Manual?";
 							mes "Your level is too high.";
-							mes "There is no other way.";
+							mes "You can't use it anymore.";
 							next;
 							mes "[Verkhasel]";
 							mes "Envenom is the skill to poison.";
-							mes "If not poison him, you can damage to him due to the characteristic of venom.";
+							mes "If you can't poison it, you can't damage it with the characteristics of venom";
 							next;
 							mes "[Verkhasel]";
-							mes "Keep in mind of these. That might be good enough for you.";
-							mes "As it is the class to let you know what you can do.";
-							mes "Let's finish the skill experience.";
-							mes "Check with Mayssel.";
+							mes "If you take in that information, that might be good enough for you.";
+							mes "That's what the practical lessons would have tought you.";
+							mes "So let's finish the skill experience.";
+							mes "Check in with Mayssel.";
 							completequest 7485;
 							close2;
 							cutin "", 255;
@@ -11645,48 +11644,48 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				if (!isbegin_quest(7485)) {
 					cutin "gc_verkhasel01.bmp", 0;
 					mes "[Verkhasel]";
-					mes "This is about the use of skill.";
-					mes "Now if you were an assassin, shall I let you test the skills related to venom which you may continue to use?";
+					mes "This is about the use of skills.";
+					mes "To act as an Assassin, shall I let you test the venom-related skills that you may use in the future?";
 					next;
 					mes "[Verkhasel]";
-					mes "Load the thief guide receved by Mayssel and open the skill window by pressing Alt+S key,";
-					mes "Register Envenom regisstered on the ETC compartment,  by pressing shortcut key^000000";
+					mes "Equip the Thief's Manuel that Mayssel gave you and open the skill window by pressing Alt+S.";
+					mes "^4d4dffTake the Envenom skill from the 'ETC' section of the window, register it to a shortcut on your shortcut bar, and use the skill by using its shortcut^000000";
 					next;
 					mes "[Verkhasel]";
-					mes "Then, approach the Poring's cage in the center of this room and";
-					mes "Aim at Poring, and ^4d4dff' hunt one poring by using";
+					mes "Then, approach the Porings enclosure in the center of this room,";
+					mes "aim at a Poring, and ^4d4dff' hunt one poring down with the poison.";
 					next;
 					mes "[Verkhasel]";
-					mes "That's my assignment to you.";
-					mes "You definitely use envenom to Poring in this room.";
-					mes "don't go out faraway to find Porings.";
+					mes "That's my assignment for you.";
+					mes "You can definitely use Envenom on the Porings in this room.";
+					mes "No need to wander far off to find Porings.";
 					setquest 7485;
 					next;
 					cutin "nov_lumin02.bmp", 2;
 					mes "[Lumin]";
 					mes "Eummm.";
-					mes "It's sad..";
-					mes "Please accept my condolence in advance, as you can't experience envenom... hehehe...";
+					mes "Pity..";
+					mes "Please accept my condolences in advance, as I don't believe you'll Envenom properly... hehehe...";
 					next;
 					select("What are you talking about?");
 					mes "[Lumin]";
-					mes "From now, I am going to hunt Poring..";
-					mes "...Don't misunderstand me for challenging you, as such I  want to make a bet with you.";
+					mes "Instead, I'll be the one to hunt the Porings..";
+					mes "...Don't misunderstand me on this challenge, I actually want to make a bet with you.";
 					cutin "nov_lumin03.bmp", 2;
 					next;
 					cutin "", 255;
-					mes "Lumin is betting win or loose.";
+					mes "Lumin is betting, win or lose.";
 					close;
 				} else if (isbegin_quest(7485) == 1) {
 					if (checkquest(7485,HUNTING) == 2) {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "You are doing well.";
-						mes "Envenom has the poison effect and can damage from venom itself.";
+						mes "You're doing well.";
+						mes "Envenom has the effect of poison creates the continual damage characteristics of venom.";
 						next;
 						mes "[Verkhasel]";
-						mes "The skill experience is now enough.";
-						mes "Check it with Mayssel.";
+						mes "Your skill experience is sufficien.";
+						mes "Check in with Mayssel.";
 						completequest 7485;
 						getexp 800,0;
 						close2;
@@ -11695,24 +11694,24 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					} else {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Come close to a poring cage and use envenom to poring.";
-						mes "You must do it only to porings in this room.";
+						mes "Get close to the Poring enclosure and use Envenom on the Porings.";
+						mes "Worry only about the Porings in this room.";
 						next;
 						if (select("I see..", "I won't do it.") == 1) {
 							mes "[Verkhasel]";
-							mes "OK. Until you kill all the porings in the cage, attack them with venom.";
+							mes "Keep attacking with venom until you kill all the Porings in an encloser.";
 							percentheal 0,100;
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Verkhasel]";
-						mes "These are not your aptitude.";
-						mes "I will cancel my assignment, and the other assignments from Mayssel to be cancelled by her.";
+						mes "Perhaps this is not for you.";
+						mes "I will cancel your assignment with me, though any assignments from Mayssel should be cancelled through her.";
 						next;
 						if (select("Cancel.", "I will continue..") == 1) {
 							mes "[Verkhasel]";
-							mes "Cancel the mission to hunt poring with envenom.";
+							mes "The assignment to hunt Porings with Envenom has been cancelled.";
 							erasequest 7485;
 							close2;
 							cutin "", 255;
@@ -11720,7 +11719,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						}
 						mes "[Verkhasel]";
 						mes "Have you changed your mind?";
-						mes "Then, until you kill all the poring in the cage, keep attacking them with envenom.";
+						mes "Then, keep attacking with venom until you kill all the Porings in an encloser.";
 						percentheal 0,100;
 						close2;
 						cutin "", 255;
@@ -11728,8 +11727,8 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					}
 				} else {
 					mes "[Verkhasel]";
-					mes "Now you fully understand what skill venom is..";
-					mes "As you completed my assignment, go and check it with Mayssel.";
+					mes "Now you fully understand the Envenom skill works..";
+					mes "You have completed your assignment, now go check in with Mayssel.";
 					cutin "gc_verkhasel01.bmp", 0;
 					close2;
 					cutin "", 255;
@@ -11737,14 +11736,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				}
 			} else {
 				mes "[Verkhasel]";
-				mes "You are the bung finished Mayssel's class complete.";
-				mes "Any more questions, ask Mayssel.";
-				mes "It is the end of my class.";
+				mes "You have completed Mayssel's lessons.";
+				mes "If you have any more questions, ask Mayssel.";
+				mes "Your lessons here with me are done as well.";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				mes "[Verkhasel]";
-				mes "If you become a thief, we may meet together in far future..";
-				mes "If you become an assassin.";
+				mes "If you become a Thief, we'll meet again in the distant future..";
+				mes "should you turn to Assassin.";
 				close2;
 				cutin "", 255;
 				end;
@@ -11753,14 +11752,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 	} else {
 		if (!isbegin_quest(4269)) {
 			mes "[Verkhasel]";
-			mes "There is no words to tell you guy not belonging to our academy.";
-			mes "In fact, I pulled out here unwillingly, I don't have mind to be kind of you...";
+			mes "I don't have anything to say to someone not registerd with our Academy.";
+			mes "In fact I was pressured into this position against my will, so I don't have a mind to be kind...";
 			cutin "gc_verkhasel01.bmp", 0;
 			next;
 			mes "[Mayssel]";
 			mes "Wait, Verkhasel.....";
-			mes "Don't get even with other innocent....";
-			mes "How about helping my class for me?";
+			mes "Don't take things out on an innocent....";
+			mes "How about just helping with my lessons for students?";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			cutin "", 255;
@@ -11769,14 +11768,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 		} else {
 			if (Class == Job_Thief) {
 				mes "[Verkhasel]";
-				mes "Yo~ You...";
-				mes "What do you want to be?";
+				mes "Yo~ Thief. You...";
+				mes "what do you want to be?";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				if (select("An Assassin!", "A Rogue!") == 1) {
 					mes "[Lumin]";
-					mes "Welcome to your joining in the way of bloody darness.";
-					mes "My comrad.";
+					mes "Joining the bloody path full of darkness. Welcome...";
+					mes "my comrad.";
 					cutin "nov_lumin03.bmp", 2;
 					next;
 					cutin "gc_verkhasel02.bmp", 0;
@@ -11791,29 +11790,29 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					close;
 				} else {
 					mes "[Verkhasel]";
-					mes "Go over there.";
+					mes "Move over there, then.";
 					cutin "gc_verkhasel01.bmp", 0;
 					next;
 					cutin "sc_vicente04.bmp", 2;
 					mes "[Vicente]";
 					mes "Oh... Mr. Verkhasel...";
-					mes "Don't play like this among a family.";
+					mes "Don't be like this among family.";
 					mes "Why are you dividing us into teams?";
 					next;
 					cutin "gc_verkhasel01.bmp", 0;
 					mes "[Verkhasel]";
-					mes "I've never been in your family.";
-					mes "Originally, you are not a Rogue.";
+					mes "I've never been your family.";
+					mes "Originally, you weren't even a Rogue.";
 					mes "You were only a merchant.";
 					next;
 					cutin "sc_vicente02.bmp", 2;
 					mes "[Vicente]";
-					mes "Oh.. No.. What a dirty word.";
-					mes "Have I asked you for buying something from me?";
+					mes "Oh.. What a foul sentiments.";
+					mes "Have I ever even asked you to buying something from me?";
 					next;
 					cutin "gc_mayssel03.bmp", 1;
 					mes "[Mayssel]";
-					mes "..........You look friendly.. Two of you...";
+					mes "..........You seem friendly.. The two of you...";
 					next;
 					cutin "", 255;
 					mes "The mood has become tense.";
@@ -11822,9 +11821,9 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 			} else {
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
-				mes "You are the guy knows everything you need.";
-				mes "Are you coming to watch only? Emmm?";
-				mes "Why don't you help the juniors without watch only?";
+				mes "You already know everything you need.";
+				mes "Are you here just to observe? Emmm?";
+				mes "Why don't you help your juniors, rather than just watch?";
 				close2;
 				cutin "", 255;
 				end;
@@ -11856,17 +11855,17 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	if (checkquest(7487,HUNTING) == -1) {
 		if (isbegin_quest(7485) == 2) {
 			mes "[Lumin]";
-			mes "Your eagerness and efforst to complete mission moved me to offer something.";
+			mes "Your efforts and eagernes to complete your assignments moved me to offer a challenge.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "^4d4dff It is to hunt all 4 Porings here within 30 seconds^000000.";
-			mes "If you do, I will yield to you all the earned item in my hand.";
+			mes "^4d4dffDefeat 4 Porings in this room within 30 seconds^000000.";
+			mes "If you succeed, I will will hand over all the earned items in my hand.";
 			next;
 			select("If I fail?");
 			mes "[Lumin]";
-			mes "It is our bet. You have to give up yours as you lost.";
-			mes "Emmm. As I am generous, I will receive ^4d4dff10 beginner's red potions^000000.";
+			mes "Well, it's a bet. If you fail, you give up your items instead.";
+			mes "Emmm. But as I am generous, I will take only ^4d4dff10 beginner's red potions^000000.";
 			next;
 			if (select("Give Up.", "I Accept.") == 1) {
 				mes "[Lumin]";
@@ -11879,7 +11878,7 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			} else {
 				mes "[Lumin]";
 				mes ".... Good!";
-				mes "Now, ^4d4dffspeak to me once you finish hunting 4 porings in 30 seconds.^000000";
+				mes "Now, ^4d4dffspeak to me once you have defeated 4 Porings within 30 seconds.^000000";
 				setquest 7487;
 				close2;
 				cutin "", 255;
@@ -11887,8 +11886,8 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			}
 		} else {
 			mes "[Lumin]";
-			mes "The intoxicated enemies won't die only from poisoning.";
-			mes "They only come close to death.";
+			mes "Evenomed enemies won't die just from poisoning.";
+			mes "They can come close to death, but still you much finish them off another way.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
@@ -11900,21 +11899,21 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else if (checkquest(7487,HUNTING) == 1) {
 		if (checkquest(7487,PLAYTIME) == 2) {
 			mes "[Lumin]";
-			mes "... 30 seconds have passed and you have not yet hunted 4 porings.";
-			mes "Then, it is not interesting.";
+			mes "... 30 seconds have passed and you have not yet defeated 4 Porings.";
+			mes "This wasn't much fun.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "If you don't like do it... no way.";
-			mes "As I am generous, I disregard the bet this time.";
+			mes "If you don't to do it... well.";
+			mes "As I am generous, I'll disregard the bet this time.";
 			erasequest 7487;
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "You may be too busy in^4d4dff hunting 4 porings in 30 seconds.^000000";
-			mes "Hey, time passes now...";
+			mes "You may be too slow^4d4dff defeating 4 Porings in 30 seconds.^000000";
+			mes "Hey, time goes fast...";
 			cutin "nov_lumin01.bmp", 2;
 			close2;
 			cutin "", 255;
@@ -11923,12 +11922,12 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else if (checkquest(7487,HUNTING) == 2) {
 		if (checkquest(7487,PLAYTIME) == 0) {
 			mes "[Lumin]";
-			mes "Oh... You are very powerful!";
-			mes "Now then, as agreed I will give you everything I have.";
+			mes "Oh... quite powerful!";
+			mes "As agreed I will give you everything I have.";
 			cutin "nov_lumin03.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "I've had a lot of fun because of you!";
+			mes "I've had a lot of fun here, thanks to you!";
 			cutin "nov_lumin05.bmp", 2;
 			completequest 7487;
 			getexp 800,50;
@@ -11941,13 +11940,13 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "Regretfully, 30 seconds has passed.";
+			mes "Unfortunately, 30 seconds has passed.";
 			cutin "nov_lumin02.bmp", 2;
 			mes ".....";
 			next;
 			mes "[Lumin]";
-			mes "I will give them to you anyways.";
-			mes "Come on, take it.";
+			mes "I will give you something anyway.";
+			mes "Go on, take it.";
 			cutin "nov_lumin03.bmp", 2;
 			completequest 7487;
 			getexp 800,50;
@@ -11956,7 +11955,7 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			select("Why are you treating me like this?", "Didn't I loose?");
 			mes "[Lumin]";
 			mes "You spent time with me.";
-			mes "Get it free. I stole them from Porings.";
+			mes "It's yours. I stole them from Porings.";
 			cutin "nov_lumin05.bmp", 2;
 			close2;
 			cutin "", 255;
@@ -11965,34 +11964,34 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else {
 		if (Class == Job_Novice) {
 			mes "[Lumin]";
-			mes "We may meet again.";
-			mes "Becoming familiar with others is pleasrue and sad.";
+			mes "Perhaps we'll meet again.";
+			mes "Getting to know others is bitter and sweet.";
 			cutin "nov_lumin02.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "... It may be in trouble if it dies upfront...";
+			mes "... It may be bad if one dies first...";
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "At last, the day comes.";
+			mes "At last, it's time.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "", 255;
-			mes "Lumin changing clothes piece by piece.";
+			mes "Lumin changes clothes, piece by piece.";
 			specialeffect2 EF_SPHERE;
 			specialeffect2 EF_SPHERE;
 			setnpcdisplay( "Lumin#"+strnpcinfo(2), 4_M_THIEF_RUMIN );
 			next;
 			cutin "thf_lumin01.bmp", 2;
 			mes "[Lumin]";
-			mes "I was carrying out my mission.";
+			mes "I was carrying out a mission.";
 			next;
-			select("No need to make an excuse....");
+			select("No need to make excuses....");
 			mes "[Lumin]";
-			mes "At least to you, I don't want to be a stranger.";
-			mes "Forget what you saw today, as I have to introduce to the way of Thief Guild as many people as possible.";
+			mes "At least to you, I don't want to be someone else.";
+			mes "Forget what you saw today, as it was for my purpose of introducing to the way of the Thief Guild to as many people as possible.";
 			cutin "thf_lumin05.bmp", 2;
 			close2;
 			specialeffect2 EF_SPHERE;

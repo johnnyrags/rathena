@@ -9687,17 +9687,17 @@ OnInit:
 iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	disable_items;
 	if (!checkweight(714,3) || (MaxWeight - Weight) < 10000) {
-		mes "- As you are overloaded with so many items, quest can't be proceeded. -";
+		mes "- The quest can't be proceeded, as you are overloaded with too many items. -";
 		close;
 	}
 	if (BaseLevel > 15 || Class != Job_Novice) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
 		mes "Ehm?";
-		mes "This class only for Novices just starting their adventure.";
+		mes "This class only for Novices just starting their journey.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Looking at you, you seem like you need some help. How about going to another place?";
+		mes "Looking at you, you don't seem like you would need my help. Perhaps you meant to talk to someone else?";
 		close2;
 		cutin "", 255;
 		end;
@@ -9706,10 +9706,10 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
 		mes "Oh~";
-		mes "At a glance, hey, you like the lost baby sheep.. Here the non registered passengers are prohibited.";
+		mes "You look like a lost baby sheep.. non-registered passengers are prohibited here.";
 		next;
 		mes "[Salim Hamid]";
-		mes "If you want to look around this area without physical prohibiton, you would better register first at the info desk at the Academy entrance.";
+		mes "If you want to look around this area freely, you would do better to register yourself with the info desk at the Academy entrance.";
 		close2;
 		cutin "", 255;
 		end;
@@ -9718,36 +9718,36 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
 		mes "Ho Oh~";
-		mes "You look like you're ready to change to a first job.";
+		mes "It looks like you're ready to change to a first job.";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "How about it? Are you interested in the way of the Merchant? If so, I may be helpful for you.";
+		mes "How about it? Are you interested in the way of the Merchant? If so, I may be helpful to you.";
 		next;
 		if (select("Not interest.", "Interested.") == 1) {
 			mes "[Salim Hamid]";
-			mes "Oh.. No...";
-			mes "Well, there is no way. Our Criatura Academy put the priority to the adventurer's choice.";
+			mes "Oh no...";
+			mes "Well, it can't be helped. Criatura Academy prioritizes the adventurer's choice.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Good~ Then, I will send you to the town of Alberta. There you can become a merchant.";
+		mes "Good~ Then, I will send you to the town of Alberta. That is where you can go to become a merchant.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Do not go elsewhere, immediately enter the town.";
-		mes "Find the <NAVI>[Forge]<INFO>alberta_in,75 48</INFO></NAVI>.";
+		mes "When you arrive, do not wander off. Enter the town immediately.";
+		mes "Once inside, look for the <NAVI>[Forge]<INFO>alberta_in,75 48</INFO></NAVI>. Are you ready?";
 		next;
-		if (select("Not yet ready.", "I'm Ready!") == 1) {
+		if (select("Not ready yet.", "I'm Ready!") == 1) {
 			mes "[Salim Hamid]";
-			mes "Yes, I understand. When you are ready, let me see you again.";
+			mes "I understand. When you are ready, come to see me again.";
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Salim Hamid]";
-			mes "Good~ Please go to the Forge and find me.";
+			mes "Good~ Head to the Forge and look for me.";
 			close2;
 			setquest 12307;
 			warp "pay_fild03", 388, 68;
@@ -9758,7 +9758,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
 		mes "Oh~";
-		mes "Hey, you like a lost sheep. Do you know why you've come here?";
+		mes "You look like a lost sheep. Do you know why you've come here?";
 		next;
 		if (select("Don't Know", "Know.") == 1) {
 			mes "[Salim Hamid]";
@@ -9774,14 +9774,14 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		next;
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "I am ^0000ffSalim Hamid^000000 in charge with training the merchant course here at the Criatura Academy.";
+		mes "I am ^0000ffSalim Hamid^000000 in charge of the merchant training course here at Criatura Academy.";
 		next;
 		mes "[Salim Hamid]";
-		mes "This classroom is for Merchant applicants. In fact, this room is mainly for doing the finacial management of the Criatura Academy.";
+		mes "This class is for Merchant applicants. In fact, this room is mainly for doing finacial management for Criatura Academy.";
 		next;
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Next time, if you want to observe the merchant course, you can visit me, Salim Hamid and register.";
+		mes "If you want to observe the merchant course, you can visit me again and register.";
 		setquest 12302;
 		completequest 12302;
 		close2;
@@ -9791,22 +9791,22 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	if (isbegin_quest(12303) < 1) {
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Oh~ You came back. Do you want to experience the Merchant training course? It is a little bit difficult to the average beginner.";
+		mes "Oh~ You came back. Do you want to experience the Merchant training course? It is a little bit difficult for the average beginner.";
 		next;
-		if (select("No thanks!", "Sign me up!.") == 1) {
+		if (select("No thanks!", "Sign me up!") == 1) {
 			mes "[Salim Hamid]";
-			mes "Oh~ though it is a bit hard, it is worth learning. Sadly, there's no other way.";
+			mes "Oh~ though it is a bit hard, it is worth learning. I'm sad to hear you won't try, but whatever you decide.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Oh, yes... Then, first will you register your name in this student list?";
+		mes "Oh, good... Then, first, will you register your name on this student list?";
 		next;
 		if (select("Refuse.", "Put your name on the list.") == 1) {
 			cutin "aca_salim03.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Resistance from the beginning? This isn't the way to start training.";
+			mes "Resistance from the beginning? This isn't a great way to start training.";
 			close2;
 			cutin "", 255;
 			end;
@@ -9817,14 +9817,14 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		mes "^0000ff"+ strcharinfo(0) +"^000000...... right?";
 		next;
 		mes "[Salim Hamid]";
-		mes "First to observe the Merchant course, you need to have the Merchant mindset. A trader with less than 100 zeny could not be called a Merchant.";
+		mes "To start the Merchant course properly, you need to have a Merchant mindset. A trader with less than 100 zeny could not be called a Merchant.";
 		next;
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
-		mes ""+ strcharinfo(0) +"^000000 come back to me with 100 Zeny in hand before the next class.";
+		mes ""+ strcharinfo(0) +"^000000, return with 100 Zeny in hand before your next class.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Of course, that money won't be taken. It is only A test to see your basic mindset to being a Merchant. Good luck.";
+		mes "Of course, we won't take the money from you. It is only a test to see if you have the right mindset to become a Merchant. Good luck.";
 		setquest 12303;
 		close2;
 		cutin "", 255;
@@ -9833,16 +9833,16 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		if (Zeny >= 100) {
 			cutin "aca_salim02.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Wow, you really came back with 100 zeny in hand. I feel your desire to learn clearly.";
+			mes "Wow, you really did it.. 100 zeny in hand. I can feel your desire to learn.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Now. I will give you a Merchant's manual. Equipped with it. Press Alt + S key and look at the skill window.";
+			mes "Now. I will give you a Merchant's manual. Equip it, then Press Alt + S to open the skill window.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Clicking the [MISC] tab on the skill window, you can see the Merchant manual skills.";
+			mes "If you click the [MISC] tab on the skill window, you should see the Merchant manual skills.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Now~ as we should go to the next course, equip the guide and see the skill, then speak to me again.";
+			mes "Now then~ we should move on to the next course. Equip the manual and check the skills, then speak to me again.";
 			getitem 2823,1;// Merchant_Manual
 			completequest 12303;
 			close2;
@@ -9851,17 +9851,17 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		} else {
 			cutin "aca_salim02.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Hohohong.. Test is not easy? Will you give it up now?";
+			mes "Hohohong.. the test is not easy? Are you giving up the challenge?";
 			next;
-			if (select("Can't do it.", "Give it up.") == 1) {
+			if (select("Can't give up.", "Give it up.") == 1) {
 				mes "[Salim Hamid]";
-				mes "Will you? 100 zeny isn't hard to get pal.";
+				mes "You'll keep going, then? 100 zeny isn't hard to get, you know.";
 				close2;
 				cutin "", 255;
 				end;
 			} else {
 				mes "[Salim Hamid]";
-				mes "Yes, come back to me when you change your mind.";
+				mes "Okay, come back to me when you change your mind.";
 				erasequest 12303;
 				close2;
 				cutin "", 255;
@@ -9872,10 +9872,10 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	if (isbegin_quest(12304) < 1) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Now, how about attending the class concerning various basic skills which merchants should have for making money.";
+		mes "Now, I recommand a class to learn various basic skills that Merchants need for making money.";
 		next;
 		mes "[Salim Hamid]";
-		mes "This might be better for you to learn from the steward working on the field next door. Go to him for the Merchant theory course, then return to me.";
+		mes "This might be better to learn from the steward working in the field next door. Go to him for the Merchant Theory course, then return to me.";
 		setquest 12304;
 		close2;
 		cutin "", 255;
@@ -9883,31 +9883,31 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12304) == 1) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Haven't you gone to him for the class? Go to the steward next to me and return after completing the Merchant skill theory.";
+		mes "Haven't you gone to him for the class yet? Go to the steward nearby and return after completing Merchant skill theory.";
 		close2;
 		cutin "", 255;
 		end;
 	}
 	if (isbegin_quest(12305) < 1) {
 		mes "[Salim Hamid]";
-		mes "Have you come after a good lesson from the steward concerning what a Merchant can do?";
+		mes "Have you returned after a good lesson from the steward concerning what a Merchant can do?";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "By any chance, "+strcharinfo(0)+" do you have mind to learn more about Merchants here?";
+		mes "Well then, "+strcharinfo(0)+", do you have a mind to learn more about Merchants here?";
 		next;
-		if (select("I will look around at more jobs.", "Let me do it a little more.") == 1) {
+		if (select("I will look around at more jobs.", "I'd like to learn a little more.") == 1) {
 			mes "[Salim Hamid]";
-			mes "Yes, your open mind is good for you. As this academy has many other lecturers besides Merchants.";
+			mes "Yes, an open mind is good for you. Our Academy has many courses for jobs other than Merchants.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Whenever you feel like learning again, come back to me "+strcharinfo(0)+".";
+			mes "Should you feel like learning more from me, come back to see me, "+strcharinfo(0)+".";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Is that so? OK, now how about learning the major effects of Merchant's stats? If you are ready, speak to me.";
+		mes "Is that so? Great, then how about learning the major effects of Merchant stats? If you are ready for that, speak to me again.";
 		setquest 12305;
 		close2;
 		cutin "", 255;
@@ -9915,71 +9915,71 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12305) == 1) {
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Trader's stats are classified as two major series. One is for manufacturing, the other is for battle.";
+		mes "A trader's stats may go in one of two directions, depending on what they would like to specialize in. One option is best for crafting, the other is best for battle.";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Of course, these are for farther down in the future. At this moment, you are even short of stats to invest DEX enabling you to hunt a monster.";
+		mes "Of course, that becomes applicable further down the line on the Merchant path. At the moment, you are still at the point of needing things like DEX just to hunt monsters.";
 		next;
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "But, there is a big difference between your knowledge of the basic rules and being ignorant of it.";
-		mes "Let's learn about it one by one.";
+		mes "But it's better to have knowledge of the basics sooner than later, rather than be ignorant of them.";
+		mes "So let's learn about these one at a time.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Now, what series do we start with?";
+		mes "Now, what do you want to start with?";
 		while(1) {
 			next;
-			switch(select("Already know it.", "Battle Stats.", "Crafting Stats.")) {
+			switch(select("Already know both.", "Battle Stats.", "Crafting Stats.")) {
 			case 1:
 				mes "[Salim Hamid]";
-				mes "It will be OK as it is, won't it?";
+				mes "So you are okay with what you know?";
 				next;
-				if (select("I already know all of them.", "Please make another explanation.") == 1) {
+				if (select("Yep, I already know all of it.", "Actually, I'd like to hear more.") == 1) {
 					mes "[Salim Hamid]";
-					mes "Yes, you are "+strcharinfo(0)+" I am pleased to meet a quick-to-learn student like you. It also saves my time.";
+					mes "Then, "+strcharinfo(0)+", I am pleased to meet a quick-to-learn student like you. It saves me time, too.";
 					next;
 				} else {
 					mes "[Salim Hamid]";
-					mes "Aha~ I think I got you wrong. Let's start the lecture again.";
+					mes "Aha~ I must have misunderstood. Let me tell you more, then.";
 					continue;
 				}
 				break;
 			case 2:
 				mes "[Salim Hamid]";
-				mes "Being in a trader role, the stats affecting the figure of battle power are two ^4d4fffSTR & DEX^000000.";
+				mes "For the Merchant specializing in battle, the stats affecting attack power figures are two... ^4d4fffSTR & DEX^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "STR is related to the basic attacking power, DEX is to hit ratio and recovery from damage.";
+				mes "STR increases basic attacking power, DEX helps with hit ratio and recovering from damage.";
 				next;
 				mes "[Salim Hamid]";
-				mes "In you future, according to the 2nd and 3rd jobs you choose, you can learn additional attacking stats such ^4d4fffINT or AGI^000000.";
+				mes "In the future, when you've progressed to your 2nd and 3rd job choice, you can consider additional stats such as ^4d4fffINT or AGI^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "To back up your shortage, you can increase LUK a little.";
+				mes "And to help stack up where you come up short, you can increase LUK a little as well.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Rather than worry yourself, it may be a good idea to learn from other Merchants. You know ask others for advice.";
+				mes "Rather than try to figure out the best balance on your own, it may be a good idea to learn from other Merchants. You know, ask others for advice.";
 				next;
 				mes "[Salim Hamid]";
 				mes "Any other questions?";
 				continue;
 			case 3:
 				mes "[Salim Hamid]";
-				mes "The stats concerning crafting is simpler than that concerning battle. Only difficulty is how to cultivate it.";
+				mes "The stats for specializing in crafting are simpler than those for battle. The only difficulty may be how to grow without much attack power to speak of.";
 				next;
 				mes "[Salim Hamid]";
-				mes "It is common that you increase ^4d4fffDEX & LUK^000000 as the base and, if you have surplus, you invest the rest in ^4d4fffINT^000000.";
+				mes "It is common to increase ^4d4fffDEX & LUK^000000 as the basis for the class, and if you have surplus, invest the rest in ^4d4fffINT^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Of course, the allocation of the portion should be properly adjusted in accordance with your equipments and the status you are in.";
+				mes "Of course, the exact allocation should be adjusted depending your equipment and circumstances.";
 				next;
 				mes "[Salim Hamid]";
-				mes "One thing you should keep in mind is it may be a very boring and ascetic way to grow alone as Merchant specializing in crafting.";
+				mes "One thing you should keep in mind is you may find it tedious and confining to level alone as Merchant specializing in crafting.";
 				next;
 				mes "[Salim Hamid]";
-				mes "If possible, make use of your friends and their items if you can.";
-				mes "This is my personal opinion only.";
+				mes "It can be helpful to make use of your friends and items, if you can.";
+				mes "This is just my personal opinion, though.";
 				mes "It is absolutely not the official standpoint of the Criatura Academy.";
 				next;
 				mes "[Salim Hamid]";
@@ -9989,8 +9989,8 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 			break;
 		}
 		mes "[Salim Hamid]";
-		mes "Then, it is the end of this class.";
-		mes "If you have more questions about Merchants, please make other visits.";
+		mes "Well, that is the end of our lesson.";
+		mes "If you have more questions about Merchants, please do talk to me again.";
 		completequest 12305;
 		close2;
 		cutin "", 255;
@@ -9998,31 +9998,31 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	}
 	if (isbegin_quest(12306) < 1) {
 		mes "[Salim Hamid]";
-		mes "You came back again. "+strcharinfo(0)+" this time, shall we have a practical training by doing a simple errand?";
+		mes "So you came back, "+strcharinfo(0)+". This time, I shall give you practical training by sending you on a simple errand.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Can you see the noisy vending machine at the corner of this classroom? It was originally a soft drink vending machine but swallows coin very much...";
+		mes "Do you see the noisy vending machine at the corner of this classroom? It was originally a soft drink vending machine, but it swallows coins most of the time...";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Anyway, due to this reason, it is now being used for the trainees' practice of skills. Please check the prices for Garlet and Zargon.";
+		mes "So nowadays it's used for the purposes of practicing trainee skills. Go there to check the prices for Garlet and Zargon.";
 		next;
 		mes "[Salim Hamid]";
-		mes "But! You should come back wit the information about ^4d4fffthe discounted prices equipped with the merchant's manual and applied with the discount rate^000000.";
+		mes "But! You only need information about ^4d4fffthe discounted prices while equipped with the Merchant's Manual, which applies a discount^000000.";
 		next;
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Don't buy them. Just come back with the checked prices only. Can you do it?";
+		mes "So you don't need to buy them. Just come back with the information about the prices. Can you do it?";
 		next;
-		if (select("I will do it next time.", "I will do it.") == 1) {
+		if (select("I will do it next time.", "I will do it now.") == 1) {
 			mes "[Salim Hamid]";
-			mes "OK. Then you challenge it next time.";
+			mes "OK. Then come back next time when you want to try it.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Good~ I will see you later.";
+		mes "Good~ See you back here soon.";
 		setquest 12306;
 		close2;
 		cutin "", 255;
@@ -10030,32 +10030,32 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12306) == 1) {
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Yes. Let's see the prices you checked.";
+		mes "Welcome back. Let's see the prices you checked.";
 		next;
-		switch(select("I will come back after rechecking them.:Garlet 39z Zargon 450z:Garlet 37z Zargon 448z:Garlet 37z Zargon 446z:Garlet 37z Zargon 444z")) {
+		switch(select("I will check again and come back.:Garlet 39z Zargon 450z:Garlet 37z Zargon 448z:Garlet 37z Zargon 446z:Garlet 37z Zargon 444z")) {
 			case 1:
 				mes "[Salim Hamid]";
-				mes "OK. You come back after rechecking them in detail.";
+				mes "OK. Look over the information in detail and come back.";
 				close2;
 				cutin "", 255;
 				end;
 			case 4:
 				mes "[Salim Hamid]";
-				mes "OK~ You correctly checked the prices equipped with Merchant's Manual.";
+				mes "Great~ You noted the correct prices while equipped with Merchant's Manual.";
 				next;
 				cutin "aca_salim01",2;
 				mes "[Salim Hamid]";
-				mes "Perhaps, if you become a Merchant and use the high level of discount skill, you can buy what you want at much cheaper prices.";
+				mes "If you become a Merchant and use the discount skill at a high level, you can buy what you need at much cheaper prices.";
 				next;
 				mes "[Salim Hamid]";
-				mes "The practice of overcharge will be the same.";
+				mes "Using overcharge will work much the same.";
 				next;
 				cutin "aca_salim02",2;
 				mes "[Salim Hamid]";
-				mes "You don't need to practice the overcharge as well. You experience it while selling items earned during the other courses.";
+				mes "So you don't need to practice overcharge. You will experience what that's like when selling items earned in due course.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Now the Merchant training at the Academy is finished.";
+				mes "Now your Merchant lessons here at the Academy are finished.";
 				completequest 12306;
 				close2;
 				cutin "", 255;
@@ -10063,7 +10063,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 			default:
 				cutin "aca_salim03",2;
 				mes "[Salim Hamid]";
-				mes "Did you correctly check them?";
+				mes "Did you check them correctly? Make sure to equip your Merchant's Manual...";
 				close2;
 				cutin "", 255;
 				end;
@@ -10072,17 +10072,17 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	// if (JobLevel < 10) {
 	cutin "aca_salim02",2;
 	mes "[Salim Hamid]";
-	mes "Hahaha. "+strcharinfo(0)+" you have completed the Merchant theory course at the Criatura Academy.";
+	mes "Hahaha. "+strcharinfo(0)+", you have completed the Merchant Theory course at the Criatura Academy.";
 	next;
 	mes "[Salim Hamid]";
-	mes "When you want to test the other battle skills in the Merchant's Manual,";
+	mes "If you want to test the battle skills in your Merchant's Manual,";
 	mes "visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> on the 1st floor.";
 	next;
 	mes "[Salim Hamid]";
-	mes "You can fully experience the battle related practice through him.";
+	mes "You'll get a chance to practice battle-related skills through him.";
 	next;
 	mes "[Salim Hamid]";
-	mes "The guide for the next course "+strcharinfo(0)+" will be serviced when you reach job level 10. Good luck.";
+	mes "So,"+strcharinfo(0)+", the next course will come when you reach job level 10. Good luck.";
 	close2;
 	cutin "", 255;
 	end;

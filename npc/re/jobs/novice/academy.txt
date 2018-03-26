@@ -10045,14 +10045,14 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 				next;
 				cutin "aca_salim01",2;
 				mes "[Salim Hamid]";
-				mes "If you become a Merchant and use the discount skill at a high level, you can buy what you need at much cheaper prices.";
+				mes "If you become a Merchant and use the Discount skill at a higher level, you will be able to buy what you need at much cheaper prices.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Using overcharge will work much the same.";
+				mes "Using Overcharge will work similarly, except for selling instead of buying.";
 				next;
 				cutin "aca_salim02",2;
 				mes "[Salim Hamid]";
-				mes "So you don't need to practice overcharge. You will experience what that's like when selling items earned in due course.";
+				mes "But ou don't need to practice Overcharge. You will experience what that's like when selling items earned in due course.";
 				next;
 				mes "[Salim Hamid]";
 				mes "Now your Merchant lessons here at the Academy are finished.";
@@ -10063,7 +10063,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 			default:
 				cutin "aca_salim03",2;
 				mes "[Salim Hamid]";
-				mes "Did you check them correctly? Make sure to equip your Merchant's Manual...";
+				mes "Did you check the prices correctly? Make sure to equip your Merchant's Manual...";
 				close2;
 				cutin "", 255;
 				end;
@@ -10082,7 +10082,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	mes "You'll get a chance to practice battle-related skills through him.";
 	next;
 	mes "[Salim Hamid]";
-	mes "So,"+strcharinfo(0)+", the next course will come when you reach job level 10. Good luck.";
+	mes "Then,"+strcharinfo(0)+", the next course will come when you reach job level 10. Good luck.";
 	close2;
 	cutin "", 255;
 	end;
@@ -10098,114 +10098,114 @@ iz_ac02_d,50,169,3	duplicate(Salim Hamid#ac)	Salim Hamid#ac_d	1_M_MERCHANT
 iz_ac02,53,171,3	script	Steward Aydin#ac	4_M_MANAGER,{
 	disable_items;
 	if (!checkweight(714,3) || (MaxWeight - Weight) < 10000) {
-		mes "- As you are overloaded with so many items, quest can't be proceeded.";
+		mes "- Quest can't be proceeded, as you are overloaded with so many items.";
 		close;
 	}
 	if (isbegin_quest(12304) == 1) {
 		mes "[Steward Aydin]";
-		mes "Mr. Hamid sent you here. Nice to meet you. Being busy in organizing the account book, I will make time for you.";
+		mes "I see Mr. Hamid sent you here. Nice to meet you. Though I've been busy organizing the account book, I will make time for you.";
 		next;
 		mes "[Steward Aydin]";
-		mes "There are many ways to make margin on trading.. A threat, a concillation, black-market dealings, etc.";
+		mes "There are many ways to make a profit when trading.. with threats, backdoor agreements, black-market dealings, etc.";
 		next;
 		mes "[Steward Aydin]";
-		mes "If necessary, even various violent and bloody shortcuts (wow this guy is serious!)";
+		mes "If necessary, even some violent and bloody shortcuts. (Wow, this guy is serious!)";
 		next;
 		mes "[Steward Aydin]";
-		mes "OH wait, what did I tell you?";
-		mes "These are legally prohibited behaviors. So, Merchants will be given two skills. Those are ^4d4fffOvercharge and Discount^000000..";
+		mes "OH wait, what am I saying?";
+		mes "These behaviors are legally prohibited. So instead, Merchants will be given two skills. They are ^4d4fffOvercharge and Discount^000000..";
 		next;
 		mes "[Steward Aydin]";
-		mes "Besides, there are some other helpful skills such as ^4d4fffPush Cart Vending, Item Appraisal^000000 etc.. Which are not related directly to them though.";
+		mes "Besides those two, there are some other helpful skills such as ^4d4fffPush Cart Vending, Item Appraisal^000000 etc.. which are quite different.";
 		next;
 		mes "[Steward Aydin]";
-		mes "Any questions among them?";
+		mes "Do you have questions about any of them?";
 		next;
 		while(1) {
 			switch(select("I already know all of them.", "Overcharge & Discount", "Other skills", "Item Appraisal")) {
 				case 1:
 					mes "[Steward Aydin]";
-					mes "Really are you OK with it?";
+					mes "Really, are you OK with no other info?";
 					next;
-					if (select("Wait I know it all.", "No, please explain them again.") == 1) {
+					if (select("I know it all.", "No, please explain them.") == 1) {
 						mes "[Steward Aydin]";
-						mes "Ho O~ You don't have any questions?";
-						mes "OK. You are a person of practice rather than of theory.";
+						mes "Oh ho~ You don't have any questions?";
+						mes "I see. You are a person that prefers practice rather than theory.";
 						next;
 						mes "[Steward Aydin]";
-						mes "The additional lecture will be provided by Mr. Salim Hamid. Ah. I have something to give you.";
+						mes "Additional lessons will be provided by Mr. Salim Hamid. Ah, but wait. I have something to give you.";
 						next;
 						mes "[Steward Aydin]";
-						mes "This is a box containing the defective equipments leaving from the inventory organization here.";
-						mes "Please practice the Item Appraisal skill in the Merchant Manual with it.";
+						mes "This is a box containing some defective equipment left by the inventory organization.";
+						mes "You can use these items to practice the Item Appraisal skill, which you can find if you have the Merchant Manual equipped.";
 						next;
 						mes "[Steward Aydin]";
-						mes "I anticipate to see you next time in a good shape.";
+						mes "I anticipate seeing doing well next time you stop by.";
 						completequest 12304;
 						getitem 12847,1;// Old_Equipment_Box
 						close;
 					}
 					mes "[Steward Aydin]";
-					mes "Ho O~ Sorry but I got you wrong.";
-					mes "Let's start the class.";
+					mes "O ho~ guess you weren't so sure.";
+					mes "Let me tell you more, then.";
 					next;
 					break;
 				case 2:
 					mes "[Steward Aydin]";
-					mes "It is simple to use Overcharge and Discount.";
+					mes "The skills Overcharge and Discount are simple to use.";
 					next;
 					mes "[Steward Aydin]";
-					mes "These two skills are passive skills. If you become familiar with these, "+strcharinfo(0)+" these will automatically perform in trading with merchant NPC without your operation.";
+					mes "They are passive skills. As you may know, "+strcharinfo(0)+", passive skills take effect automatically. So the effect will be applied when trading with merchant NPC's without any intervention needed.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Once you've learned Overcharge, when selling commodities to a merchant NPC, you can gain the sales money composed of the regular sales price plus additional money as per the Overcharge skill level.";
+					mes "When you've learned Overcharge and are selling commodities to a merchant NPC, you will receive the regular sales price plus additional money depending on the Overcharge skill level.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Oppositely, Discount is the skill, on your buying commodities from a merchant NPC, you can purchase it at the price discounted on the regular selling price as per the skill level.";
+					mes "Similarly with Discount, when you are buying commodities from a merchant NPC, you can purchase it at a discount from the regular price depending on your Discount skill level.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Be carefult that these two skills are to be used only in trading with usual merchant's NPC, not with other manufacturing NPC or among adventurers.";
+					mes "It's imporant to note that these two skills are to be used only in trading with shop merchant NPC's, not with manufacturing or other NPC's, nor among your fellow adventurers.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Do you have more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 				case 3:
 					mes "[Steward Aydin]";
-					mes "Enlarge Weight Limit, Push Cart, Vending. These three skills have close relationships.";
+					mes "About Enlarge Weight Limit, Push Cart, Vending... these three skills are closely related.";
 					next;
 					mes "[Steward Aydin]";
-					mes "First talking about ^4d4fffEnlarge Weight Limit^000000 skill, is the skill to increase th character's basic earned points. It is an automatic operational passive skill when you learn it.";
+					mes "Firstly with ^4d4fffEnlarge Weight Limit^000000, it's a skill to increase the limit of how much you can carry. It is a passive skill that's automaticly operational when you learn it.";
 					next;
 					mes "[Steward Aydin]";
-					mes "This earned point skill reaching a certain level, you can use the skill called ^4d4fffPush Cart^000000";
+					mes "Once Weight Limit has reached a certain level, you can use a skill called ^4d4fffPush Cart^000000";
 					next;
 					mes "[Steward Aydin]";
-					mes "But this Push Cart skill has the disadvantage of the slowdown of moving speed, though the advantage of high loading capacity.";
+					mes "Though Push Cart has the disadvantage of slowing down your movement speed, the advantage is a higher load capacity because you can then get a cart to carry items in.";
 					next;
 					mes "[Steward Aydin]";
-					mes "When this Push Cart skill reaches at a certain level, you can use the skill called ^4d4fffVending^000000. This is used to sell your own items to other players.";
+					mes "Then when the Push Cart skill reaches a certain level, you can use the skill called ^4d4fffVending^000000. This is used to sell items in your cart to other players.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Besides these, is there any more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 				case 4:
 					mes "[Steward Aydin]";
-					mes "Item Appraisal skill is a supplementary skill rather than the essential one.";
+					mes "Item Appraisal is a supplementary skill rather than an essential one, but it's a good one.";
 					next;
 					mes "[Steward Aydin]";
-					mes "If you learn this skill you can identify items without having to use a Magnifying Glass Item.";
+					mes "If you learn this skill, you can identify items without needing to use a Magnifying Glass item.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Besides these, is there any more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 			}
 		}
 	} else {
 		mes "[Steward Aydin]";
-		mes "I am very busy clearing an account book, so how about talking next time?";
+		mes "I am very busy clearing our account book just now, how coming back another time?";
 		close;
 	}
 }

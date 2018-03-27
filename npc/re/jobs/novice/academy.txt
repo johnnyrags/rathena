@@ -4263,11 +4263,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ë£¨ë‚˜í‹±ì¹´ë“œ.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "íŒŒë¸Œë¥´ì¹´ë“œ.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4289,11 +4289,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "í¬ë§ì¹´ë“œ.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings, found bouncing around the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ë£¨ë‚˜í‹±ì¹´ë“œ.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4315,15 +4315,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "í¬ë§ì¹´ë“œ.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings, found bouncing around the field of Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "íŒŒë¸Œë¥´ì¹´ë“œ.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ë£¨ë‚˜í‹±ì¹´ë“œ.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4345,11 +4345,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "í¬ë§ì¹´ë“œ.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be gotten from Porings in the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "ë£¨ë‚˜í‹±ì¹´ë“œ.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;
@@ -11797,7 +11797,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					mes "[Vicente]";
 					mes "Oh... Mr. Verkhasel...";
 					mes "Don't be like this among family.";
-					mes "Why are you dividing us into teams?";
+					mes "Why are you having us pick sides?";
 					next;
 					cutin "gc_verkhasel01.bmp", 0;
 					mes "[Verkhasel]";
@@ -11812,7 +11812,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					next;
 					cutin "gc_mayssel03.bmp", 1;
 					mes "[Mayssel]";
-					mes "..........You seem friendly.. The two of you...";
+					mes "..........You should be friends.. The two of you...";
 					next;
 					cutin "", 255;
 					mes "The mood has become tense.";
@@ -11822,7 +11822,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
 				mes "You already know everything you need.";
-				mes "Are you here just to observe? Emmm?";
+				mes "Are you here just to observe? Hmmm?";
 				mes "Why don't you help your juniors, rather than just watch?";
 				close2;
 				cutin "", 255;
@@ -12122,12 +12122,12 @@ iz_ac02_d,1,1,0	duplicate(#nbacStone03)	#nbacStone03_d	CLEAR_NPC
 iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 	if (isbegin_quest(4269) < 1) {
 		mes "[Alice Yisha]";
-		mes "Did you ^ff0000register with the Criatura Academy^000000?";
-		mes "You can register at ^ff0000information center of Criatura Academy^000000.";
+		mes "Did you ^ff0000register with Criatura Academy^000000?";
+		mes "You can register with the ^ff0000information center for Criatura Academy^000000.";
 		cutin "acact_03.bmp", 2;
 		next;
 		mes "[Alice Yisha]";
-		mes "It is annoying... but you need to register so you can receive ^ff0000lots of education and service of Criatura Academy^000000.";
+		mes "It's a bother... but you need to register in order to get access to our ^ff0000many services and educational courses for Criatura Academy^000000.";
 		cutin "acact_01.bmp", 2;
 		close2;
 		cutin "", 255;
@@ -12135,9 +12135,9 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 	} else {
 		if (isbegin_quest(11343) == 0) {
 			mes "[Alice Yisha]";
-			mes "oh Odin!";
+			mes "By Odin!";
 			mes "Nice to meet you.";
-			mes "I am Alice Yisha ^ff0000in charge of Acolytes^000000.";
+			mes "I am Alice Yisha ^ff0000in charge of Acolyte education^000000.";
 			cutin "acact_01.bmp", 2;
 			setquest 11343;
 			completequest 11343;
@@ -12145,7 +12145,7 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		} else {
 			mes "[Alice Yisha]";
 			mes "Welcome~";
-			mes "Glad to meet you again.";
+			mes "It's nice to see you again.";
 			cutin "acact_01.bmp", 2;
 			if (isbegin_quest(11343) == 1)
 				completequest 11343;
@@ -12153,13 +12153,13 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		}
 		if (Class == Job_Novice) {
 			mes "[Alice Yisha]";
-			mes "If you did not select Acolyte as a job, why don't you study more about it?";
+			mes "If you haven't chosen a job for yourself yet, why don't you learn about Acolyte?";
 			cutin "acact_01.bmp", 2;
 			next;
 			.@menu$ = "What is an Acolyte?:Battle Acolyte:Support Acolyte:Change job class to Acolyte.:End Conversation";
 		} else {
 			mes "[Alice Yisha]";
-			mes "I guess you do not need my help any more.";
+			mes "I guess there's not much else I can help you with.";
 			mes "Do you have any questions about Acolytes?";
 			cutin "acact_03.bmp", 2;
 			next;
@@ -12168,57 +12168,57 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		switch(select(.@menu$)) {
 			case 1:
 				mes "[Alice Yisha]";
-				mes "An acolyte serves ^ff0000Odin^000000 so it can use ^ff0000Holy skills^000000 according to the will of Odin.";
+				mes "An acolyte serves ^ff0000Odin^000000 so it can use ^ff0000Holy^000000 skills according to the will of Odin.";
 				cutin "acact_02.bmp", 2;
 				next;
 				mes "[Alice Yisha]";
-				mes "Most skills are based on ^ff0000the purpose of treatment or aid^000000 so it is a very important job for ^ff0000party hunting^000000.";
+				mes "The purposes of most skills ^ff0000are treatment and aid^000000, so it is a very important role for ^ff0000party hunting^000000.";
 				cutin "acact_03.bmp", 2;
 				next;
 				mes "[Alice Yisha]";
-				mes "It is a ^ff0000hybrid job^000000 which can change ^ff0000attack type^000000 depends on increased status, but the range of weapon is narrow because they don't use fatal killing weapons for religious reason.";
+				mes "Acolyte is also a ^ff0000hybrid job^000000 that can change ^ff0000attack type^000000 depending on their status, but their weapon range is narrow because for religious reasons, they use less leathal weapons.";
 				close2;
 				cutin "", 255;
 				end;
 			case 2:
 				mes "[Alice Yisha]";
-				mes "An acolyte is categorized as ^ff0000support type^000000 and ^ff0000physical attack type^000000.";
+				mes "An Acolyte can be a ^ff0000support type^000000 or a ^ff0000physical attack type^000000. Which do you want to hear about?";
 				next;
 				switch(select("Support type", "Attack type", "Stop.")) {
 				case 1:
 					mes "[Alice Yisha]";
-					mes "^ff0000INT^000000 is important status for ^ff0000support type Acolytes^000000.";
-					mes "^ff0000INT^000000 enhances ^ff0000treatment function^000000 and increases ^ff0000SP^000000 which is necessary for using skills.";
-					mes "It also helps ^ff0000SP recovery^000000.";
+					mes "^ff0000INT^000000 is a very important stat for ^ff0000support type Acolytes^000000.";
+					mes "^ff0000INT^000000 enhances ^ff0000healing ability^000000 and increases ^ff0000SP^000000, which you'll need a lot of for the use of skills.";
+					mes "It also helps with ^ff0000SP recovery^000000.";
 					cutin "acact_02.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "But  aid type acolyte has a weakness point such as ^ff0000It is difficult to hunt alone^000000.";
-					mes "So it goes huning with ^ff0000party^000000 or use ^ff0000heal^000000 skill to monsters with ^ff0000fire-attribute^000000.";
+					mes "But going the support route has its weak points, such as ^ff0000making it difficult to hunt alone^000000.";
+					mes "So it's a good idea to hunt with ^ff0000party^000000 or to use ^ff0000healing^000000 skill on monsters that have ^ff0000fire-attribute^000000.";
 					next;
 					mes "[Alice Yisha]";
-					mes "It is like ^ff0000heal skill with holly power is fatal to undead with fire-attribute^000000.";
+					mes "^ff0000A heal skill with holly power is powerful against undead monsters with fire-attribute^000000.";
 					cutin "acact_01.bmp", 2;
 					close2;
 					cutin "", 255;
 					end;
 				case 2:
 					mes "[Alice Yisha]";
-					mes "The important status FOR ^ff0000physical attack type^000000 acolyte is ^ff0000STR, VIT, AGI, DEX^000000.";
-					mes "The status seem to be complicated compare to support type but it is simple indeed.";
+					mes "The important stats for a ^ff0000physical attack type^000000 Acolyte are ^ff0000STR, VIT, AGI, DEX^000000.";
+					mes "This may seem complicated in comparison to support type, but it's simpler than it seems.";
 					cutin "acact_02.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "^ff0000STR is the power, increases attack power, VIT is physical power, AGI is attack , speed and dodge, DEX increases hitting rate and skill casting speed.";
+					mes "^ff0000STR is the strength for increasing attack power, VIT is vitality for endurance, AGI is agility for attack speed and evasion, DEX is dexterity for increasing hit rate and skill casting speed.";
 					cutin "acact_01.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "For the character of ^ff0000Attack type^000000, ^ff0000DEX^000000 will be most important status...no?";
-					mes "If the attack does not hit the enemy, the attack is meaningless.";
-					mes "You may increase STR, VIT, AGI according to your style.";
+					mes "For the ^ff0000attack type^000000 character, ^ff0000DEX^000000 should be prioritized first...don't you think?";
+					mes "If the attack misses the enemy, it becomes meaningless.";
+					mes "As for the others, STR, VIT, and AGI, prioritize them according to your fighting style.";
 					next;
 					mes "[Alice Yisha]";
-					mes "You might think an Acolyte is not strong enough because it has no attack type skill, it enables use of sub essential skills which enhance the powers as much as you want. It helps your stable hunting.";
+					mes "Though you might think an Acolyte is weak because it lacks a physical attack skill, other skills can be used in a way to meanigfully enhance battle performance. It can result in real stability in hunting.";
 					close2;
 					cutin "", 255;
 					end;
@@ -12231,30 +12231,30 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 				}
 			case 3:
 				mes "[Alice Yisha]";
-				mes "An acolyte has lots of skills.";
-				mes "All those skills are useful.";
+				mes "An Acolyte has lots of skills.";
+				mes "All skills are useful.";
 				next;
 				mes "[Alice Yisha]";
-				mes "^ff0000Heal^000000 is for the wounds, It is also used to attack undead with opposite attribute.";
-				mes "Increase the power related to ^ff0000speed^000000 and ^ff0000[Increase Agi]^000000 to increase  ^ff0000movement speed^000000";
-				mes "^ff0000[Blessing]^000000 can ^ff0000enhance^000000 ^ff0000STR, INT, DEX^000000 at the same time.";
+				mes "^ff0000Heal^000000 is for treating damage, and can also be used to attack undead that have the opposite attribute to heal.";
+				mes "^ff0000[Increase Agi]^000000 powers up skills that depend on ^ff0000speed^000000 and also increases  ^ff0000movement speed^000000";
+				mes "^ff0000[Blessing]^000000 will ^ff0000enhance^000000 ^ff0000STR, INT, DEX^000000 simultaneously.";
 				next;
 				mes "[Alice Yisha]";
-				mes "^ff0000[Teleport]^000000 is to ^ff0000move^000000 to other places.";
-				mes "^ff0000[Warp Portal]^000000 can open a gate to the ^ff0000Places saved in memory^000000.";
-				mes "There are still more skills as well.";
+				mes "^ff0000[Teleport]^000000 is to instantly ^ff0000warp^000000 to a different point on the current map.";
+				mes "^ff0000[Warp Portal]^000000 will open a gate to ^ff0000Save points in recent memory^000000.";
+				mes "And there are still more skills beyond this.";
 				next;
 				mes "[Alice Yisha]";
-				mes "Ask ^ff0000if you want to experience skills of an Acolyte, ask the sister next to you^000000.";
-				mes "Now I am reading an introductory skill.";
+				mes "^ff0000If you want to experience the skills of an Acolyte, talk the nun next to you^000000.";
+				mes "I'll be here reading about introductory skill.";
 				emotion ET_HUK, getnpcid(0, "A Nun#"+strnpcinfo(2));
 				close2;
 				cutin "", 255;
 				end;
 			case 4:
 				mes "[Alice Yisha]";
-				mes "oh my!";
-				mes "So.. you decided to be an Acolyte?";
+				mes "Oh my!";
+				mes "So.. you have decided to be an Acolyte?";
 				mes "Odin welcomes you.";
 				cutin "acact_02.bmp", 2;
 				next;
@@ -12265,22 +12265,22 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 				if (BaseLevel > 14) {
 					mes "[Alice Yisha]";
 					mes "Please visit ^ff0000Father Mareusis^000000 at the church in the ^ff0000northeast corner^000000 of ^ff0000Prontera.^000000";
-					mes "At ^ff0000Job Level 10^000000 you can join the ministry.";
+					mes "If you are at ^ff0000Job Level 10^000000 or above, you will be able to join the ministry.";
 					cutin "acact_01.bmp", 2;
 					close2;
 					cutin "", 255;
 					end;
 				} else if (JobLevel < 10) {
 					mes "[Alice Yisha]";
-					mes "Oh my?! You haven't accomplished the basic practice yet?! You have long way to go! Come again after increasing your job level!";
+					mes "Oh my?! You haven't done basic leveling yet?! You have a long way to go! Come back after increasing your job level!";
 					close2;
 					cutin "", 255;
 					end;
 				} else {
 					mes "[Alice Yisha]";
-					mes "Wonderful! I'll transfer you to the local ministry at Prontera.";
+					mes "Wonderful! I'll send you to the local ministry in Prontera.";
 					mes "^ff0000Please visit Father Mareusis at the church in the northeast corner of Prontera.^000000";
-					mes "At ^ff0000Job Level 10^000000 you can join the ministry.";
+					mes "If you've reached ^ff0000Job Level 10^000000 or above, you will be able to join the ministry.";
 					cutin "acact_01.bmp", 2;
 					next;
 					if (select("Go to the field south of Prontera", "End Conversation") == 2) {
@@ -12291,7 +12291,7 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 						end;
 					}
 					mes "[Alice Yisha]";
-					mes "Good, I wish you luck~";
+					mes "Wonderful, I wish you luck~";
 					mes "Let's go~";
 					close2;
 					cutin "", 255;
@@ -12318,8 +12318,8 @@ iz_ac02_d,156,169,5	duplicate(Acolyte Leader Alice#2)	Acolyte Leader Alice#2_d	4
 iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 	if (JobLevel > 10 || Class != Job_Novice) {
 		mes "[A nun]";
-		mes "Wow... this academy is amazing?";
-		mes "It was not like this when I used to train in the past.";
+		mes "Wow... isn't this Academy amazing?";
+		mes "It wasn't like this when I used to train here in the past.";
 		close;
 	} else {
 		if (!checkweight(1119,3)) {
@@ -12328,25 +12328,25 @@ iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 		}
 		if (!isbegin_quest(4269)) {
 			mes "[A nun]";
-			mes "Wow... this academy is amazing?";
-			mes "It was not like this when I used to train in the past.";
+			mes "Wow... isn't this Academy amazing?";
+			mes "It wasn't like this when I used to train here in the past.";
 			next;
 			mes "[A nun]";
-			mes "You can ^ff0000register^000000 at the ^ff0000information center of the Criatura Academy^000000, it will be a great help.";
+			mes "You should ^ff0000register^000000 at the ^ff0000information center for Criatura Academy^000000. It will be a great help.";
 			close;
 		} else {
 			mes "[A nun]";
 			mes "Ahem..~";
 			mes "Who are you?";
-			mes "Are you interested in this ^ff0000introductory course^000000?";
+			mes "Are you interested in our ^ff0000introductory course^000000?";
 			next;
 			mes "[A nun]";
-			mes "This introductory manual is mysterious! It enables the ^ff0000use a couple of an Acolyte's skill^000000.";
+			mes "This introductory Manual is a blessing! It enables the ^ff0000use of a few Acolyte's skills^000000.";
 			mes "Will you borrow it?";
 			next;
 			if (select("Take the Acolyte Course.", "Stop.") == 2) {
 				mes "[A nun]";
-				mes "Well.. if you are not interested.. fine.";
+				mes "Well.. if you are not interested.. that's fine.";
 				mes "murmuring";
 				close;
 			}
@@ -12357,8 +12357,8 @@ iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 				close;
 			} else {
 				mes "[A nun]";
-				mes "Then, use it for good.";
-				mes "^ff0000Equip (double click or drag to equipment window)^000000 and open the ^ff0000skill window(Alt+S)^000000 to see the skills in manual.";
+				mes "Use it for good, okay?";
+				mes "^ff0000Equip the Manual (double click or drag to equipment window)^000000 and open the ^ff0000skill window(Alt+S)^000000 to the 'ETC' tab to see the skills provided by the manual.";
 				getitem 2821,1;// Acolyte_Manual
 				close;
 			}

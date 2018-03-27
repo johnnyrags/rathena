@@ -12391,14 +12391,14 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 			if (Class == Job_Ninja) {
 				if (!isbegin_quest(4268)) {
 					mes "[Ninja Guide]";
-					mes "If you want to be trained as a Ninja, just visit Hono O, who is at the room next to where you upgraded.";
+					mes "If you want to be trained as a Ninja just visit Hono O, who can be found in the room next to where you upgraded.";
 					setquest 4268;
 					close2;
 					cutin "", 255;
 					end;
 				} else if (isbegin_quest(4268) == 1) {
 					mes "[Ko Ori]";
-					mes "If you want to be trained as a Ninja, just visit Hono O, who is at the room next to where you upgraded.";
+					mes "If you want to be trained as a Ninja just visit Hono O, who can be found in the room next to where you upgraded.";
 					close2;
 					cutin "", 255;
 					end;
@@ -12412,10 +12412,10 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				}
 			} else {
 				mes "[Ninja Guide]";
-				mes "I am the guide to the way of the Ninja for newcomers.";
+				mes "I am the new adventurer's guide to the way of the Ninja.";
 				next;
 				mes "[Ninja Guide]";
-				mes "I am not interested in the people who are already on their path.";
+				mes "I am not interested in the people who are already on a different path.";
 				mes "Take your leave now...";
 				close2;
 				cutin "", 255;
@@ -12425,22 +12425,22 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 	} else {
 		if (Upper == 2) {
 			mes "[Ninja Guide]";
-			mes "A child cannot accept the life of the Ninja.";
-			mes "It is not easy to qualify for such a life, so do not feel sorry...";
+			mes "A child is not able to accept the life of the Ninja.";
+			mes "It is not easy to qualify this life, so do not feel too bad...";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		if (isbegin_quest(4269) != 2) {
 			mes "[Ninja Guide]";
-			mes "First of all, you must enroll in the Academy and visit me again.";
-			mes "Everything has to follow the correct procedures and being clumsy is no excuse.";
+			mes "First you must register with the Academy, then come and visit me again.";
+			mes "Everything must follow an order, and being clumsy is no excuse.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Ninja Guide]";
-		mes "Hmmm. So a new beginner has come eh?";
+		mes "Hmmm. So a new beginner has appeared, eh?";
 		mes "Why are you here?";
 		next;
 		switch(select("Explanation about the Ninja.", "I decided to be a Ninja.", "I don't have any business here.")) {
@@ -12450,80 +12450,80 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				mes "A beginner wishing to be a Ninja....";
 				mes "Ask me what you are curious about.";
 				next;
-				switch(select("What can I do if I become a Ninja?", "What is required to become a Ninja?", "I want to experience Ninja skills.", "I don't have any worries about Ninjas.")) {
+				switch(select("What can I do if I become a Ninja?", "What is required to become a Ninja?", "I want to experience Ninja skills.", "I am not curious about Ninjas.")) {
 				case 1:
 					mes "[Ninja Guide]";
-					mes "Ninja is a profession that allows you to attack while sneaking for maximum damage.";
-					mes "As Ninja has various kinds of deception skills, which is good for soloing.";
+					mes "Ninja is a profession that allows you to attack with stealth for maximum damage.";
+					mes "Ninja has various kinds of skills of deception, which is good for hunting alone.";
 					next;
 					mes "[Ninja Guide]";
-					mes "Not only can you learn Ninja technique similarly as magic, you can also make direct attacks, deal critical damage or throw knives at enemies.";
+					mes "Not only can you learn Ninja techniques that are similar to magic, you can also strike physical attacks, deal critical damage, or throw knives at enemies.";
 					next;
 					mes "[Ninja Guide]";
-					mes "But you can't do all of these things perfectly without sufficient equipment.";
-					mes "You will take more damage than others if you are hit.";
+					mes "But you won't get far if you don't equip yourself with properly.";
+					mes "Otherwise, you will take more damage than others if you are hit.";
 					next;
 					mes "[Ninja Guide]";
-					mes "Therefore, if the person who is not completely weary of this world chooses this job, with no discretion, they will not fail.";
+					mes "Therefore if a person who does not have a keen sense of the workings of the world chooses this job without discretion, they are destined to fail.";
 					next;
 					break;
 				case 2:
 					mes "[Ninja Guide]";
-					mes "Ninja can be trained in a variety of courses.";
-					mes "Everything has both one merit and one demerit.";
-					mes "You would better make your own decision after profound consideration.";
+					mes "Ninjas can be trained in a variety of ways.";
+					mes "As with everything, there are merits and detriments.";
+					mes "So choosing your course is best done after profound consideration.";
 					next;
 					mes "[Ninja Guide]";
-					mes "There are two major status which affect the degree of damages.";
-					mes "One is ^ff0000Power^000000, the other is ^ff0000Intelligence^000000,";
-					mes "Power affects the damages by^8E2323 physical attacks^000000 and^8E2323 throwing attacks^000000.";
-					mes "Intelligence affects the damage by ^8E2323Ninja's skill ^000000";
+					mes "There are two major stats to enhance damage inflicted.";
+					mes "One is ^ff0000Strength^000000, the other is ^ff0000Intelligence^000000,";
+					mes "Strength affects damage by^8E2323 physical attacks^000000 and^8E2323 throwing attacks^000000.";
+					mes "Intelligence affects damage by ^8E2323a Ninja's skills.^000000";
 					next;
 					mes "[Ninja Guide]";
-					mes "In addition to these, you can learn";
-					mes "other statuses not from the professional trainers like us";
-					mes "but from the trainers teaching the basic skills for battle.";
+					mes "In addition what you learn here, you can learn";
+					mes "other possibilities for stats not from professional trainers like us,";
+					mes "but from the trainers that teach basic skills for battle.";
 					next;
 					mes "[Ninja Guide]";
-					mes "For example, to raise up the hit rate,";
-					mes "What should you do?";
-					mes "To raise the defense, what do you wear? Etc...";
+					mes "For example, to increase your hit rate,";
+					mes "what stat should you work on?";
+					mes "To raise defense, what gear should you choose? And so on...";
 					next;
 					break;
 				case 3:
 					if (countitem(2940) > 0) {
 						mes "[Ninja Guide]";
-						mes "You can equip this manual to experience some skills.";
-						mes "Open up your skill window by pressing <Alt+S> and find the skills in the Misc TAB.";
+						mes "You can equip this Manual to test out some skills.";
+						mes "Open up your skill window by pressing <Alt+S> and find the skills in the 'MISC' tab.";
 						next;
 						mes "[Ninja Guide]";
-						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him and train your skills.";
+						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him to get a chance to try out your skills.";
 						next;
 						mes "[Ninja Guide]";
-						mes "He will give you some quests to complete. Use the Manual to help you in battle.";
+						mes "He will provide quests to complete. Use the Manual to help you in battle.";
 						if (countitem(13295) < 10)
 							getitem 13295,10;// Light_Shuriken
 						next;
 					} else {
 						mes "[Ninja Guide]";
-						mes "Make every useful moment count.";
-						mes "You can equip this manual to experience some skills.";
-						mes "Open up your skill window by pressing <Alt+S> and find the skills in the Misc TAB.";
+						mes "Make every moment count.";
+						mes "You can equip this Manual to test out some skills.";
+						mes "Open up your skill window by pressing <Alt+S> and find the skills in the 'MISC' tab.";
 						getitem 2940,1;// Ninja_Manual
 						getitem 13295,10;// Light_Shuriken
 						next;
 						mes "[Ninja Guide]";
-						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him and train your skills.";
+						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him to get a chance to try out your skills.";
 						next;
 						mes "[Ninja Guide]";
-						mes "He will give you some quests to complete. Use the Manual to help you in battle.";
+						mes "He will provide quests to complete. Use the Manual to help you in battle.";
 						next;
 					}
 					break;
 				case 4:
 					mes "[Ninja Guide]";
 					mes "Do you understand everything I told you?";
-					mes "That's all... You don't have any questions?";
+					mes "That's all, then... You don't have any questions?";
 					close2;
 					cutin "", 255;
 					end;
@@ -12533,32 +12533,32 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 		case 2:
 			if (!callfunc("F_CanChangeJob")) {
 				mes "[Ninja Guide]";
-				mes "I appreciate your braveness but, first of all, you have to be familiar with the current profession.";
+				mes "I appreciate your bravery but first of all, you have to be familiar with your current profession.";
 				next;
 				mes "[Ninja Guide]";
-				mes "Before you decide to become a Ninja,";
-				mes "you need to come back after reaching the novice's job level 9. Then, I will accept you.";
+				mes "Before you can decide to become a Ninja,";
+				mes "you need to reach job level 9 for Novice. Only then will I accept you.";
 				close2;
 				cutin "", 255;
 				end;
 			} else {
 				mes "[Ninja Guide]";
-				mes "This may be your last warning.";
+				mes "Let this be a last warning.";
 				mes "Becoming a Ninja means leading a difficult life.";
 				next;
 				mes "[Ninja Guide]";
-				mes "As Ninja don't belong to a guild, it is easily obtainable to Novices.";
-				mes "Make sure your decision is final!";
+				mes "As Ninjas don't belong to a guild, it is easily obtainable to Novices, but...";
+				mes "make sure your decision is one you will not regret!";
 				next;
 				if (select("I will reconsider.", "I already made up my mind.") == 1) {
 					mes "[Ninja Guide]";
-					mes "Well thought actions can often bring good results.";
+					mes "Well thought-out decisions bring the best results.";
 					close2;
 					cutin "", 255;
 					end;
 				}
 				mes "[Ninja Guide]";
-				mes "If you're so assertive, I have no choice but to guide you there.";
+				mes "If you're so certain, I have no choice but to guide you there.";
 				next;
 				mes "[Ninja Guide]";
 				mes "I will send you close to where you can change your job.";
@@ -12568,10 +12568,10 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				mes "Amatsu town is where you are going to arrive. Find the hidden tunnel in a vacant house.";
 				next;
 				mes "[Ninja Guide]";
-				mes "There you will meet a person who will guide you to becoming a Ninja.";
+				mes "There, you will meet a person who will guide you to becoming a Ninja.";
 				next;
 				mes "[Ninja Guide]";
-				mes "If you get lost in the town, well there is no way... Being ninja requires a level of observation power.";
+				mes "If you get lost in the town, well that is too bad... Being ninja requires a certain level of observation power.";
 				next;
 				mes "-Select ^ff0000Confirm^000000 to go to Amatsu.";
 				cutin "", 255;
@@ -12589,7 +12589,7 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 			mes "......";
 			next;
 			mes "[Ninja Guide]";
-			mes "I have no words to say, if you don't have any business with me.";
+			mes "I have nothing to say, if you don't have any business with me.";
 			close2;
 			cutin "", 255;
 			end;

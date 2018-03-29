@@ -264,8 +264,8 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 		mes "Soon we will head to Izlude where you can talk to other people like you just talked to me.";
 		next;
 		mes "[Captain Carocc]";
-		mes "Many youngsters visit the ^4d4dffKingdom of Rune-Midgarts^000000 to chase their dreams.";
-		mes "Izlude is a satellite city of Prontera, the capital of Rune-Midgarts.";
+		mes "Many youngsters visit the ^4d4dffKingdom of Rune Midgard^000000 to chase their dreams.";
+		mes "Izlude is a satellite city of Prontera, the capital of Rune Midgard.";
 		next;
 		mes "[Captain Carocc]";
 		mes "Izlude always welcomes young adventurers like you who have just started their journey through the world.";
@@ -279,7 +279,7 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 		mes "I will give you more details later. See you at the harbor deck.";
 		next;
 		mes "[Captain Carocc]";
-		mes "To get off this ship, you should enter the ^4d4dffShining Portal^000000 over there.";
+		mes "To get on the ship over there, you should enter the ^4d4dffShining Portal^000000.";
 		mes "All transportation is done through portals.";
 		setquest 7471;
 		completequest 7471;
@@ -2696,7 +2696,7 @@ iz_ac01,100,39,5	script	Academy Receptionist#1	4_F_01,{
 				break;
 			case 3:
 				mes "[Receptionist]";
-				mes "This town is called 'Izlude', the satellite and port city of the Capital City of the Kingdom of Rune-Midgarts, Prontera.";
+				mes "This town is called 'Izlude', the satellite and port city of the Capital City of the Kingdom of Rune Midgard, Prontera.";
 				next;
 				mes "[Receptionist]";
 				mes "This town was re-organized to better suit the education of Novices.";
@@ -6811,11 +6811,11 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	next;
 	mes "'Aaaahh!! Don't hurt me ~'";
 	next;
-	mes "You run to the place and see someone surrounded by punks. Because of your sudden appearace, the punks are surprised.";
+	mes "You run toward the sound and see someone surrounded by Thief Bugs. Because of your sudden appearace, the Thief Bugs are surprised.";
 	next;
 	mes "What would be your reaction to this situation?";
 	next;
-	switch(select("Fight against the punks", "Cast Magic.", "Call for Guards.", "Throw rocks at them.")) {
+	switch(select("Fight against the Thief Bugs", "Cast Magic.", "Call for Guards.", "Throw rocks at them.")) {
 	case 1:
 		.@question_01$ = "You subdue them easily.";
 		.@swordman_p = .@swordman_p + 1;
@@ -6839,7 +6839,7 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	mes ""+.@question_01$+"";
 	next;
 	mes "After clearing up the mess, you approach the person who was being attacked.";
-	mes "Do you think the person who was surrounded by punks is a man or a woman?";
+	mes "Do you think the person who was surrounded by Thief Bugs is a man or a woman?";
 	next;
 	if (select("Man", "Woman") == 1) {
 		.@question_02_01$ = "he";
@@ -6850,7 +6850,7 @@ iz_ac02,143,55,3	script	Cream Puff#ac	4_M_KID1,{
 	}
 	mes "From talking, you find out the encounter happened like this...";
 	next;
-	mes "Turns out that "+.@question_02_01$+" is the "+.@question_02_02$+" of a very rich family in Alberta and the punks attacked while "+.@question_02_01$+" was on an errand for the family.";
+	mes "Turns out that "+.@question_02_01$+" is the "+.@question_02_02$+" of a very rich family in Alberta and the Thief Bugs attacked while "+.@question_02_01$+" was on an errand for the family.";
 	next;
 	mes "What kind of errand was it?";
 	next;
@@ -9314,35 +9314,35 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 	if (Class == Job_Novice) {
 		if (isbegin_quest(4269) == 2) {
 			mes "[Mage Chuck]";
-			mes "I am the one in charge of magic studies in Criatura Academy";
+			mes "I am in charge of magic studies here in Criatura Academy";
 			mes "^0000FFA genius Mage^000000~!";
-			mes "^0000FFMage Chuck^000000.";
+			mes "^0000FFThey call me Mage Chuck^000000.";
 			next;
 			mes "[Mage Chuck]";
-			mes "Someone like you who has magic talent but doesn't know how to become a Mage.";
-			mes "For a ^FF0000Novice^000000 like you I'm offering my training.";
+			mes "I feel you have magic talent but maybe are unsure of how to become a Mage.";
+			mes "For a ^FF0000Novice^000000 like you, I'm offering my training.";
 			next;
 			mes "[Mage Chuck]";
 			mes "How about it?";
-			mes "Do you wanna try out my priceless lessons?";
+			mes "Will you try out my invaluable lessons?";
 			next;
-			if (select("I will learn.", "No thanks!") == 2) {
+			if (select("I will.", "No thanks!") == 2) {
 				mes "[Mage Chuck]";
-				mes "If you don't listen to me, you'll regret of it.";
+				mes "If you don't learn from me, you'll regret of it.";
 				next;
 				mes "[Mage Chuck]";
 				mes "When you change your mind, come back to me.";
 			} else {
 				mes "[Mage Chuck]";
 				mes "Good! If that's your decision, I will do my best.";
-				mes "How much you learn depends on your own effort.";
+				mes "However, how much you learn will depend on your own effort.";
 				next;
 				mes "[Mage Chuck]";
 				mes "To become a Mage, you need to be very studious.";
-				mes "Ask me what you want to learn!";
+				mes "Ask me about what you want to learn!";
 				while(1) {
 					next;
-					switch(select("What is a Mage's primary role?", "What ^8B4513stats^000000 are good for Mage?", "What are Mage's ^8B4513skill^000000s?", "Can I try some skills?!", "I want to ^8B451Cchange job^000000 to Mage!", "I'll get back to you later")) {
+					switch(select("What is a Mage's primary role?", "What ^8B4513stats^000000 are good for Mage?", "What are Mage's ^8B4513skill^000000s?", "Can I try some skills?!", "I want to ^8B451Cchange my job^000000 to Mage!", "I'll get back to you later")) {
 					case 1:
 						mes "[Mage Chuck]";
 						mes "A Mage's primary role is to use magic to inflict powerful attacks.";
@@ -9352,27 +9352,27 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						mes "Be careful about the damage you take as a Mage.";
 						next;
 						mes "[Mage Chuck]";
-						mes "If you remember these little things you can become a great Mage.";
-						mes "Walk with pride as you grow in magic power~";
+						mes "If you remember these things you can become a great Mage.";
+						mes "Walk with pride as you grow your magic power~";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
 						break;
 					case 2:
 						mes "[Mage Chuck]";
-						mes "Doesn't a Mage remind you something solid?";
+						mes "Doesn't a Mage remind you of something solid?";
 						next;
 						mes "[Mage Chuck]";
 						mes "Sheer physical force is for brutes who increase their ^006400STR^000000.";
-						mes "For a ^0000FFgenius Mage^000000 like myself that's a waste.";
+						mes "For a ^0000FFgenius Mage^000000s like myself, that's a waste.";
 						next;
 						mes "[Mage Chuck]";
 						mes "Become wise and clever with your^006400 mind power^000000.";
-						mes "This is Mage's primary attribute- ^006400INT^000000, it's what's most important!";
+						mes "Mage's primary attribute, ^006400INT^000000, is what's most important!";
 						next;
 						mes "[Mage Chuck]";
-						mes "If you remember these little things you can become a great Mage.";
-						mes "Walk with pride as you grow in magic power~";
+						mes "If you remember these things you can become a great Mage.";
+						mes "Walk with pride as you grow your magic power~";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
@@ -9383,27 +9383,27 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						mes "The basis of these skills are the attributes ^006400<Water, Wind, Earth, Fire>^000000.";
 						next;
 						mes "[Mage Chuck]";
-						mes "As each element has its own^006400 range attack magic^000000, these are useful when dealing with many enemies~!!";
+						mes "As each element has its own^006400 range attack magic^000000, which are useful when dealing with many enemies~!!";
 						next;
 						mes "[Mage Chuck]";
-						mes "Ok enough talk.";
+						mes "Ok, enough talk.";
 						mes "I will show you my power by offering a demonstration.";
 						mes "You should be honored to be witnessing this!";
 						next;
 						mes "[Mage Chuck]";
 						switch(rand(1,7)) {
 						case 1:
-							mes "Detecting hidden enemies";
+							mes "For detecting hidden enemies,";
 							mes "^006400Sight^000000 !!!!";
 							specialeffect EF_SIGHT;
 							break;
 						case 2:
-							mes "Deflect all physical attacks";
+							mes "To deflect all physical attacks,";
 							mes "^006400Safety Wall^000000!!!!";
 							specialeffect EF_GLASSWALL;
 							break;
 						case 3:
-							mes "Fire damage premier ~!!!";
+							mes "Fire damage inflicter ~!!!";
 							mes "^006400Fire Ball^000000!!!!";
 							specialeffect EF_FIREBALL;
 							break;
@@ -9431,8 +9431,8 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						}
 						next;
 						mes "[Mage Chuck]";
-						mes "Doesn't it shake your heart to see my skills?";
-						mes "You won't get hurt so don't worry~!";
+						mes "Does it not shake you to the core to see my skills?";
+						mes "You won't get hurt, don't worry~!";
 						next;
 						mes "[Mage Chuck]";
 						mes "Anything else you want to know about Mages?";
@@ -9440,38 +9440,38 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 					case 4:
 						if (isequippedcnt(2824) > 0 || countitem(2824) > 0) {
 							mes "[Mage Chuck]";
-							mes "I think you already received a ^FF0000Mage Manual^000000~!";
+							mes "It looks like you already received a ^FF0000Mage Manual^000000~!";
 							mes "I can't offer you two of them.";
 							mes "One is good enough~!";
 							next;
 							mes "[Mage Chuck]";
 							mes "Try out the skills after equipping the^006400 Mage Manual^000000.";
-							mes "Then hunt with the skills given to you in your skill window.";
+							mes "Then go out to hunt with the skills given to you in your skill window.";
 							next;
 							mes "[Mage Chuck]";
 							mes "Anything else you want to know about Mages?";
 						} else {
 							if (checkweight(607,1)) {
 								mes "[Mage Chuck]";
-								mes "Right, you must be set with your heart firm on becoming a Mage.";
+								mes "Right, your heart must be firmly set on becoming a Mage.";
 								next;
 								mes "[Mage Chuck]";
-								mes "OK! Then I'll give you a chance to taste what it is to become a Mage.";
+								mes "Great! Then I'll give you a taste of what it is to become a Mage.";
 								mes "Take this ^006400Mage Manual^000000.";
-								mes "I'll let you borrow it!";
+								mes "I'll let you borrow it for a while!";
 								next;
 								mes "[Mage Chuck]";
-								mes "Try out the skills after equipping the^006400 Mage Manual^000000.";
-								mes "Then hunt with the skills given to you in your skill window.";
+								mes "Try out some skills after equipping the^006400 Mage Manual^000000.";
+								mes "Then go out to hunt with the skills given to you in your skill window.";
 								next;
 								mes "[Mage Chuck]";
-								mes "It's a valuable item so don't lose it.";
-								mes "If you want to become a genius ^0000FFMage^000000 like me, follow in my path.";
+								mes "It's a valuable item, so don't lose it.";
+								mes "If you want to become a genius ^0000FFMage^000000 like me, follow in my footsteps.";
 								getitem 2824,1;// Mage_Manual
 								break;
 							} else {
 								mes "[Mage Chuck]";
-								mes "If you want to become a Mage lighten up your inventory load.";
+								mes "If you want to become a Mage, lighten up your inventory load first.";
 								next;
 								mes "[Mage Chuck]";
 								mes "Anything else you want to know about Mages?";
@@ -9481,53 +9481,53 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 					case 5:
 						if (isbegin_quest(9264) == 2) {
 							mes "[Mage Chuck]";
-							mes "Ah~ you want to change to a magician?";
+							mes "Ah~ you want to become a Mage?";
 							next;
 							mes "[Mage Chuck]";
-							mes "I seem to have used a great deal of magic sending you before...";
-							mes "Because of too many students like you, I cannot send you again!";
+							mes "I already used a great deal of magic sending you to Geffen so you could do that...";
+							mes "Too many students like you have drained me of my power, I cannot send you again!";
 							next;
 							mes "[Mage Chuck]";
-							mes "If you really want to go, then please go speak to the Kafra Staff and use their Teleport Service.";
+							mes "If you really want to go, please go speak to the Kafra Staff and use their Teleport Service to get you to Geffen.";
 						} else {
 							mes "[Mage Chuck]";
-							mes "Ah~ you want to change to a magician?";
+							mes "Ah~ you want to become a Mage?";
 							next;
 							mes "[Mage Chuck]";
-							mes "To change your job to a magician, you must visit the Magician's Guild.";
-							mes "I can send you close to there, but...";
+							mes "To change your job, you must visit the Magician's Guild.";
+							mes "I can send you to a location that's close to it, but...";
 							next;
 							mes "[Mage Chuck]";
-							mes "You must first reach ^006400Job level 10^000000 and ^006400Basic Skill level 9^000000.";
+							mes "First, you must reach ^006400Job level 10^000000 and have ^006400Basic Skill level 9^000000.";
 							next;
 							if (!callfunc("F_CanChangeJob")) {
 								mes "[Mage Chuck]";
 								mes "You don't seem ready!";
-								mes "If you want to change your job, you must first be ^006400Job level 10^000000 and ^006400Basic Skill level 9^000000.";
-								mes "Then come back and see me!";
+								mes "If you want to change your job, you must first be ^006400Job level 10^000000 and have ^006400Basic Skill level 9^000000.";
+								mes "Come back and see me when you've done that!";
 								next;
 								mes "[Mage Chuck]";
-								mes "What else do you want to know about magicians?";
+								mes "What else do you want to know about Mages?";
 							} else {
 								mes "[Mage Chuck]";
-								mes "Ah, it seems that you already have those requirements!";
+								mes "Ah, it seems that you have already met those requirements!";
 								mes "Do you want to change your job immediately?";
 								next;
 								if (select("No", "Yes") == 1) {
 									mes "[Mage Chuck]";
-									mes "Okay, when you have decided please come back!";
+									mes "Okay, plese come back when you have decided!";
 									next;
 									mes "[Mage Chuck]";
-									mes "What else do you want to know about magicians?";
+									mes "What else do you want to know about Mages?";
 								} else {
 									mes "[Mage Chuck]";
 									mes "In that case, I'll use magic to send you near ^8B4513Geffen^000000, where the Magician's Guild is.";
-									mes "It is there that you will be able to become a magician.";
+									mes "It is there that you will be able to become a Mage.";
 									next;
 									mes "[Mage Chuck]";
-									mes "Once I send you, you will speak to the ^0000FFMage's Guild Guide^000000.";
+									mes "Once I send you, speak to the ^0000FFMage's Guild Guide^000000.";
 									mes "They will be able to assist you further.";
-									mes "Let's go! I'm ready to send you there!";
+									mes "Let's go! I'm ready to send you over!";
 									next;
 									mes "[Mage Chuck]";
 									mes "Whoosh Whoosh";
@@ -9545,11 +9545,11 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 						break;
 					case 6:
 						mes "[Mage Chuck]";
-						mes "Yes~ Go meet other teachers then come back.";
-						mes "Of course, Mages are most alluring of them all.~";
+						mes "Yes~ Might as well hear from other teachers before deciding.";
+						mes "But of course, Mage is the most alluring job of them all~";
 						next;
 						mes "[Mage Chuck]";
-						mes "You'll choose Mage again I have no doubt about it~~!!";
+						mes "You'll come back to Mage again, I have no doubt about it~~!!";
 						mes "Haha see you later~";
 						break;
 					}
@@ -9558,13 +9558,13 @@ iz_ac02,148,110,3	script	Mage Chuck#ac	4_M_JOB_WIZARD,{
 			}
 		} else {
 			mes "[Mage Chuck]";
-			mes "First you'll have to complete your ^8B4513registration^000000 at the Academy front desk.";
-			mes "If you go to the 1st floor of the academy someone will help you register.";
+			mes "First, you need to complete your ^8B4513registration^000000 at the Academy front desk.";
+			mes "If you go to the 1st floor of the Academy, someone will help you register.";
 		}
 	} else {
 		mes "[Mage Chuck]";
-		mes "You're no longer the innocent ^8b4513Novice^000000 who doesn't know anything~?";
-		mes "I don't have anything to teach you~!";
+		mes "You're no longer the naive ^8b4513Novice^000000 who doesn't know anything~?";
+		mes "Then I don't have anything left to teach you~!";
 	}
 	close2;
 	cutin "", 255;
@@ -9588,16 +9588,16 @@ OnTouch:
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "You look a little exhausted...";
-		mes "Though.. to become a magician is exhausting in a way...";
+		mes "I suppose.. becoming a Mage is exhausting, in some ways...";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "First off, my task is to guide you to the Mage's guild!";
+		mes "First off, my task is to guide you to the Magician's Guild.";
 		mes "Go straight to the right!";
 		mes "After ^8B4513crossing the bridge^000000, you will see the entrance to ^FF0000Geffen^000000!";
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "Once there,";
-		mes "You should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
+		mes "you should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
 		mes "Speak to him, he will continue to guide you to the Magician's Guild!";
 		nov_3_magician = 2;
 		completequest 9264;
@@ -9612,13 +9612,13 @@ OnTouch:
 gef_fild07,89,208,6	script	Magician's Guild Guide#1	2_F_MAGICMASTER,{
 	if (isbegin_quest(9265) == 1) {
 		mes "[Magician's Guild Guide]";
-		mes "First off, my task is to guide you to the Mage's guild!";
+		mes "First off, my task is to guide you to the Magician's guild.";
 		mes "Go straight to the right!";
 		mes "After ^8B4513crossing the bridge^000000, you will see the entrance to ^FF0000Geffen^000000!";
 		next;
 		mes "[Magician's Guild Guide]";
 		mes "Once there,";
-		mes "You should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
+		mes "you should find our <NAVI>^4D4DFF[Magician's Guild Guide]^000000<INFO>geffen,43,123,</INFO></NAVI>.";
 		mes "Speak to him, he will continue to guide you to the Magician's Guild!";
 	} else {
 		mes "[Magician's Guild Guide]";
@@ -9638,37 +9638,37 @@ OnInit:
 geffen,43,123,6	script	Magician's Guild Guide#2	2_F_MAGICMASTER,{
 	if (isbegin_quest(9265) == 1) {
 		mes "[Magician's Guild Guide]";
-		mes "Ah, you made it all the way here. Very good for an academy student!";
+		mes "Ah, you made it all the way here. Very good for an Academy student!";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Before this step-by-step guide, they would get lost and frustrated.";
+		mes "Before we were tasked to provide step-by-step navigation, students would get lost and frustrated.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Anyways, let's keep this short.";
-		mes "I will now tell you the route to the Mage's Guild!";
+		mes "Anyway, let's keep this short.";
+		mes "I will give you the route to the Mage's Guild!";
 		mes "The way to go is quite simple...";
-		mes "From here, go toward 11 o'clock, you will see the Mage's Guild.";
+		mes "From here head in the direction of 11 o'clock, until you see the Mage's Guild.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Just go inside, and upstairs a little to find the";
-		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>";
-		mes "From there, he will assist you in becoming a Mage.";
+		mes "Once you go inside, head upstairs a little to find the";
+		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>.";
+		mes "He can assist you in becoming a Mage.";
 		completequest 9265;
 		erasequest 9265;
 		setquest 9266;
 	} else if (isbegin_quest(9266) == 1) {
 		mes "[Magician's Guild Guide]";
 		mes "The way to go is quite simple...";
-		mes "From here, go toward 11 o'clock, you will see the Mage's Guild.";
+		mes "From here head in the direction of 11 o'clock, until you see the Mage's Guild.";
 		next;
 		mes "[Magician's Guild Guide]";
-		mes "Just go inside, and upstairs a little to find the";
-		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>";
-		mes "From there, he will assist you in becoming a Mage.";
+		mes "Once you go inside, head upstairs a little to find the";
+		mes "<NAVI>^4D4DFF[Mage Guildsman]^000000<INFO>geffen_in,164,124,</INFO></NAVI>.";
+		mes "He can assist you in becoming a Mage.";
 	} else {
 		mes "[Magician's Guild Guide]";
 		mes "I am in charge of bringing ^8B4513Criatura Academy^000000 students to the Mage's guild.";
-		mes "These days the academy has a lot of new students so I'm happy to be working.";
+		mes "These days the academy has a lot of new students, so I'm happy to be working.";
 	}
 	close;
 
@@ -9687,17 +9687,17 @@ OnInit:
 iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	disable_items;
 	if (!checkweight(714,3) || (MaxWeight - Weight) < 10000) {
-		mes "- As you are overloaded with so many items, quest can't be proceeded. -";
+		mes "- The quest can't be proceeded, as you are overloaded with too many items. -";
 		close;
 	}
 	if (BaseLevel > 15 || Class != Job_Novice) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
 		mes "Ehm?";
-		mes "This class only for Novices just starting their adventure.";
+		mes "This class only for Novices just starting their journey.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Looking at you, you seem like you need some help. How about going to another place?";
+		mes "Looking at you, you don't seem like you would need my help. Perhaps you meant to talk to someone else?";
 		close2;
 		cutin "", 255;
 		end;
@@ -9706,10 +9706,10 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
 		mes "Oh~";
-		mes "At a glance, hey, you like the lost baby sheep.. Here the non registered passengers are prohibited.";
+		mes "You look like a lost baby sheep.. non-registered passengers are prohibited here.";
 		next;
 		mes "[Salim Hamid]";
-		mes "If you want to look around this area without physical prohibiton, you would better register first at the info desk at the Academy entrance.";
+		mes "If you want to look around this area freely, you would do better to register yourself with the info desk at the Academy entrance.";
 		close2;
 		cutin "", 255;
 		end;
@@ -9718,36 +9718,36 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
 		mes "Ho Oh~";
-		mes "You look like you're ready to change to a first job.";
+		mes "It looks like you're ready to change to a first job.";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "How about it? Are you interested in the way of the Merchant? If so, I may be helpful for you.";
+		mes "How about it? Are you interested in the way of the Merchant? If so, I may be helpful to you.";
 		next;
 		if (select("Not interest.", "Interested.") == 1) {
 			mes "[Salim Hamid]";
-			mes "Oh.. No...";
-			mes "Well, there is no way. Our Criatura Academy put the priority to the adventurer's choice.";
+			mes "Oh no...";
+			mes "Well, it can't be helped. Criatura Academy prioritizes the adventurer's choice.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Good~ Then, I will send you to the town of Alberta. There you can become a merchant.";
+		mes "Good~ Then, I will send you to the town of Alberta. That is where you can go to become a merchant.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Do not go elsewhere, immediately enter the town.";
-		mes "Find the <NAVI>[Forge]<INFO>alberta_in,75 48</INFO></NAVI>.";
+		mes "When you arrive, do not wander off. Enter the town immediately.";
+		mes "Once inside, look for the <NAVI>[Forge]<INFO>alberta_in,75 48</INFO></NAVI>. Are you ready?";
 		next;
-		if (select("Not yet ready.", "I'm Ready!") == 1) {
+		if (select("Not ready yet.", "I'm Ready!") == 1) {
 			mes "[Salim Hamid]";
-			mes "Yes, I understand. When you are ready, let me see you again.";
+			mes "I understand. When you are ready, come to see me again.";
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Salim Hamid]";
-			mes "Good~ Please go to the Forge and find me.";
+			mes "Good~ Head to the Forge and look for me.";
 			close2;
 			setquest 12307;
 			warp "pay_fild03", 388, 68;
@@ -9758,7 +9758,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
 		mes "Oh~";
-		mes "Hey, you like a lost sheep. Do you know why you've come here?";
+		mes "You look like a lost sheep. Do you know why you've come here?";
 		next;
 		if (select("Don't Know", "Know.") == 1) {
 			mes "[Salim Hamid]";
@@ -9774,14 +9774,14 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		next;
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "I am ^0000ffSalim Hamid^000000 in charge with training the merchant course here at the Criatura Academy.";
+		mes "I am ^0000ffSalim Hamid^000000 in charge of the merchant training course here at Criatura Academy.";
 		next;
 		mes "[Salim Hamid]";
-		mes "This classroom is for Merchant applicants. In fact, this room is mainly for doing the finacial management of the Criatura Academy.";
+		mes "This class is for Merchant applicants. In fact, this room is mainly for doing finacial management for Criatura Academy.";
 		next;
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Next time, if you want to observe the merchant course, you can visit me, Salim Hamid and register.";
+		mes "If you want to observe the merchant course, you can visit me again and register.";
 		setquest 12302;
 		completequest 12302;
 		close2;
@@ -9791,22 +9791,22 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	if (isbegin_quest(12303) < 1) {
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Oh~ You came back. Do you want to experience the Merchant training course? It is a little bit difficult to the average beginner.";
+		mes "Oh~ You came back. Do you want to experience the Merchant training course? It is a little bit difficult for the average beginner.";
 		next;
-		if (select("No thanks!", "Sign me up!.") == 1) {
+		if (select("No thanks!", "Sign me up!") == 1) {
 			mes "[Salim Hamid]";
-			mes "Oh~ though it is a bit hard, it is worth learning. Sadly, there's no other way.";
+			mes "Oh~ though it is a bit hard, it is worth learning. I'm sad to hear you won't try, but whatever you decide.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Oh, yes... Then, first will you register your name in this student list?";
+		mes "Oh, good... Then, first, will you register your name on this student list?";
 		next;
 		if (select("Refuse.", "Put your name on the list.") == 1) {
 			cutin "aca_salim03.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Resistance from the beginning? This isn't the way to start training.";
+			mes "Resistance from the beginning? This isn't a great way to start training.";
 			close2;
 			cutin "", 255;
 			end;
@@ -9817,14 +9817,14 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		mes "^0000ff"+ strcharinfo(0) +"^000000...... right?";
 		next;
 		mes "[Salim Hamid]";
-		mes "First to observe the Merchant course, you need to have the Merchant mindset. A trader with less than 100 zeny could not be called a Merchant.";
+		mes "To start the Merchant course properly, you need to have a Merchant mindset. A trader with less than 100 zeny could not be called a Merchant.";
 		next;
 		cutin "aca_salim02.bmp", 2;
 		mes "[Salim Hamid]";
-		mes ""+ strcharinfo(0) +"^000000 come back to me with 100 Zeny in hand before the next class.";
+		mes ""+ strcharinfo(0) +"^000000, return with 100 Zeny in hand before your next class.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Of course, that money won't be taken. It is only A test to see your basic mindset to being a Merchant. Good luck.";
+		mes "Of course, we won't take the money from you. It is only a test to see if you have the right mindset to become a Merchant. Good luck.";
 		setquest 12303;
 		close2;
 		cutin "", 255;
@@ -9833,16 +9833,16 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		if (Zeny >= 100) {
 			cutin "aca_salim02.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Wow, you really came back with 100 zeny in hand. I feel your desire to learn clearly.";
+			mes "Wow, you really did it.. 100 zeny in hand. I can feel your desire to learn.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Now. I will give you a Merchant's manual. Equipped with it. Press Alt + S key and look at the skill window.";
+			mes "Now. I will give you a Merchant's manual. Equip it, then Press Alt + S to open the skill window.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Clicking the [MISC] tab on the skill window, you can see the Merchant manual skills.";
+			mes "If you click the [MISC] tab on the skill window, you should see the Merchant manual skills.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Now~ as we should go to the next course, equip the guide and see the skill, then speak to me again.";
+			mes "Now then~ we should move on to the next course. Equip the manual and check the skills, then speak to me again.";
 			getitem 2823,1;// Merchant_Manual
 			completequest 12303;
 			close2;
@@ -9851,17 +9851,17 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 		} else {
 			cutin "aca_salim02.bmp", 2;
 			mes "[Salim Hamid]";
-			mes "Hohohong.. Test is not easy? Will you give it up now?";
+			mes "Hohohong.. the test is not easy? Are you giving up the challenge?";
 			next;
-			if (select("Can't do it.", "Give it up.") == 1) {
+			if (select("Can't give up.", "Give it up.") == 1) {
 				mes "[Salim Hamid]";
-				mes "Will you? 100 zeny isn't hard to get pal.";
+				mes "You'll keep going, then? 100 zeny isn't hard to get, you know.";
 				close2;
 				cutin "", 255;
 				end;
 			} else {
 				mes "[Salim Hamid]";
-				mes "Yes, come back to me when you change your mind.";
+				mes "Okay, come back to me when you change your mind.";
 				erasequest 12303;
 				close2;
 				cutin "", 255;
@@ -9872,10 +9872,10 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	if (isbegin_quest(12304) < 1) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Now, how about attending the class concerning various basic skills which merchants should have for making money.";
+		mes "Now, I recommand a class to learn various basic skills that Merchants need for making money.";
 		next;
 		mes "[Salim Hamid]";
-		mes "This might be better for you to learn from the steward working on the field next door. Go to him for the Merchant theory course, then return to me.";
+		mes "This might be better to learn from the steward working in the field next door. Go to him for the Merchant Theory course, then return to me.";
 		setquest 12304;
 		close2;
 		cutin "", 255;
@@ -9883,31 +9883,31 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12304) == 1) {
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Haven't you gone to him for the class? Go to the steward next to me and return after completing the Merchant skill theory.";
+		mes "Haven't you gone to him for the class yet? Go to the steward nearby and return after completing Merchant skill theory.";
 		close2;
 		cutin "", 255;
 		end;
 	}
 	if (isbegin_quest(12305) < 1) {
 		mes "[Salim Hamid]";
-		mes "Have you come after a good lesson from the steward concerning what a Merchant can do?";
+		mes "Have you returned after a good lesson from the steward concerning what a Merchant can do?";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "By any chance, "+strcharinfo(0)+" do you have mind to learn more about Merchants here?";
+		mes "Well then, "+strcharinfo(0)+", do you have a mind to learn more about Merchants here?";
 		next;
-		if (select("I will look around at more jobs.", "Let me do it a little more.") == 1) {
+		if (select("I will look around at more jobs.", "I'd like to learn a little more.") == 1) {
 			mes "[Salim Hamid]";
-			mes "Yes, your open mind is good for you. As this academy has many other lecturers besides Merchants.";
+			mes "Yes, an open mind is good for you. Our Academy has many courses for jobs other than Merchants.";
 			next;
 			mes "[Salim Hamid]";
-			mes "Whenever you feel like learning again, come back to me "+strcharinfo(0)+".";
+			mes "Should you feel like learning more from me, come back to see me, "+strcharinfo(0)+".";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Is that so? OK, now how about learning the major effects of Merchant's stats? If you are ready, speak to me.";
+		mes "Is that so? Great, then how about learning the major effects of Merchant stats? If you are ready for that, speak to me again.";
 		setquest 12305;
 		close2;
 		cutin "", 255;
@@ -9915,71 +9915,71 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12305) == 1) {
 		cutin "aca_salim01.bmp", 2;
 		mes "[Salim Hamid]";
-		mes "Trader's stats are classified as two major series. One is for manufacturing, the other is for battle.";
+		mes "A trader's stats may go in one of two directions, depending on what they would like to specialize in. One option is best for crafting, the other is best for battle.";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Of course, these are for farther down in the future. At this moment, you are even short of stats to invest DEX enabling you to hunt a monster.";
+		mes "Of course, that becomes applicable further down the line on the Merchant path. At the moment, you are still at the point of needing things like DEX just to hunt monsters.";
 		next;
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "But, there is a big difference between your knowledge of the basic rules and being ignorant of it.";
-		mes "Let's learn about it one by one.";
+		mes "But it's better to have knowledge of the basics sooner than later, rather than be ignorant of them.";
+		mes "So let's learn about these one at a time.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Now, what series do we start with?";
+		mes "Now, what do you want to start with?";
 		while(1) {
 			next;
-			switch(select("Already know it.", "Battle Stats.", "Crafting Stats.")) {
+			switch(select("Already know both.", "Battle Stats.", "Crafting Stats.")) {
 			case 1:
 				mes "[Salim Hamid]";
-				mes "It will be OK as it is, won't it?";
+				mes "So you are okay with what you know?";
 				next;
-				if (select("I already know all of them.", "Please make another explanation.") == 1) {
+				if (select("Yep, I already know all of it.", "Actually, I'd like to hear more.") == 1) {
 					mes "[Salim Hamid]";
-					mes "Yes, you are "+strcharinfo(0)+" I am pleased to meet a quick-to-learn student like you. It also saves my time.";
+					mes "Then, "+strcharinfo(0)+", I am pleased to meet a quick-to-learn student like you. It saves me time, too.";
 					next;
 				} else {
 					mes "[Salim Hamid]";
-					mes "Aha~ I think I got you wrong. Let's start the lecture again.";
+					mes "Aha~ I must have misunderstood. Let me tell you more, then.";
 					continue;
 				}
 				break;
 			case 2:
 				mes "[Salim Hamid]";
-				mes "Being in a trader role, the stats affecting the figure of battle power are two ^4d4fffSTR & DEX^000000.";
+				mes "For the Merchant specializing in battle, the stats affecting attack power figures are two... ^4d4fffSTR & DEX^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "STR is related to the basic attacking power, DEX is to hit ratio and recovery from damage.";
+				mes "STR increases basic attacking power, DEX helps with hit ratio and recovering from damage.";
 				next;
 				mes "[Salim Hamid]";
-				mes "In you future, according to the 2nd and 3rd jobs you choose, you can learn additional attacking stats such ^4d4fffINT or AGI^000000.";
+				mes "In the future, when you've progressed to your 2nd and 3rd job choice, you can consider additional stats such as ^4d4fffINT or AGI^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "To back up your shortage, you can increase LUK a little.";
+				mes "And to help stack up where you come up short, you can increase LUK a little as well.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Rather than worry yourself, it may be a good idea to learn from other Merchants. You know ask others for advice.";
+				mes "Rather than try to figure out the best balance on your own, it may be a good idea to learn from other Merchants. You know, ask others for advice.";
 				next;
 				mes "[Salim Hamid]";
 				mes "Any other questions?";
 				continue;
 			case 3:
 				mes "[Salim Hamid]";
-				mes "The stats concerning crafting is simpler than that concerning battle. Only difficulty is how to cultivate it.";
+				mes "The stats for specializing in crafting are simpler than those for battle. The only difficulty may be how to grow without much attack power to speak of.";
 				next;
 				mes "[Salim Hamid]";
-				mes "It is common that you increase ^4d4fffDEX & LUK^000000 as the base and, if you have surplus, you invest the rest in ^4d4fffINT^000000.";
+				mes "It is common to increase ^4d4fffDEX & LUK^000000 as the basis for the class, and if you have surplus, invest the rest in ^4d4fffINT^000000.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Of course, the allocation of the portion should be properly adjusted in accordance with your equipments and the status you are in.";
+				mes "Of course, the exact allocation should be adjusted depending your equipment and circumstances.";
 				next;
 				mes "[Salim Hamid]";
-				mes "One thing you should keep in mind is it may be a very boring and ascetic way to grow alone as Merchant specializing in crafting.";
+				mes "One thing you should keep in mind is you may find it tedious and confining to level alone as Merchant specializing in crafting.";
 				next;
 				mes "[Salim Hamid]";
-				mes "If possible, make use of your friends and their items if you can.";
-				mes "This is my personal opinion only.";
+				mes "It can be helpful to make use of your friends and items, if you can.";
+				mes "This is just my personal opinion, though.";
 				mes "It is absolutely not the official standpoint of the Criatura Academy.";
 				next;
 				mes "[Salim Hamid]";
@@ -9989,8 +9989,8 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 			break;
 		}
 		mes "[Salim Hamid]";
-		mes "Then, it is the end of this class.";
-		mes "If you have more questions about Merchants, please make other visits.";
+		mes "Well, that is the end of our lesson.";
+		mes "If you have more questions about Merchants, please do talk to me again.";
 		completequest 12305;
 		close2;
 		cutin "", 255;
@@ -9998,31 +9998,31 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	}
 	if (isbegin_quest(12306) < 1) {
 		mes "[Salim Hamid]";
-		mes "You came back again. "+strcharinfo(0)+" this time, shall we have a practical training by doing a simple errand?";
+		mes "So you came back, "+strcharinfo(0)+". This time, I shall give you practical training by sending you on a simple errand.";
 		next;
 		mes "[Salim Hamid]";
-		mes "Can you see the noisy vending machine at the corner of this classroom? It was originally a soft drink vending machine but swallows coin very much...";
+		mes "Do you see the noisy vending machine at the corner of this classroom? It was originally a soft drink vending machine, but it swallows coins most of the time...";
 		next;
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Anyway, due to this reason, it is now being used for the trainees' practice of skills. Please check the prices for Garlet and Zargon.";
+		mes "So nowadays it's used for the purposes of practicing trainee skills. Go there to check the prices for Garlet and Zargon.";
 		next;
 		mes "[Salim Hamid]";
-		mes "But! You should come back wit the information about ^4d4fffthe discounted prices equipped with the merchant's manual and applied with the discount rate^000000.";
+		mes "But! You only need information about ^4d4fffthe discounted prices while equipped with the Merchant's Manual, which applies a discount^000000.";
 		next;
 		cutin "aca_salim01",2;
 		mes "[Salim Hamid]";
-		mes "Don't buy them. Just come back with the checked prices only. Can you do it?";
+		mes "So you don't need to buy them. Just come back with the information about the prices. Can you do it?";
 		next;
-		if (select("I will do it next time.", "I will do it.") == 1) {
+		if (select("I will do it next time.", "I will do it now.") == 1) {
 			mes "[Salim Hamid]";
-			mes "OK. Then you challenge it next time.";
+			mes "OK. Then come back next time when you want to try it.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Salim Hamid]";
-		mes "Good~ I will see you later.";
+		mes "Good~ See you back here soon.";
 		setquest 12306;
 		close2;
 		cutin "", 255;
@@ -10030,32 +10030,32 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	} else if (isbegin_quest(12306) == 1) {
 		cutin "aca_salim02",2;
 		mes "[Salim Hamid]";
-		mes "Yes. Let's see the prices you checked.";
+		mes "Welcome back. Let's see the prices you checked.";
 		next;
-		switch(select("I will come back after rechecking them.:Garlet 39z Zargon 450z:Garlet 37z Zargon 448z:Garlet 37z Zargon 446z:Garlet 37z Zargon 444z")) {
+		switch(select("I will check again and come back.:Garlet 39z Zargon 450z:Garlet 37z Zargon 448z:Garlet 37z Zargon 446z:Garlet 37z Zargon 444z")) {
 			case 1:
 				mes "[Salim Hamid]";
-				mes "OK. You come back after rechecking them in detail.";
+				mes "OK. Look over the information in detail and come back.";
 				close2;
 				cutin "", 255;
 				end;
 			case 4:
 				mes "[Salim Hamid]";
-				mes "OK~ You correctly checked the prices equipped with Merchant's Manual.";
+				mes "Great~ You noted the correct prices while equipped with Merchant's Manual.";
 				next;
 				cutin "aca_salim01",2;
 				mes "[Salim Hamid]";
-				mes "Perhaps, if you become a Merchant and use the high level of discount skill, you can buy what you want at much cheaper prices.";
+				mes "If you become a Merchant and use the Discount skill at a higher level, you will be able to buy what you need at much cheaper prices.";
 				next;
 				mes "[Salim Hamid]";
-				mes "The practice of overcharge will be the same.";
+				mes "Using Overcharge will work similarly, except for selling instead of buying.";
 				next;
 				cutin "aca_salim02",2;
 				mes "[Salim Hamid]";
-				mes "You don't need to practice the overcharge as well. You experience it while selling items earned during the other courses.";
+				mes "But ou don't need to practice Overcharge. You will experience what that's like when selling items earned in due course.";
 				next;
 				mes "[Salim Hamid]";
-				mes "Now the Merchant training at the Academy is finished.";
+				mes "Now your Merchant lessons here at the Academy are finished.";
 				completequest 12306;
 				close2;
 				cutin "", 255;
@@ -10063,7 +10063,7 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 			default:
 				cutin "aca_salim03",2;
 				mes "[Salim Hamid]";
-				mes "Did you correctly check them?";
+				mes "Did you check the prices correctly? Make sure to equip your Merchant's Manual...";
 				close2;
 				cutin "", 255;
 				end;
@@ -10072,17 +10072,17 @@ iz_ac02,50,169,3	script	Salim Hamid#ac	1_M_MERCHANT,{
 	// if (JobLevel < 10) {
 	cutin "aca_salim02",2;
 	mes "[Salim Hamid]";
-	mes "Hahaha. "+strcharinfo(0)+" you have completed the Merchant theory course at the Criatura Academy.";
+	mes "Hahaha. "+strcharinfo(0)+", you have completed the Merchant Theory course at the Criatura Academy.";
 	next;
 	mes "[Salim Hamid]";
-	mes "When you want to test the other battle skills in the Merchant's Manual,";
+	mes "If you want to test the battle skills in your Merchant's Manual,";
 	mes "visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> on the 1st floor.";
 	next;
 	mes "[Salim Hamid]";
-	mes "You can fully experience the battle related practice through him.";
+	mes "You'll get a chance to practice battle-related skills through him.";
 	next;
 	mes "[Salim Hamid]";
-	mes "The guide for the next course "+strcharinfo(0)+" will be serviced when you reach job level 10. Good luck.";
+	mes "Then,"+strcharinfo(0)+", the next course will come when you reach job level 10. Good luck.";
 	close2;
 	cutin "", 255;
 	end;
@@ -10098,114 +10098,114 @@ iz_ac02_d,50,169,3	duplicate(Salim Hamid#ac)	Salim Hamid#ac_d	1_M_MERCHANT
 iz_ac02,53,171,3	script	Steward Aydin#ac	4_M_MANAGER,{
 	disable_items;
 	if (!checkweight(714,3) || (MaxWeight - Weight) < 10000) {
-		mes "- As you are overloaded with so many items, quest can't be proceeded.";
+		mes "- Quest can't be proceeded, as you are overloaded with so many items.";
 		close;
 	}
 	if (isbegin_quest(12304) == 1) {
 		mes "[Steward Aydin]";
-		mes "Mr. Hamid sent you here. Nice to meet you. Being busy in organizing the account book, I will make time for you.";
+		mes "I see Mr. Hamid sent you here. Nice to meet you. Though I've been busy organizing the account book, I will make time for you.";
 		next;
 		mes "[Steward Aydin]";
-		mes "There are many ways to make margin on trading.. A threat, a concillation, black-market dealings, etc.";
+		mes "There are many ways to make a profit when trading.. with threats, backdoor agreements, black-market dealings, etc.";
 		next;
 		mes "[Steward Aydin]";
-		mes "If necessary, even various violent and bloody shortcuts (wow this guy is serious!)";
+		mes "If necessary, even some violent and bloody shortcuts. (Wow, this guy is serious!)";
 		next;
 		mes "[Steward Aydin]";
-		mes "OH wait, what did I tell you?";
-		mes "These are legally prohibited behaviors. So, Merchants will be given two skills. Those are ^4d4fffOvercharge and Discount^000000..";
+		mes "OH wait, what am I saying?";
+		mes "These behaviors are legally prohibited. So instead, Merchants will be given two skills. They are ^4d4fffOvercharge and Discount^000000..";
 		next;
 		mes "[Steward Aydin]";
-		mes "Besides, there are some other helpful skills such as ^4d4fffPush Cart Vending, Item Appraisal^000000 etc.. Which are not related directly to them though.";
+		mes "Besides those two, there are some other helpful skills such as ^4d4fffPush Cart Vending, Item Appraisal^000000 etc.. which are quite different.";
 		next;
 		mes "[Steward Aydin]";
-		mes "Any questions among them?";
+		mes "Do you have questions about any of them?";
 		next;
 		while(1) {
 			switch(select("I already know all of them.", "Overcharge & Discount", "Other skills", "Item Appraisal")) {
 				case 1:
 					mes "[Steward Aydin]";
-					mes "Really are you OK with it?";
+					mes "Really, are you OK with no other info?";
 					next;
-					if (select("Wait I know it all.", "No, please explain them again.") == 1) {
+					if (select("I know it all.", "No, please explain them.") == 1) {
 						mes "[Steward Aydin]";
-						mes "Ho O~ You don't have any questions?";
-						mes "OK. You are a person of practice rather than of theory.";
+						mes "Oh ho~ You don't have any questions?";
+						mes "I see. You are a person that prefers practice rather than theory.";
 						next;
 						mes "[Steward Aydin]";
-						mes "The additional lecture will be provided by Mr. Salim Hamid. Ah. I have something to give you.";
+						mes "Additional lessons will be provided by Mr. Salim Hamid. Ah, but wait. I have something to give you.";
 						next;
 						mes "[Steward Aydin]";
-						mes "This is a box containing the defective equipments leaving from the inventory organization here.";
-						mes "Please practice the Item Appraisal skill in the Merchant Manual with it.";
+						mes "This is a box containing some defective equipment left by the inventory organization.";
+						mes "You can use these items to practice the Item Appraisal skill, which you can find if you have the Merchant Manual equipped.";
 						next;
 						mes "[Steward Aydin]";
-						mes "I anticipate to see you next time in a good shape.";
+						mes "I anticipate seeing doing well next time you stop by.";
 						completequest 12304;
 						getitem 12847,1;// Old_Equipment_Box
 						close;
 					}
 					mes "[Steward Aydin]";
-					mes "Ho O~ Sorry but I got you wrong.";
-					mes "Let's start the class.";
+					mes "O ho~ guess you weren't so sure.";
+					mes "Let me tell you more, then.";
 					next;
 					break;
 				case 2:
 					mes "[Steward Aydin]";
-					mes "It is simple to use Overcharge and Discount.";
+					mes "The skills Overcharge and Discount are simple to use.";
 					next;
 					mes "[Steward Aydin]";
-					mes "These two skills are passive skills. If you become familiar with these, "+strcharinfo(0)+" these will automatically perform in trading with merchant NPC without your operation.";
+					mes "They are passive skills. As you may know, "+strcharinfo(0)+", passive skills take effect automatically. So the effect will be applied when trading with merchant NPC's without any intervention needed.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Once you've learned Overcharge, when selling commodities to a merchant NPC, you can gain the sales money composed of the regular sales price plus additional money as per the Overcharge skill level.";
+					mes "When you've learned Overcharge and are selling commodities to a merchant NPC, you will receive the regular sales price plus additional money depending on the Overcharge skill level.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Oppositely, Discount is the skill, on your buying commodities from a merchant NPC, you can purchase it at the price discounted on the regular selling price as per the skill level.";
+					mes "Similarly with Discount, when you are buying commodities from a merchant NPC, you can purchase it at a discount from the regular price depending on your Discount skill level.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Be carefult that these two skills are to be used only in trading with usual merchant's NPC, not with other manufacturing NPC or among adventurers.";
+					mes "It's imporant to note that these two skills are to be used only in trading with shop merchant NPC's, not with manufacturing or other NPC's, nor among your fellow adventurers.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Do you have more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 				case 3:
 					mes "[Steward Aydin]";
-					mes "Enlarge Weight Limit, Push Cart, Vending. These three skills have close relationships.";
+					mes "About Enlarge Weight Limit, Push Cart, Vending... these three skills are closely related.";
 					next;
 					mes "[Steward Aydin]";
-					mes "First talking about ^4d4fffEnlarge Weight Limit^000000 skill, is the skill to increase th character's basic earned points. It is an automatic operational passive skill when you learn it.";
+					mes "Firstly with ^4d4fffEnlarge Weight Limit^000000, it's a skill to increase the limit of how much you can carry. It is a passive skill that's automaticly operational when you learn it.";
 					next;
 					mes "[Steward Aydin]";
-					mes "This earned point skill reaching a certain level, you can use the skill called ^4d4fffPush Cart^000000";
+					mes "Once Weight Limit has reached a certain level, you can use a skill called ^4d4fffPush Cart^000000";
 					next;
 					mes "[Steward Aydin]";
-					mes "But this Push Cart skill has the disadvantage of the slowdown of moving speed, though the advantage of high loading capacity.";
+					mes "Though Push Cart has the disadvantage of slowing down your movement speed, the advantage is a higher load capacity because you can then get a cart to carry items in.";
 					next;
 					mes "[Steward Aydin]";
-					mes "When this Push Cart skill reaches at a certain level, you can use the skill called ^4d4fffVending^000000. This is used to sell your own items to other players.";
+					mes "Then when the Push Cart skill reaches a certain level, you can use the skill called ^4d4fffVending^000000. This is used to sell items in your cart to other players.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Besides these, is there any more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 				case 4:
 					mes "[Steward Aydin]";
-					mes "Item Appraisal skill is a supplementary skill rather than the essential one.";
+					mes "Item Appraisal is a supplementary skill rather than an essential one, but it's a good one.";
 					next;
 					mes "[Steward Aydin]";
-					mes "If you learn this skill you can identify items without having to use a Magnifying Glass Item.";
+					mes "If you learn this skill, you can identify items without needing to use a Magnifying Glass item.";
 					next;
 					mes "[Steward Aydin]";
-					mes "Besides these, is there any more questions?";
+					mes "Besides this, do you have any other questions?";
 					next;
 					break;
 			}
 		}
 	} else {
 		mes "[Steward Aydin]";
-		mes "I am very busy clearing an account book, so how about talking next time?";
+		mes "I am very busy clearing our account book just now, how about coming back another time?";
 		close;
 	}
 }
@@ -10232,94 +10232,94 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 	if (isbegin_quest(4269) > 0 && Class == Job_Novice) {
 		if (!isbegin_quest(7480)) {
 			mes "[Lumin]";
-			mes ".......... Then";
+			mes ".......... Huh.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "gc_mayssel05.bmp", 1;
 			mes "[Mayssel]";
-			mes "I see, Lu make it as you want.";
+			mes "Okay, Lu, do as you please.";
 			next;
 			select("Uh, hi...");
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "I am sorry...";
-			mes "Are you a student of Criatura Academy?";
+			mes "Sorry...";
 			mes "I didn't intend to ignore you.";
-			mes "He is also one of the students in this class.";
+			mes "Are you a student of Criatura Academy?";
+			mes "Lu here is also a student in this class.";
 			next;
 			mes "[Mayssel]";
-			mes "Hello " + strcharinfo(0) + "";
-			mes "I am Mayssel  the section chief of the Veins section of the Assassin Guild.";
-			mes "I came here to give you some information about the Thief class.";
+			mes "Nice to meet you, " + strcharinfo(0) + ".";
+			mes "I am Mayssel, the section chief of the Veins division of the Assassin Guild.";
+			mes "I came to provide students information about the Thief class.";
 			next;
 			mes "[Mayssel]";
-			mes "Do you want to know about the Thief class?";
+			mes "Do you want to learn about Thief class?";
 			next;
 			if (select("Yes, please.", "No, I won't be a Thief.") == 2) {
 				mes "[Mayssel]";
-				mes "If you want it....";
+				mes "If that's what you decide....";
 				cutin "gc_mayssel05.bmp", 1;
 				close2;
 				cutin "", 255;
 				end;
 			}
 			mes "[Mayssel]";
-			mes "Well a thief is commonly thought of as a criminal.";
-			mes "But our guild is not about taking from those that are in need of it.";
+			mes "Well, a thief is commonly thought of as a criminal.";
+			mes "But our guild is not about taking from those that are in need.";
 			next;
 			mes "[Mayssel]";
-			mes "First, we should make it clear.";
-			mes "We don't steal other's belongings.";
+			mes "First, to be clear...";
+			mes "we don't steal the belongings of others.";
 			next;
 			mes "[Lumin]";
-			mes "How about monsters?";
+			mes "What about of monsters?";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "", 255;
 			mes "[Mayssel]";
-			mes "Now monsters...";
+			mes "Um, monsters...";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			mes "[Verkhasel]";
-			mes "Hey, take it easy.";
-			mes "You said it was a mission for something important. But only a place like this...";
+			mes "Come on, take it easy.";
+			mes "You said this mission would be a big deal. But it's only a place like this, so...";
 			cutin "gc_verkhasel01.bmp", 2;
 			next;
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "I was upset...";
-			mes "Let me continue.";
-			mes "A Thief uses techniques that common thieves use to be fast and nimble.";
+			mes "I got nervous...";
+			mes "Okay, I'll continue.";
+			mes "A Thief uses techniques to be fast and nimble.";
 			next;
 			mes "[Mayssel]";
 			mes "We use stealth to blend into our surroundings and strike our foes.";
 			next;
 			mes "[Mayssel]";
-			mes "Our primary weapon is a dagger and we compensate their attack strength by adding poison property to our attacks.";
+			mes "Our primary weapon is a dagger, and we compensate for attack strength by adding a poison property to our attacks.";
 			next;
 			mes "[Mayssel]";
-			mes "The higher class jobs in Thief class are Assassin and Rogue.";
-			mes "Verkhasel is a Guillotine Cross which is the third class of the Assassin Job.";
-			mes "and......";
+			mes "Moving up from Thief, the higher class jobs are Assassin and Rogue.";
+			mes "Verkhasel here is a Guillotine Cross, which is the third class of the Assassin job.";
+			mes "He can tell you more about Assassins. And......";
 			next;
 			mes "[Mayssel]";
-			mes "Mr. Vicente... I called Dumk..";
+			mes "Mr. Vicente, who I call Dumk..";
 			cutin "gc_mayssel02.bmp", 1;
 			next;
 			mes "[Vicente]";
-			mes "Ah, that is... Mayssel..";
-			mes "As you know well about Master.";
-			mes "I can explain about Rogues to you.";
+			mes "Ahem... Mayssel..";
+			mes "As I take after the Master,";
+			mes "I can provide information about Rogues.";
 			next;
 			mes "[Mayssel]";
 			mes "I see...";
-			mes "" + strcharinfo(0) + " Sorry but you can learn about the Shadow Chaser class from them.";
+			mes "" + strcharinfo(0) + ", you can learn about the Shadow Chaser class as you get information about Rogues.";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			cutin "gc_mayssel01.bmp", 1;
 			mes "[Mayssel]";
-			mes "Anyway, these two gentlemen will help you.";
-			mes "^4d4dffCome back to me after speaking to Verkhasel and Vicente.^000000";
+			mes "So these two gentlemen will help you with the next steps.";
+			mes "^4d4dffTalk to me again after speaking to Verkhasel and Vicente.^000000";
 			setquest 7480;
 			close2;
 			cutin "", 255;
@@ -10327,25 +10327,25 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else if (isbegin_quest(7480) == 1) {
 			if (isbegin_quest(7481) > 0 && isbegin_quest(7482) > 0) {
 				mes "[Mayssel]";
-				mes "Have you learned something about Thief, Assassin and Rogue?";
-				mes "You don't need to understand everything right now.";
+				mes "Have you learned what you need about Thief, Assassin and Rogue?";
+				mes "You don't need to understand everything just yet.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				if (BaseLevel > 12) {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "The next course is how to use the experience guide... Let's skim it over.";
+					mes "My only role is to inform you of the options...";
+					mes "The next lesson is using the Manual... just a little information first, then.";
 					next;
 					mes "[Mayssel]";
-					mes "The guide for skill experience provided by the academy can be used up to level 12.";
-					mes "Regretfully, only the explanation is available for you.";
+					mes "The Thief Manual provided by the Academy to test out the job's skills can be used up to level 12.";
+					mes "Unfortunately, that's all I can tell you.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help direct you to the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "Thank you for your hard work.";
+					mes "You're doing good so far.";
 					cutin "gc_mayssel02.bmp", 1;
 					completequest 7480;
 					erasequest 7481;
@@ -10357,15 +10357,15 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					getitem 12325,20;// N_Magnifier
 				} else {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "Then, let's talk about the Thief's skills.";
+					mes "My only role is to inform you of the options...";
+					mes "But about using Thief skills.";
 					next;
 					mes "[Mayssel]";
-					mes "I will give you the guide to borrow the thief's skill temporarily.";
-					mes "Organize the guide items, you can see the useful skills on the 'ETC' skill window.";
+					mes "I will give you a Manual so you can test out Thief skills temporarily.";
+					mes "Equip the Thief's Manual and open the skills window to the section labeled 'ETC'.";
 					next;
 					mes "[Mayssel]";
-					mes "By making use of the guide, you may take the missions being asked by Verkhasel and Vicente.";
+					mes "By making use of the Manual, you can try the assignments set out by Verkhasel and Vicente.";
 					completequest 7480;
 					erasequest 7481;
 					erasequest 7482;
@@ -10377,21 +10377,21 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				end;
 			} else {
 				mes "[Mayssel]";
-				mes "Verkhasel and Vicente will give you various information related to the higher class jobs.";
-				mes "So, come back to me after listening to them.";
+				mes "Verkhasel and Vicente can give you information related to the higher class jobs for Thief.";
+				mes "Come back to me after hearing them out.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
-				mes "Preparation for real battle is next.";
+				mes "That should prepare you for what comes next.";
 				next;
 				if (select("I see...", "I won't do it.") == 1) {
 					mes "[Mayssel]";
-					mes "I will compensate for you when your mission is completed.";
+					mes "I have something for you when your assignments are completed.";
 					mes "Come back to me after speaking to Verkhasel and Vicente.";
 				} else {
 					mes "[Mayssel]";
-					mes "I see..";
-					mes "This course is now cancelled.";
+					mes "I see...";
+					mes "I'll cancel your lessons, then.";
 					erasequest 7480;
 				}
 				close2;
@@ -10401,25 +10401,25 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else {
 			if (!isbegin_quest(7483)) {
 				mes "[Mayssel]";
-				mes "Have you learned something about Thief, Assassin and Rogue?";
-				mes "You don't need to understand everything right now.";
+				mes "Have you learned what you need about Thief, Assassin and Rogue?";
+				mes "You don't need to understand everything just yet.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				if (BaseLevel > 12) {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...?";
-					mes "The next course is how to use the experience guide... Let's skim it over.";
+					mes "My only role is to inform you of the options...";
+					mes "The next lesson is using the Manual... just a little information first, then.";
 					next;
 					mes "[Mayssel]";
-					mes "The  guide for skill experience provided by the academy can be used up to level 12.";
-					mes "Regretfully, only the explanation is available for you.";
+					mes "The Thief Manual provided by the Academy to test out the job's skills can be used up to level 12.";
+					mes "Unfortunately, that's all I can tell you.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help you with the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "You've worked hard.";
+					mes "You're doing good so far.";
 					cutin "gc_mayssel02.bmp", 1;
 					completequest 7480;
 					erasequest 7481;
@@ -10431,15 +10431,15 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					getitem 12325,20;// N_Magnifier
 				} else {
 					mes "[Mayssel]";
-					mes "I only play the role to inform you of there is this one that one...";
-					mes "Then, let's talk about the Thief's skills.";
+					mes "My only role is to inform you of the options...";
+					mes "But about using Thief skills.";
 					next;
 					mes "[Mayssel]";
-					mes "I will give you the guide to borrow the thief's skill temporarily.";
-					mes "Organize the guide items, you can see the useful skills on the 'ETC' skill window.";
+					mes "I will give you a Manual so you can test out Thief skills temporarily.";
+					mes "Equip the Thief's Manual and open the skills window to the section labeled 'ETC'.";
 					next;
 					mes "[Mayssel]";
-					mes "By making use of the guide, you may take the missions being asked by Verkhasel and Vicente.";
+					mes "By making use of the Manual, you can try the assignments set out by Verkhasel and Vicente.";
 					completequest 7480;
 					erasequest 7481;
 					erasequest 7482;
@@ -10453,26 +10453,26 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				if (isbegin_quest(7484) > 1 && isbegin_quest(7485) > 1) {
 					cutin "gc_mayssel01.bmp", 1;
 					mes "[Mayssel]";
-					mes "Have you got a sense what it is to be a Thief?";
-					mes "If you want to use the skill like double attack, visit ^4d4dffMr. Subino on the 1st floor^000000.";
+					mes "Have you got a sense of what it is to be a Thief?";
+					mes "If you want to try using a skill like Double Attack, visit ^4d4dffMr. Subino on the 1st floor^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "<NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> will give you several battle missions.";
+					mes "<NAVI>[Battle Trainer Subino]<INFO>iz_ac01,59,83</INFO></NAVI> will give you some battle missions.";
 					next;
 					mes "[Mayssel]";
-					mes "I hope you experience other skills with battle Quests.";
-					mes "Double attack is somewhat an exciting skill.";
+					mes "I hope you get to experience new skills with his battle Quests.";
+					mes "Double Attack is a prtty exciting skill.";
 					next;
 					mes "[Mayssel]";
-					mes "Make a decision after you've at least experienced it.";
-					mes "You still have a long way and enough time before you make a decision... Think of it deeply.";
+					mes "It's best to make a decision after you've gotten a chance to experience.";
+					mes "You still have a long way and plenty of time before you need to make a decision... so consider carefully.";
 					next;
 					mes "[Mayssel]";
-					mes "If you want to be a Thief, you just come back here.";
-					mes "I can help you with the 1st step of the job change.";
+					mes "When you're ready to be a Thief, speak to me again.";
+					mes "I can help direct you to the first step to making the job change.";
 					next;
 					mes "[Mayssel]";
-					mes "Thank you for you hard work.";
+					mes "Good job thus far.";
 					completequest 7483;
 					getexp 800,50;
 					getitem 569,30;// Novice_Potion
@@ -10484,35 +10484,35 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					cutin "gc_mayssel01.bmp", 1;
 					mes "[Mayssel]";
 					mes "In the battle training, the actual fighting is more important than theory.";
-					mes "To use the skill once is better than all this talking.";
+					mes "Experiencing a skill is better than just talking about it.";
 					next;
 					mes "[Mayssel]";
-					mes "If you carry out the mission asked by Verkhasel and Vicente, I will go to the next class.";
+					mes "If you carry out the assignments by Verkhasel and Vicente, we can move on to the next lesson.";
 					next;
 					if (select("I see.", "I won't do it.") == 1) {
 						mes "[Mayssel]";
-						mes "I will compensate for you when your mission is complete.";
-						mes "Come back to me after listening to Verkhasel and Vicente.";
+						mes "I have something for you when your assignments are completed.";
+						mes "Come back to me after speaking to Verkhasel and Vicente.";
 						close2;
 						cutin "", 255;
 						end;
 					} else {
 						mes "[Mayssel]";
 						mes "I see.";
-						mes "This course is now cancelled.";
-						mes "The ongoing lower courses are cancelled.";
+						mes "Let's cancel, then.";
+						mes "Any ongoing lessons will be cancelled.";
 						next;
-						if (select("No.", "Yes, cancel the course.") == 1) {
+						if (select("Nevermind.", "Yes, cancel the course.") == 1) {
 							mes "[Mayssel]";
-							mes "Fortunately...";
-							mes "Good to see you have patience.";
+							mes "Oh, good...";
+							mes "Glad to see you do have some patience.";
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Mayssel]";
-						mes "All the ongoing courses are cancelled.";
-						mes "These are not your aptitude.";
+						mes "All the ongoing lessons have been cancelled.";
+						mes "This course is clearly not for you.";
 						nude;
 						if (countitem(2820) > 0)
 							delitem 2820,countitem(2820);// Thief_Manual
@@ -10528,45 +10528,45 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				cutin "gc_mayssel01.bmp", 1;
 				mes "[Mayssel]";
 				mes "What are you curious about?";
-				mes "If you want to know about battle, visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01_c,59,83</INFO></NAVI>.";
+				mes "If you want to try out skills in battle, visit <NAVI>[Battle Trainer Subino]<INFO>iz_ac01_c,59,83</INFO></NAVI>.";
 				next;
-				switch(select("Change job to Thief.", "Thief Stat Explanation", "Thief Skill Explanation", "Not curious about it.")) {
+				switch(select("Change job to Thief.", "Thief Stats Explanation", "Thief Skill Explanation", "Not curious about anything.")) {
 				case 1:
 					if (JobLevel > 9) {
 						mes "[Mayssel]";
-						mes "You made up your mind.";
+						mes "So you made up your mind.";
 						mes "Welcome to the world of shadows.";
 						cutin "gc_mayssel02.bmp", 1;
 						next;
 						cutin "gc_mayssel01.bmp", 1;
 						mes "[Mayssel]";
-						mes "If you are ready, I will send you to the deserts of Morroc to embrace the shadows.";
+						mes "If you are ready, I'll send you to the deserts of Morroc where you can officially embrace the shadows.";
 						mes "The journey will be both strange and challenging.";
 						next;
-						if (select("At once please.", "I need more time.") == 2) {
+						if (select("At once, please.", "I need more time.") == 2) {
 							mes "[Mayssel]";
-							mes "Yes, after a sufficient survey of other jobs, you may make a decision.";
+							mes "Sure. After you've sufficiently surveyed other jobs, you can make a final decision.";
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Mayssel]";
-						mes "^4d4dffFind the Pyramid^000000 in the ^4d4dffNorthwest^000000 of Morroc.";
+						mes "Go and ^4d4dfffind the Pyramid^000000 in the ^4d4dffNorthwest^000000 of the Morroc desert. I'll send you there.";
 						close2;
 						cutin "", 255;
 						warp "morocc", 30, 290;
 						end;
 					} else {
 						mes "[Mayssel]";
-						mes "I'm sorry but you are short of job levels to change your job.";
+						mes "I'm sorry but you have not reached the required job level to change your job.";
 						next;
 						mes "[Mayssel]";
-						mes "Level composes of Base level and Job level.";
+						mes "Levels are composed of Base level and Job level.";
 						mes "Job level is what determines your current job.";
 						next;
 						mes "[Mayssel]";
-						mes "^4d4dffThe 1st job condition condition is job level 10.^000000";
-						mes "You need more experience so fight more and level up first.";
+						mes "^4d4dffThe condition to change to a 1st job is to reach job level 10.^000000";
+						mes "You need more experience still, so fight some more and level up first.";
 						close2;
 						cutin "", 255;
 						end;
@@ -10574,27 +10574,27 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				case 2:
 					mes "[Mayssel]";
 					mes "You want to know more about stats?";
-					mes "As Vicente already told you, stats don't have a fixed answer.";
+					mes "As Vicente already told you, stats don't have a fixed course.";
 					cutin "gc_mayssel01.bmp", 1;
 					next;
 					mes "[Mayssel]";
-					mes "If I choose one among them,";
-					mes "^4d4dffAGI is related to flee ability^000000,";
-					mes "^4d4dffDex is related with hit ratio";
-					mes "STR raises physical attacking power^000000";
+					mes "If I had to choose one among them,";
+					mes "^4d4dffAGI is related to evasion^000000,";
+					mes "^4d4dffDex is for improving hit ratio,";
+					mes "and STR raises physical attacking power^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "Vit, Luk, Int are valued according your target chosen.";
-					mes "For your reference, Verkhasel has high level of Luk.";
+					mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+					mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 					mes "A weapon called Katar is good for Critical.";
 					next;
 					mes "[Mayssel]";
-					mes "But thief's primary weapon is a dagger.";
-					mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+					mes "But the Thief's primary weapon is a dagger.";
+					mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 					next;
 					mes "[Mayssel]";
-					mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-					mes "Hope you find the right stats that are suitable to your fighting style.";
+					mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+					mes "I hope you find the right stats that are suitable to your fighting style.";
 					close2;
 					cutin "", 255;
 					end;
@@ -10607,38 +10607,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 						switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 						case 1:
 							mes "[Mayssel]";
-							mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-							mes "You want to avoid taking damage from enemy attack, don't you?";
+							mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000.";
+							mes "You want to avoid taking damage from enemy attacks, don't you?";
 							next;
 							break;
 						case 2:
 							mes "[Mayssel]";
-							mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-							mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+							mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+							mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 							next;
 							break;
 						case 3:
 							mes "[Mayssel]";
-							mes "^4d4dffHiding means exactly that... to hide.^000000";
+							mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 							next;
 							mes "[Mayssel]";
-							mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+							mes "^4d4dffSteal is a skill used to steal an enemy's items.^000000";
 							mes "You can steal one item from one enemy.";
 							next;
 							break;
 						case 4:
 							mes "[Mayssel]";
 							mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-							mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+							mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 							next;
 							mes "[Mayssel]";
-							mes "Oppositely, the name implies, Detoxify removes poison status.";
+							mes "On the other hand, as the name implies, Detoxify removes poison status.";
 							next;
 							break;
 						case 5:
 							mes "[Mayssel]";
-							mes "It is good you have enough knowledge.";
-							mes "Supplementary the field experiences will make you perfect.";
+							mes "It's good to have come into this knowledge.";
+							mes "Together with field experience, you can come to be great.";
 							close2;
 							cutin "", 255;
 							end;
@@ -10647,8 +10647,8 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				case 4:
 					mes "[Mayssel]";
 					mes "Is that so?";
-					mes "Like other job guilds, there is a limit learned through theory.";
-					mes "I would like to recommend you to experience battle first-hand.";
+					mes "Like other job guilds, there is a limit to what can be learned through theory.";
+					mes "I recommend you experience battle first-hand.";
 					cutin "gc_mayssel01.bmp", 1;
 					close2;
 					cutin "", 255;
@@ -10659,45 +10659,45 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 	} else {
 		if (!isbegin_quest(4269)) {
 			mes "[Mayssel]";
-			mes "You are a stranger.";
-			mes "Excuse me but I was invited to explain about the jobs for the students,";
-			mes "I have no words to tell you.";
+			mes "I don't believe I know you.";
+			mes "Sorry, but I was invited to teach students about our jobs,";
+			mes "so I'm not sure I can be of much help.";
 			cutin "gc_mayssel01.bmp", 1;
 			next;
 			mes "[Mayssel]";
-			mes "It is almost miracle to meet you and me living far away from the light of ground.";
-			mes "We should abide by the regulations.";
+			mes "It's quite something that you find me here today, as I'm normally living far away from the light of the sun.";
+			mes "In order to participate in these lessons, you must first become a student of Criatura Academy.";
 			next;
 			mes "[Mayssel]";
-			mes "Attending the class, first you may be a student of Criatura Academy.";
+			mes "We should abide by the Academy's regulations.";
 			next;
 			mes "[Mayssel]";
-			mes "However, if you want the information about the thief job itself, I will let you know.";
+			mes "However if you only want a little information about the Thief job for now, I can help with what you want to know.";
 			next;
 			switch(select("About the useful stats for a Thief", "About Thief's primary skills", "Not curious about it.")) {
 			case 1:
 				mes "[Mayssel]";
 				mes "You want to know more about stats?";
-				mes "As Vicente already told you, stats don't have a fixed answer.";
+				mes "As Vicente already told you, stats don't have a fixed course.";
 				next;
 				mes "[Mayssel]";
-				mes "If I choose one among them,";
-				mes "^4d4dffAGI is related to flee ability^000000,";
-				mes "^4d4dffDex is related with hit ratio";
-				mes "STR raises physical attacking power^000000";
+				mes "If I had to choose one among them,";
+				mes "^4d4dffAGI is related to evasion^000000,";
+				mes "^4d4dffDex is for improving hit ratio,";
+				mes "and STR raises physical attacking power^000000.";
 				next;
 				mes "[Mayssel]";
-				mes "Vit, Luk, Int are valued according your target chosen.";
-				mes "For your reference, Verkhasel has high level of Luk.";
+				mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+				mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 				mes "A weapon called Katar is good for Critical.";
 				next;
 				mes "[Mayssel]";
-				mes "But thief's primary weapon is a dagger.";
-				mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+				mes "But the Thief's primary weapon is a dagger.";
+				mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 				next;
 				mes "[Mayssel]";
-				mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-				mes "Hope you find the right stats that are suitable to your fighting style.";
+				mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+				mes "I hope you find the right stats that are suitable to your fighting style.";
 				close2;
 				cutin "", 255;
 				end;
@@ -10709,38 +10709,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 					case 1:
 						mes "[Mayssel]";
-						mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-						mes "You want to avoid taking damage from enemy attack, don't you?";
+						mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000.";
+						mes "You want to avoid taking damage from enemy attacks, don't you?";
 						next;
 						break;
 					case 2:
 						mes "[Mayssel]";
-						mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-						mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+						mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+						mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 						next;
 						break;
 					case 3:
 						mes "[Mayssel]";
-						mes "^4d4dffHiding means exactly that... to hide.^000000";
+						mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 						next;
 						mes "[Mayssel]";
-						mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+						mes "^4d4dffSteal is a skill used to steal an enemy's items.^000000";
 						mes "You can steal one item from one enemy.";
 						next;
 						break;
 					case 4:
 						mes "[Mayssel]";
 						mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-						mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+						mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 						next;
 						mes "[Mayssel]";
-						mes "Oppositely, the name implies, Detoxify removes poison status.";
+						mes "On the other hand, as the name implies, Detoxify removes poison status.";
 						next;
 						break;
 					case 5:
 						mes "[Mayssel]";
-						mes "It is good you have enough knowledge.";
-						mes "Supplementary the field experiences will make you perfect.";
+						mes "It's good to have come into this knowledge.";
+						mes "Together with field experience, you can come to be great.";
 						cutin "gc_mayssel05.bmp", 1;
 						close2;
 						cutin "", 255;
@@ -10749,7 +10749,7 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 				}
 			case 3:
 				mes "[Mayssel]";
-				mes "After you register as a student, you can take lessons and gain more experience.";
+				mes "After you register as a student, you can come take lessons and gain some experience.";
 				cutin "gc_mayssel01.bmp", 1;
 				close2;
 				cutin "", 255;
@@ -10758,13 +10758,13 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 		} else {
 			if (Class == Job_Thief) {
 				mes "[Mayssel]";
-				mes "You are on the way of thief.";
+				mes "You have taken on the way of the Thief.";
 				mes "Thief is the 1st job.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
-				mes "Someday, you would transfer to the 2nd job.";
-				mes "It would be better to think of whether becoming  a Log or an Assassin now.";
+				mes "Someday, you will transfer to a 2nd job.";
+				mes "It's a good idea to start thinking about whether you want that job to be Rogue or Assassin.";
 				cutin "gc_mayssel02.bmp", 1;
 				close2;
 				cutin "", 255;
@@ -10772,36 +10772,36 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 			} else {
 				mes "[Mayssel]";
 				mes "You don't look familiar.";
-				mes "In order to attend this class, you must first become a student of Criatura Academy.";
+				mes "In order to participate in these lessons, you must first become a student of Criatura Academy.";
 				cutin "gc_mayssel01.bmp", 1;
 				next;
 				mes "[Mayssel]";
 				mes "What information would you like to know about the Thief job?";
 				next;
-				switch(select("About the useful stats for a Thief", "About Thief's primary skills", "Not curious about it.")) {
+				switch(select("About the useful stats for a Thief", "About a Thief's primary skills", "Not curious about it.")) {
 				case 1:
 					mes "[Mayssel]";
 					mes "You want to know more about stats?";
-					mes "There are no perfect answers for useful stats.";
+					mes "There is no one answer for what stats are best.";
 					next;
 					mes "[Mayssel]";
-					mes "If I choose one among them,";
-					mes "^4d4dffAGI is related to flee ability^000000,";
-					mes "^4d4dffDex is related with hit ratio";
-					mes "STR raises physical attacking power^000000";
+					mes "If I had to choose one among them,";
+					mes "^4d4dffAGI is related to evasion^000000,";
+					mes "^4d4dffDex is for improving hit ratio,";
+					mes "and STR raises physical attacking power^000000.";
 					next;
 					mes "[Mayssel]";
-					mes "Vit, Luk, Int are valued according your target chosen.";
-					mes "For your reference, Verkhasel has high level of Luk.";
+					mes "Vit, Luk, Int can be valuable depending on your chosen target.";
+					mes "For reference... Verkhasel has a high level of Luk, which affects the chance of critical hit.";
 					mes "A weapon called Katar is good for Critical.";
 					next;
 					mes "[Mayssel]";
-					mes "But thief's primary weapon is a dagger.";
-					mes "In the end, you have only to supplement your weak point, after evaluating you and your enemy.";
+					mes "But the Thief's primary weapon is a dagger.";
+					mes "In the end it comes down to supplementing your weak points after evaluating yourself and the enemy.";
 					next;
 					mes "[Mayssel]";
-					mes "If your attack doesn't hit the enemy, you come to think of the hit ratio.";
-					mes "Hope you find the right stats that are suitable to your fighting style.";
+					mes "For example, if your attack is not hitting the enemy you might consider working on hit ratio.";
+					mes "I hope you find the right stats that are suitable to your fighting style.";
 					close2;
 					cutin "", 255;
 					end;
@@ -10813,38 +10813,38 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 						switch(select("Improve Dodge", "Double attack", "Hiding and Steal", "Envenom and Detoxify", "Not curious about it.")) {
 						case 1:
 							mes "[Mayssel]";
-							mes "As the name implies, ^4d4dffthis skill increases a certain amount of evasion ratio^000000";
-							mes "You want to avoid taking damage from enemy attack, don't you?";
+							mes "As the name implies, ^4d4dffthis skill increases the chance of evasion^000000";
+							mes "You want to avoid taking damage from enemy attacks, don't you?";
 							next;
 							break;
 						case 2:
 							mes "[Mayssel]";
-							mes "^4d4dffThis skill allows you to deal two damages with only one attack.^000000";
-							mes "Even though this dagger looks poor, it can damage your enemy severely by the fast two attacks.";
+							mes "^4d4dffThis skill allows you to deal damage twice with only one attack.^000000";
+							mes "Even though a dagger may look poor, it can damage your enemy severely with two quick attacks.";
 							next;
 							break;
 						case 3:
 							mes "[Mayssel]";
-							mes "^4d4dffHiding means exactly that... to hide.^000000";
+							mes "^4d4dffHiding means exactly that... to hide yourself from an enemy.^000000";
 							next;
 							mes "[Mayssel]";
-							mes "^4d4dffSteal is the skill of stealing enemy's items^000000.";
+							mes "^4d4dffSteal is the skill used to steal an enemy's items.^000000";
 							mes "You can steal one item from one enemy.";
 							next;
 							break;
 						case 4:
 							mes "[Mayssel]";
 							mes "^4d4dffEnvenom is used to poison your enemy.^000000";
-							mes "If poisoned, it can make a physical attacks slowly eat away at your foe.";
+							mes "If poisoned, the effect is a physical attack that slowly eats away at your foe's health.";
 							next;
 							mes "[Mayssel]";
-							mes "Oppositely, the name implies, Detoxify removes poison status.";
+							mes "On the other hand, as the name implies, Detoxify removes poison status.";
 							next;
 							break;
 						case 5:
 							mes "[Mayssel]";
-							mes "It is good you have enough knwledge.";
-							mes "Supplementary the field experiences will make you perfect.";
+							mes "It's good to have come into this knowledge.";
+							mes "Together with field experience, you can come to be great.";
 							close2;
 							cutin "", 255;
 							end;
@@ -10853,7 +10853,7 @@ iz_ac02,52,136,3	script	Guest Lecturer Mayssel#0	4_F_MAYSEL,{
 					break;
 				case 3:
 					mes "[Mayssel]";
-					mes "After you register as a student, you can take lessons and gain more experience.";
+					mes "After you register as a student, you can come take lessons and gain some experience.";
 					cutin "gc_mayssel01.bmp", 1;
 					close2;
 					cutin "", 255;
@@ -10887,8 +10887,8 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 		if (!isbegin_quest(7480)) {
 			mes "[Vicente]";
 			mes "Are you curious about the thief job?";
-			mes "Mayssel will give you the details about it.";
-			mes "But, you must be a student of Criatura Academy.";
+			mes "Mayssel can provide some details about it.";
+			mes "But, you must have registered as a student of Criatura Academy.";
 			cutin "sc_vicente01.bmp", 2;
 			close2;
 			cutin "", 255;
@@ -10896,100 +10896,100 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 		} else if (isbegin_quest(7480) == 1) {
 			if (!isbegin_quest(7481)) {
 				mes "[Vicente]";
-				mes "Hmmm. Thief.... Then, I need to explain to you about stats, too.";
+				mes "Hmmm. Thief.... I should tell you about the stats.";
 				cutin "sc_vicente01.bmp", 2;
 				next;
 				mes "[Vicente]";
-				mes "First, ^4d4dffStr power, Agi agility, Dex hit,^000000 these theree elements are all good for a Thief.";
-				mes "Supplementary elements are Int intelligence, Vit vitality, Luk luck.";
+				mes "First, ^4d4dffStr (strength), Agi (agility), Dex (dexterity)...^000000 these three elements are all good for a Thief.";
+				mes "Supportive stats are Int (intelligence), Vit (vitality), Luk (luck).";
 				next;
 				mes "[Vicente]";
-				mes "As ^4d4dffStr raises the physical attacking power, it will be your tool to raises your attacking power against a Thief and Rogue who primarily use daggers^000000.";
-				mes "And, I will raise your limit of carrying items, which means you can load more items.";
+				mes "As ^4d4dffSTR raises the physical attacking power, it will be key to increasing the attack power for a Thief or Rogue who primarily use daggers^000000.";
+				mes "It will also raise your weight limit, which means it will allow you to carry more items.";
 				next;
 				mes "[Vicente]";
-				mes "^4d4dffAgi is to raise your evasion ratio and Aspd attacking speed.^000000 Simply speaking, you become nimble.";
+				mes "^4d4dffAGI is to increase your chance of evasion and ASPD (attacking speed).^000000 Simply speaking, you become nimble.";
 				next;
 				mes "[Vicente]";
-				mes "Agi is one of the very important figures as you- a thief wearing a light armor have to evade the enemy's attack rather than facing it head on.";
+				mes "Agi is one of the most important figures, as a thief wearing light armor has to avoid damage rather than facing it head on like classes that wear heavy armor do.";
 				next;
 				mes "[Vicente]";
-				mes "And ^4d4dffDex to hit your attack^000000 is unforgettable.";
-				mes "You can do anything once your attack succeeds.";
+				mes "And ^4d4dffDEX to successfully hit your attack^000000 is a must.";
+				mes "You can't do anything if you keep missing.";
 				next;
 				mes "[Vicente]";
-				mes "In addition, there are those who are fighting in the War of Emperium with ^4d4dffthe raised VIT energy level to increase their HP vitality^000000.";
+				mes "In addition, for those who want to fight in the War of Emperium, they would do well with ^4d4dffincreased VIT to raise their HP vitality^000000.";
 				next;
 				mes "[Vicente]";
-				mes "Among the Rogue skills, there is a skill called 'Intimidate' with which you can learn and use other's skills,";
-				mes "there are some who^4d4dffinvest to Intelligence to use the learned magic from this spell^000000.";
+				mes "Among the Rogue skills, there one called 'Intimidate' which enables you to learn and use the skills of others.";
+				mes "There are some who ^4d4dffinvest in INT to use the learned magic gained from this skill^000000.";
 				next;
 				mes "[Vicente]";
-				mes "We I can tell which one is the right choice.";
-				mes "According to the individual tastes and purposes, you have to split your ability.";
-				mes "But...";
+				mes "But I can't tell you which is the right strategy for you.";
+				mes "You have to allocate your stats according to your individual tastes and purposes.";
+				mes "However...";
 				next;
 				mes "[Vicente]";
-				mes "Rogues are for ^4d4dffdisarming the enemy's armor^000000 or ^4d4dffstealing better than a thief^000000.";
-				mes "or ^4d4dfffall back after suddenly being attacked^000000";
+				mes "Keep in mind that Rogues are best for ^4d4dffdisarming an enemy's armor^000000 or ^4d4dffstealing better than a thief^000000.";
+				mes "or to ^4d4dfffall back after a sudden attack^000000";
 				next;
 				mes "[Vicente]";
-				mes "Hmmhmmm. It may look cowardish but it is upgraded from a thief.";
-				mes "As it can have a better eyesight and do the art.";
+				mes "Hmm. It may seem cowardly but it is a step up from a thief,";
+				mes "as it means better eyesight and artfulness.";
 				cutin "sc_vicente03.bmp", 2;
 				next;
-				select("Haaaaam...", "Is that so?");
+				select("Ugh...", "Is that so?");
 				mes "[Vicente]";
-				mes ".........you were boring.";
-				mes "Among the thief's skills, there is an item called 'Improve Dodge'.";
-				mes "The stats related to evasion ratio is..";
+				mes ".........you seem bored. A test, then.";
+				mes "Among the skills for a Thief, there is one called 'Improve Dodge'.";
+				mes "The stat related to dodge or evasion is..";
 				cutin "sc_vicente02.bmp", 2;
 				next;
 				if (select("Dex !!", "Agi !!") == 1) {
 					mes "[Lumin]";
-					mes "Don't mess around with me too much.";
+					mes "Don't mess around.";
 					mes "It's Agi.";
 					cutin "nov_lumin02.bmp", 0;
 					next;
 					select("Ah, yes...");
 					mes "[Lumin]";
-					mes "Compensation is?";
+					mes "Do I get a reward?";
 					cutin "nov_lumin01.bmp", 0;
 					next;
 					cutin "sc_vicente01.bmp", 2;
 					mes "[Vicente]";
-					mes "Ahhh, yes...";
-					mes "I will give a gift for Lumin.";
+					mes "Ahh, fine...";
+					mes "A gift for Lumin.";
 					next;
 					cutin "sc_vicente03.bmp", 2;
 					mes "[Vicente]";
-					mes "Now I will finish my class.";
-					mes "Important thing is not theory like what we are talking about.";
-					mes "Actual fighting!! Actual fighting is key!!";
+					mes "To finish my lesson...";
+					mes "The important thing is not theory, like all this talk.";
+					mes "Practice and experience!! Actual fighting is key!!";
 					setquest 7481;
 					close2;
 					cutin "", 255;
 					end;
 				} else {
 					mes "[Vicente]";
-					mes "Oh, fortunately you have been in the class.";
-					mes "I didn't feel easy as your face look very boring.";
-					mes "Now, shall we keep going on?";
+					mes "Oh, fortunately you have been paying attention.";
+					mes "I wasn't sure since you eyes looked glazed over.";
+					mes "Now, shall we keep going?";
 					cutin "sc_vicente03.bmp", 2;
 					next;
 					mes "[Lumin]";
-					mes "...... Compensation is?";
+					mes "...... how about a reward?";
 					cutin "nov_lumin02.bmp", 0;
 					next;
 					cutin "sc_vicente01.bmp", 2;
 					mes "[Vicente]";
-					mes "Ah,,, thank you for your pointout.";
-					mes "Be successful!";
+					mes "Ah... thank you for that.";
+					mes "May this help in your success!";
 					next;
 					cutin "sc_vicente03.bmp", 2;
 					mes "[Vicente]";
-					mes "Important thing is not theory but actual fighting.";
-					mes "Do you agree?";
+					mes "The important thing is not just theory, but getting experience with actual fighting.";
+					mes "Wouldn't you agree?";
 					setquest 7481;
 					getitem 569,30;// Novice_Potion
 					close2;
@@ -11000,43 +11000,43 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 				if (!isbegin_quest(7486)) {
 					cutin "sc_vicente01.bmp", 2;
 					mes "[Vicente]";
-					mes "Talking about Rogue,";
-					mes "It is not a cowardish job as the others complain.";
+					mes "Speaking of Rogue,";
+					mes "it is not a job for the cowardly as the others might suggest.";
 					next;
 					mes "[Lumin]";
-					mes ".....Don't you have a strange hobby?";
-					mes "Taking off other's clothings.";
+					mes ".....Don't you have strange hobbies?";
+					mes "Like stealing clothes off of others?";
 					cutin "nov_lumin01.bmp", 2;
 					next;
 					cutin "sc_vicente02.bmp", 2;
 					mes "[Vicente]";
-					mes "What.. What a thing to say!";
-					mes "Lu, you shouldn't say such things!";
-					mes "Rogue is the upper level to a thief.";
+					mes "What.. what a thing to say!";
+					mes "Lu, don't spread such rumors!";
+					mes "Rogue is a higher class of thief.";
 					next;
 					cutin "nov_lumin01.bmp", 2;
 					mes "[Lumin]";
-					mes "Eummm. I won't be a Log.";
+					mes "Eummm. I still wouldn't be a Rogue.";
 					mes "How about you?";
 					next;
-					if (select("Eh? Me? I don't want to be.", "Me.. I like... Rogue...") == 1) {
+					if (select("Eh? Me? I don't want to be..", "Me?.. I like... Rogue...") == 1) {
 						mes "[Lumin]";
-						mes "Ok. Then you take the bloody way with me.";
+						mes "Then you should take the darker path with me.";
 						mes "Becoming a shadow in the dark....";
 						cutin "nov_lumin03.bmp", 2;
 						next;
 						select("I don't want to be a thief.", ".... I'm scared!");
 						mes "[Lumin]";
-						mes "... a headache.";
+						mes "... what a headache.";
 						cutin "nov_lumin02.bmp", 2;
 						next;
 						cutin "sc_vicente04.bmp", 2;
 						mes "[Vicente]";
-						mes "Hahahaha.  Stop talking about the scary story.";
+						mes "Hahahaha. Stop telling scary stories.";
 						next;
 						cutin "nov_lumin01.bmp", 2;
 						mes "[Lumin]";
-						mes ".. Hng..";
+						mes ".. Hmph..";
 						setquest 7486;
 						completequest 7486;
 						close2;
@@ -11045,14 +11045,14 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 					} else {
 						mes "[Lumin]";
 						mes "Is that so?";
-						mes "It is an astonishing fighting skill to make the enemy disarmed and disabled.";
-						mes "I thumb up the skill.";
+						mes "I suppose it's an impressive skill to make an enemy disarmed and disabled.";
+						mes "I give a thumbs up to those skills.";
 						cutin "nov_lumin01.bmp", 2;
 						next;
 						cutin "sc_vicente02.bmp", 2;
 						mes "[Vicente]";
-						mes "Will you say a different story from what you told before?";
-						mes "Haha.. To me, Master is good enough, doing the same thing to me.";
+						mes "Have you changed your mind alaready?";
+						mes "Haha.. If it's good enough for the Master, it's good enough for me.";
 						setquest 7486;
 						completequest 7486;
 						close2;
@@ -11062,7 +11062,7 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 				} else {
 					mes "[Vicente]";
 					mes "Keung....";
-					mes "I am losing my excitement.";
+					mes "I am losing my enthusiasm.";
 					cutin "sc_vicente04.bmp", 2;
 					close2;
 					cutin "", 255;
@@ -11083,18 +11083,18 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 					if (!isbegin_quest(7484)) {
 						cutin "sc_vicente01.bmp", 2;
 						mes "[Vicente]";
-						mes "Hmmm. It is about the thief's skill using the manual.";
-						mes "By the way, this manual is only available for experience up to level 12.";
+						mes "Hmmm. So about using thief skills with the Manual.";
+						mes "And by the way this manual is can only be used up to level 12, is it's just for temporary use.";
 						next;
 						mes "[Vicente]";
-						mes "The actual exercise of ^4d4dffstealing from monster's items^000000 skill was planned but";
-						mes "you may need to know what it is... No need to do the actual exercise.";
+						mes "An actual exercise for ^4d4dffstealing a monster's items^000000 using the Steal skill was planned,";
+						mes "but while you need to know what it is... you don't necessarily need an exercise.";
 						next;
 						mes "[Vicente]";
-						mes "I will regard my course as completed.";
-						mes "By the way, what is stealing all about?";
+						mes "I will call these lessons completed.";
+						mes "But first, what is stealing all about?";
 						next;
-						switch(select("Stealing other's items!", "Stealing monster's items!", "Stealing other's enemy!", "Don't know.")) {
+						switch(select("Stealing other's items!", "Stealing monster's items!", "Stealing other's enemies!", "Don't know.")) {
 						case 1:
 							mes "[Vicente]";
 							mes "Wrong! That would be a terrible thing to do.";
@@ -11105,14 +11105,14 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 						case 2:
 							mes "[Vicente]";
 							mes "Correct!";
-							mes "You have a good memory.";
+							mes "Your memory is good.";
 							cutin "sc_vicente03.bmp", 2;
 							next;
 							break;
 						case 3:
 							mes "[Vicente]";
-							mes "You like doing that?";
-							mes "That is a terrible thing to do.";
+							mes "You would do that?";
+							mes "That's a terrible thing to do, actually.";
 							next;
 							break;
 						case 4:
@@ -11120,12 +11120,12 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 						}
 						cutin "sc_vicente01.bmp", 2;
 						mes "[Vicente]";
-						mes "Yes, we steal monster items.";
-						mes "the higher your skill level and the higher your hit ratio is, the success ratio also becomes higher.";
+						mes "Yes, we steal a monster's items.";
+						mes "The higher the level of your Steal skill, and the higher your hit ratio is, the better your success rate will be with Steal.";
 						next;
 						mes "[Vicente]";
-						mes "Anyway, here I will finish my class.";
-						mes "If you want to continue, there is no way as your level is too high.";
+						mes "Anyway, that's the end of my lessons.";
+						mes "There's nothing more to do from here... your level is too high.";
 						setquest 7484;
 						completequest 7484;
 						close2;
@@ -11141,7 +11141,7 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 							getexp 800,0;
 							next;
 							mes "[Vicente]";
-							mes "Anyway, you seem to be skilled enough to continue.";
+							mes "Well, you seem to be skilled enough to continue.";
 							mes "Go speak to Mayssel.";
 							close2;
 							cutin "", 255;
@@ -11149,16 +11149,16 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 						} else {
 							cutin "sc_vicente01.bmp", 2;
 							mes "[Vicente]";
-							mes "Hmmm. It is about the thief's skill using the manual.";
-							mes "By the way, this manual is only available for experience up to level 12.";
+							mes "Hmmm. So about using thief skills with the Manual.";
+							mes "And by the way this manual is can only be used up to level 12, is it's just for temporary use.";
 							next;
 							mes "[Vicente]";
-							mes "The actual exercise of ^4d4dffstealing from monster's items^000000 skill was planned but";
-							mes "you may need to know what it is... No need to do the actual exercise.";
+							mes "An actual exercise for ^4d4dffstealing a monster's items^000000 using the Steal skill was planned";
+							mes "but while you need to know what it is... you don't necessarily need an exercise.";
 							next;
 							mes "[Vicente]";
-							mes "I will regard my course as completed.";
-							mes "By the way, what is stealing all about?";
+							mes "I will call these lessons completed.";
+							mes "But first, what is stealing all about?";
 							next;
 							switch(select("Stealing other's items!", "Stealing monster's items!", "Stealing other's enemy!", "Don't know.")) {
 							case 1:
@@ -11171,14 +11171,14 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 							case 2:
 								mes "[Vicente]";
 								mes "Correct!";
-								mes "You have a good memory.";
+								mes "Your memory is good.";
 								cutin "sc_vicente03.bmp", 2;
 								next;
 								break;
 							case 3:
 								mes "[Vicente]";
-								mes "You like doing that?";
-								mes "That is a terrible thing to do.";
+								mes "You would do that?";
+								mes "That's a terrible thing to do, actually.";
 								next;
 								break;
 							case 4:
@@ -11186,12 +11186,12 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 							}
 							cutin "sc_vicente01.bmp", 2;
 							mes "[Vicente]";
-							mes "Yes, we steal monster items.";
-							mes "the higher your skill level and the higher your hit ratio is, the success ratio also becomes higher.";
+							mes "Yes, we steal a monster's items.";
+							mes "The higher the level of your Steal skill, and the higher your hit ratio is, the better your success rate will be with Steal.";
 							next;
 							mes "[Vicente]";
-							mes "Anyway, here I will finish my class.";
-							mes "If you want to continue, there is no way as your level is too high.";
+							mes "Anyway, that's the end of my lessons.";
+							mes "There's nothing more to do from here... your level is too high.";
 							setquest 7484;
 							completequest 7484;
 							close2;
@@ -11203,27 +11203,27 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 				if (!isbegin_quest(7484)) {
 					cutin "sc_vicente01.bmp", 2;
 					mes "[Vicente]";
-					mes "Hmmm. What?";
-					mes "You are talking about the use of thief skills by using the manual?";
+					mes "Hmmm. What was that?";
+					mes "You want to know about Thief skills by using the manual?";
 					mes "First, equip the Thief Manual.";
 					next;
 					mes "[Vicente]";
-					mes "You can either double click ^4d4dffthe items to be equipped^000000 or drag it to the equipment window.";
+					mes "To do that, you can either double click ^4d4dffthe items to be equipped^000000 or drag it to the equipment window.";
 					next;
 					mes "[Vicente]";
-					mes "Then, open the skill window, you can find the added skills in the 'Misc' tab.";
-					mes "You can even set the skills in the shortcut bar.";
+					mes "Then open the skill window... you can find the skills from the Manual in the 'MISC' tab.";
+					mes "You can even set those skills in your shortcut bar.";
 					next;
 					mes "[Vicente]";
-					mes "Now, out of them, there is a skill called ^4d4dffSteal^000000.";
+					mes "Now from those skills, there is one called ^4d4dffSteal^000000.";
 					next;
 					mes "[Vicente]";
-					mes "Here is an assignment.";
-					mes "Can you see the ornamental Poring cage?";
-					mes "Steal ^4d4dffone Stone from Poring by using the Steal skill.^000000";
+					mes "So I have an assignment for you.";
+					mes "Can you see the ornate Poring enclosure right here?";
+					mes "Steal ^4d4dffone Stone from a few Porings by using the Steal skill.^000000";
 					next;
 					mes "[Vicente]";
-					mes "Steal has a possibility to fail so don't quit.";
+					mes "The Steal skill has a chance to fail, so don't quit if nothing happens at first.";
 					mes "Good luck.";
 					setquest 7484;
 					npcskill "AL_BLESSING", 10, 60, 60;
@@ -11241,21 +11241,21 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 						getexp 800,0;
 						next;
 						mes "[Vicente]";
-						mes "Anyway, it is good enough for your skill experience purpose, let's finish the class here.";
-						mes "If you haven't finished Mr. Verkhasel's assignment, keep going with it.";
+						mes "That's good enough for skill experience purposes, let's finish lessons here.";
+						mes "If you haven't done Mr. Verkhasel's assignment, keep going with him.";
 						close2;
 						cutin "", 255;
 						end;
 					} else {
 						cutin "sc_vicente01.bmp", 2;
 						mes "[Vicente]";
-						mes "Steal one Stone from a Poring.";
-						mes "Wasn't it fun?";
+						mes "Steal one Stone from a few Porings.";
+						mes "Having fun?";
 						next;
 						if (select("It didn't give me a stone.", "I won't do it.") == 1) {
 							mes "[Vicente]";
-							mes "Hmmm? All porings were stolen of their stones?";
-							mes "I will summon Porings again, and you, try it once again.";
+							mes "Hmmm? Did all Porings have their stones stolen already?";
+							mes "I will summon the Porings once more, and you can try again.";
 							donpcevent "#nbacStone01::OnReset";
 							donpcevent "#nbacStone02::OnReset";
 							donpcevent "#nbacStone03::OnReset";
@@ -11267,8 +11267,8 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 						} else {
 							mes "[Vicente]";
 							mes "Hmmm. Is that so?";
-							mes "This is not your aptitude.";
-							mes "I see. This mission is now cancelled.";
+							mes "Perhaps this is not for you.";
+							mes "The assignment is now cancelled.";
 							erasequest 7484;
 							close2;
 							cutin "", 255;
@@ -11278,14 +11278,14 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 				} else {
 					cutin "sc_vicente01.bmp", 1;
 					mes "[Vicente]";
-					mes "Ahhh. Boring, Boring...";
-					mes "Now I can understand why Master ran away.";
+					mes "Ahhh. Bored, so bored...";
+					mes "Now I can understand why the Master ran away.";
 					mes "I want to go home.";
 					next;
 					cutin "gc_verkhasel01.bmp", 2;
 					mes "[Verkhasel]";
 					mes "So do I.";
-					mes "Mayssel... what did she think of...";
+					mes "Mayssel... what was she thinking...";
 					next;
 					mes "[Lumin]";
 					mes "Hmmm. Did she go AWOL?";
@@ -11293,37 +11293,37 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 					next;
 					cutin "gc_verkhasel01.bmp", 2;
 					mes "[Verkhasel]";
-					mes "Are you kidding me?!";
-					mes "Would you rather be carrying out a fatal mission!?!";
+					mes "You dare say that?!";
+					mes "Would you rather we send you out on a fatal mission!?!";
 					next;
 					cutin "sc_vicente01.bmp", 2;
 					mes "[Vicente]";
-					mes "Ah... I don't like it.";
-					mes "I would rather evaluate jewelry sitting at the workshop as usual...";
+					mes "Ah... I don't like this.";
+					mes "I would rather be inspecting jewelry at the workshop like usual...";
 					next;
 					cutin "gc_mayssel03.bmp", 1;
 					mes "[Mayssel]";
 					mes ".... .. ..";
-					mes "I will accept Verkhassel's wish.";
-					mes "Don't worry hohoho...";
+					mes "Maybe I will grant Verkhasel's wish.";
+					mes "You'll see, hohoho...";
 					next;
 					cutin "", 255;
-					mes "The mood is becoming gloomy.";
+					mes "The mood is turning gloomy.";
 					mes "Should I get out of here?";
 					close;
 				}
 			} else {
 				cutin "sc_vicente01.bmp", 2;
 				mes "[Vicente]";
-				mes "You are doing well.";
+				mes "You seem to be doing well.";
 				mes "I hope to see you again someday.";
 				next;
 				mes "[Vicente]";
-				mes "Ah, for your reference, I am operating a small workshop in Lighthalzen.";
-				mes "Visit me there someday.";
+				mes "Ah, just so you know, I operate a small workshop in Lighthalzen.";
+				mes "Visit me there sometime.";
 				next;
 				mes "[Vicente]";
-				mes "Perhaps, I won't forget you...";
+				mes "Perhaps I'll even remember you...";
 				mes "Haha...";
 				close2;
 				cutin "", 255;
@@ -11335,7 +11335,7 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 			cutin "sc_vicente01.bmp", 2;
 			mes "[Vicente]";
 			mes "You are not a student of Criatura Academy.";
-			mes "If you want more explanation about this job, you better register as a student of the Academy.";
+			mes "If you want to learn more about this job, you should register as a student of the Academy.";
 			next;
 			mes "[Vicente]";
 			mes "Though only novices can register...";
@@ -11346,29 +11346,29 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 			if (Class == Job_Thief) {
 				cutin "sc_vicente03.bmp", 2;
 				mes "[Vicente]";
-				mes "Oh, you became a good thief.";
-				mes "Don't you want to be a shadow chaser in your future?";
+				mes "Oh, you became a Thief.";
+				mes "Perhaps you want to be a Shadow Chaser in the future?";
 				next;
 				mes "[Vicente]";
-				mes "This is the higher class applied by the elite Rogues of good artistry.";
+				mes "It's a higher class of Thief from the path of the elite and artistic Rogues.";
 				next;
 				mes "[Vicente]";
-				mes "Above job level 40, any Thief can be transferred to a Rogue anytime.";
-				mes "Fortunately, the sailing service from Izlude wharf to Pharos lighthouse is available!!";
+				mes "Above job level 40, a Thief can move up to become a Rogue.";
+				mes "And as luck would have it, there is a the sailing service here in Izlude that can get you to Pharos lighthouse!!";
 				next;
 				cutin "gc_verkhasel02.bmp", 0;
 				mes "[Verkhasel]";
-				mes "First, is it courteous to ask whether you can be a Rogue or not?";
-				mes "If it is an application for an Assassin, what happens to you?";
+				mes "To be fair, I should first ask whether you intend to become a Rogue or not.";
+				mes "If you plan to apply for Assassin instead, what then?";
 				next;
 				cutin "sc_vicente03.bmp", 2;
 				mes "[Vicente]";
-				mes "Haha. You like a bloody job?";
+				mes "Haha. You'd like a bloody job like Assassin?";
 				next;
 				cutin "sc_vicente04.bmp", 2;
 				mes "[Vicente]";
 				mes "Haha... Calm down...";
-				mes "Don't respond to every tiny matter..";
+				mes "No need to respond to every little thing..";
 				next;
 				cutin "", 255;
 				mes "The atmosphere became very tense.";
@@ -11378,11 +11378,11 @@ iz_ac02,49,134,5	script	Vicente#ac	4_M_HUMAN_02,{
 			} else {
 				cutin "sc_vicente03.bmp", 2;
 				mes "[Vicente]";
-				mes "Welcome to the Criatura Academy.";
-				mes "Here, I am teaching the basics to the people wishing to be a Thief.";
+				mes "Welcome to Criatura Academy.";
+				mes "Here I teach the basics to adventurers interested in the Thief job.";
 				next;
 				mes "[Vicente]";
-				mes "So, in other words, I am handling the Novices wanting to be thieves.";
+				mes "In other words, I handle Novices wanting to become thieves.";
 				mes "Haha...";
 				close2;
 				cutin "", 255;
@@ -11411,7 +11411,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 	if (isbegin_quest(4269) > 0 && Class == Job_Novice) {
 		if (!isbegin_quest(7480)) {
 			mes "[Verkhasel]";
-			mes "What? It interrupts me.";
+			mes "What? I was interrupted.";
 			cutin "gc_verkhasel01.bmp", 0;
 			close2;
 			cutin "", 255;
@@ -11419,31 +11419,31 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 		} else if (isbegin_quest(7480) == 1) {
 			if (!isbegin_quest(7482)) {
 				mes "[Verkhasel]";
-				mes "Eheee, Eheee, It can't be a joke.";
-				mes "Mayssel's class...";
-				mes "Did you call upon me for this kind of nasty thing?";
+				mes "Eheee, eheee, you're kidding me.";
+				mes "Mayssel's lessons...";
+				mes "that's what you're here about?";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
-				select("...Let's keep working?");
+				select("...Let's work together?");
 				mes "[Lumin]";
-				mes "It's a pity. That man is scary.";
+				mes "Unfortunate that the man is scary.";
 				mes "But as long as I am with you, don't be afraid of him.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				mes "[Verkhasel]";
-				mes "What are you talking about this time?";
-				mes "In the beginning, Lue.. You should not be here...";
+				mes "What are you on about?";
+				mes "To start with, Lu.. you should not be here...";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				cutin "nov_lumin01.bmp", 2;
 				mes "[Lumin]";
-				mes ".........Who am I?";
+				mes ".........Who am I to warrant being here?";
 				mes "Assistant.... Trainer?";
 				next;
 				cutin "gc_verkhasel02.bmp", 0;
 				mes "[Verkhasel]";
-				mes "Zt...";
-				mes "Well, which one are you curious about?";
+				mes "Tch...";
+				mes "Well, what do you want to know more about?";
 				next;
 				cutin "gc_verkhasel01.bmp", 0;
 				.@ok_chk = 0;
@@ -11451,54 +11451,54 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					switch(select("Double Attack", "Envenom", "Improve Dodge and Hide", "About you", "That's enough.")) {
 					case 1:
 						mes "[Verkhasel]";
-						mes "You  may already know the primary weapon of a Thief is a dagger.";
-						mes "A Thief's specialty is the ^4d4dffDouble Attack^000000 by a dagger.";
+						mes "As you may know, the primary weapon of a Thief is a dagger.";
+						mes "A Thief's specialty is tp ^4d4dffDouble Attack^000000 with a dagger.";
 						next;
 						mes "[Verkhasel]";
-						mes "If you are short of attacking power, it can be covered at a certain degree.";
+						mes "If you are lacking attack power, this skill can make up for it to an extent.";
 						mes "Any other questions?";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
 					case 2:
 						mes "[Verkhasel]";
-						mes "There is a skill called ^4d4dffEnvenom^000000 to intoxicate your enemy with poison and";
-						mes "the other skill called ^4d4dffDetoxify^000000 to remove the poisoned status.";
+						mes "There is a skill called ^4d4dffEnvenom^000000 used to intoxicate an enemy with poison,";
+						mes "and another skill called ^4d4dffDetoxify^000000 to remove a poison status.";
 						next;
 						mes "[Verkhasel]";
-						mes "You can tell the poisoned status by its very pretty purple color.";
+						mes "Poisoned status marks someone by its very pretty purple color.";
 						next;
 						mes "[Verkhasel]";
-						mes "In case, you are poisoned, venom will decrease your vitality rapidly,";
-						mes "you either detoxify right away or take the antidote potion.";
+						mes "If you are poisoned, venom will decrease your health rapidly,";
+						mes "you should either Detoxify right away or take an antidote potion.";
 						next;
 						mes "[Verkhasel]";
-						mes "If you have more interest in poison, you may be an assassin.";
-						mes "They officially use poison.";
-						mes "Then next!";
+						mes "If you have more interest in poison, you may be interested in Assassin.";
+						mes "They specialize in poison.";
+						mes "Next!";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
 					case 3:
 						mes "[Verkhasel]";
-						mes "Thiefs train the skill called ^4d4dffImprove Dodge^000000.";
-						mes "This makes the enemy powerless by evading its attack.";
+						mes "Thief's use a skill called ^4d4dffImprove Dodge^000000.";
+						mes "By evading an enemy's attacks, you can render them powerless.";
 						next;
 						mes "[Verkhasel]";
-						mes "Rather than being patient after being hit, it is more suitable for a less defensive thief to avoid from it fast.";
-						mes "Being this reason, agility [AGI] can't be neglected.";
+						mes "Rather patiently recovering after being hit, a Thief who has less defense is more suited to avoid being hit as much as possible.";
+						mes "Because of this, agility [AGI] should not be neglected.";
 						next;
 						mes "[Verkhasel]";
-						mes "^4d4dffHiding^000000 is the skill for refuge.";
-						mes "If successful, others can't see you.";
+						mes "^4d4dffHiding^000000 is a skill for refuge.";
+						mes "If successful, monsters and fellow adventurers won't be able to see you.";
 						next;
 						mes "[Verkhasel]";
-						mes "Ah, as it is said you can't cheat a ghost.... You would be found by evil.";
-						mes "Also sensitive insects recognize it...";
+						mes "Ah, but it's said that you can't cheat a ghost.... you would be found.";
+						mes "Also, sensitive insects may detect you even when hidden...";
 						next;
 						mes "[Verkhasel]";
-						mes "Other than these, it will be useful for avoiding emergency situations.";
-						mes "When you become higher jobs like Rogue or Assassin, you can learn more useful skills like Refuge.";
+						mes "Other than those exceptions, it's useful for getting out of emergency situations.";
+						mes "Then when you move to higher jobs like Rogue or Assassin, you can learn even more useful skills like Refuge.";
 						.@ok_chk = .@ok_chk + 1;
 						next;
 						continue;
@@ -11509,17 +11509,17 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						next;
 						cutin "nov_lumin01.bmp", 2;
 						mes "[Lumin]";
-						mes "As one of the assassins, I am in charge of punishing the law violators, as the member of the execution group.";
-						mes "For your reference, the primary weapon of Verkhasel is Katar.";
+						mes "As an Assassin and member of the execution class, I am in charge of punishing violators of the law.";
+						mes "And by the way, Verkhasel's primary weapon is the Katar.";
 						next;
 						select("How do you know that?");
 						mes "[Lumin]";
-						mes "That's my hope.";
+						mes "I aim to be in his place.";
 						cutin "nov_lumin03.bmp", 2;
 						next;
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Oh.. Smart funk~~";
+						mes "Oh.. Smart alec~~";
 						mes "That's enough, Lu.";
 						mes "Any more questions?";
 						next;
@@ -11527,13 +11527,13 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					case 5:
 						if (.@ok_chk == 0) {
 							mes "[Verkhasel]";
-							mes "You can steal one item from one enemy.";
-							mes "I feel mortified at stopping here, but it's worse to be neglected...";
+							mes "With this skill you can steal one item from one enemy at a time.";
+							mes "It sucks to stop at that, but better than nothing...";
 							next;
 						} else {
 							mes "[Verkhasel]";
 							mes "OK.";
-							mes "Considering your favor not to ignore me, let's finish it now.";
+							mes "Well considering you don't seem to have interest, let's stop here.";
 							next;
 						}
 						break;
@@ -11542,11 +11542,11 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				}
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
-				mes "Honestly, I don't think you need to know the details about the thief's skills.";
-				mes "Then, just be aware there is something like that..";
+				mes "Honestly, I don't think you need to know the details of a Thief's skills.";
+				mes "Just be aware of the general points..";
 				next;
 				mes "[Verkhasel]";
-				mes "I mean it is good enough now.";
+				mes "So, good enough for now.";
 				setquest 7482;
 				close2;
 				cutin "", 255;
@@ -11555,21 +11555,21 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
 				mes "Anything else you're curious about?";
-				mes "I will give you an answer after you finish Mayssel's class.";
+				mes "I can tell you more after you finish Mayssel's lessons.";
 				next;
 				mes "[Verkhasel]";
-				mes "I mean that she knows it.";
-				mes "Mayssel will do it for you.";
+				mes "She knows things.";
+				mes "Mayssel will fill you in.";
 				next;
 				cutin "nov_lumin01.bmp", 2;
 				mes "[Lumin]";
-				mes "Lazy boy.";
-				mes "Tell me the truth... You are annoying..";
+				mes "Lazy.";
+				mes "Tell me the truth... you know you are annoying..";
 				next;
 				cutin "gc_verkhasel02.bmp", 0;
 				mes "[Verkhasel]";
 				mes ".......You........";
-				mes "Zt.. I don't know the enemy..";
+				mes "Tch.. I don't know my own enemy..";
 				close2;
 				cutin "", 255;
 				end;
@@ -11580,23 +11580,23 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					if (!isbegin_quest(7485)) {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Actual experience assignments about the skill?";
-						mes "To do it, your level is too high.";
-						mes "I can't use the guide.";
+						mes "Assignments to test out the skill?";
+						mes "Your level is too high.";
+						mes "You can't use the Thief Manual now.";
 						next;
 						mes "[Verkhasel]";
-						mes "Originally, I will let you hunt porings with envenom.";
-						mes "No way, if I can't use the skill....";
+						mes "Originally, I wanted you to hunt Porings with Envenom.";
+						mes "But there's no way, if you can't use the skill....";
 						next;
 						mes "[Verkhasel]";
 						mes "Envenom is the skill to poison.";
-						mes "If not poison him, you can damage to him due to the characteristic of venom.";
+						mes "If you can't poison it, you can't damage it with the characteristics of venom.";
 						next;
 						mes "[Verkhasel]";
-						mes "Keep in mind of these. That might be good enough for you.";
-						mes "As it is the class to let you know what you can do.";
-						mes "Let's finish the skill experience.";
-						mes "Check with Mayssel.";
+						mes "But if you take in that information, that might be good enough for you.";
+						mes "That's what the practical lessons would have tought you.";
+						mes "So let's finish the skill experience.";
+						mes "Check in with Mayssel.";
 						setquest 7485;
 						completequest 7485;
 						close2;
@@ -11606,12 +11606,12 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						if (checkquest(7485,HUNTING) == 2) {
 							cutin "gc_verkhasel01.bmp", 0;
 							mes "[Verkhasel]";
-							mes "You are doing well.";
-							mes "Envenom has the poison effect and can damage from venom itself.";
+							mes "You're doing well.";
+							mes "Envenom has the effect of poison creates the continual damage characteristics of venom.";
 							next;
 							mes "[Verkhasel]";
-							mes "The skill experience is now enough.";
-							mes "Check it with Mayssel.";
+							mes "Your skill experience is sufficient.";
+							mes "Check in with Mayssel.";
 							completequest 7485;
 							getexp 800,0;
 							close2;
@@ -11622,17 +11622,17 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 							mes "[Verkhasel]";
 							mes "You can't equip the Thief Manual?";
 							mes "Your level is too high.";
-							mes "There is no other way.";
+							mes "You can't use it anymore.";
 							next;
 							mes "[Verkhasel]";
 							mes "Envenom is the skill to poison.";
-							mes "If not poison him, you can damage to him due to the characteristic of venom.";
+							mes "If you can't poison it, you can't damage it with the characteristics of venom";
 							next;
 							mes "[Verkhasel]";
-							mes "Keep in mind of these. That might be good enough for you.";
-							mes "As it is the class to let you know what you can do.";
-							mes "Let's finish the skill experience.";
-							mes "Check with Mayssel.";
+							mes "If you take in that information, that might be good enough for you.";
+							mes "That's what the practical lessons would have tought you.";
+							mes "So let's finish the skill experience.";
+							mes "Check in with Mayssel.";
 							completequest 7485;
 							close2;
 							cutin "", 255;
@@ -11644,48 +11644,48 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				if (!isbegin_quest(7485)) {
 					cutin "gc_verkhasel01.bmp", 0;
 					mes "[Verkhasel]";
-					mes "This is about the use of skill.";
-					mes "Now if you were an assassin, shall I let you test the skills related to venom which you may continue to use?";
+					mes "This is about the use of skills.";
+					mes "To act as an Assassin, shall I let you test the venom-related skills that you may use in the future?";
 					next;
 					mes "[Verkhasel]";
-					mes "Load the thief guide receved by Mayssel and open the skill window by pressing Alt+S key,";
-					mes "Register Envenom regisstered on the ETC compartment,  by pressing shortcut key^000000";
+					mes "Equip the Thief's Manuel that Mayssel gave you and open the skill window by pressing Alt+S.";
+					mes "^4d4dffTake the Envenom skill from the 'ETC' section of the window, register it to a shortcut on your shortcut bar, and use the skill by using its shortcut^000000";
 					next;
 					mes "[Verkhasel]";
-					mes "Then, approach the Poring's cage in the center of this room and";
-					mes "Aim at Poring, and ^4d4dff' hunt one poring by using";
+					mes "Then, approach the Porings enclosure in the center of this room,";
+					mes "aim at a Poring, and ^4d4dff' hunt one poring down with the poison.";
 					next;
 					mes "[Verkhasel]";
-					mes "That's my assignment to you.";
-					mes "You definitely use envenom to Poring in this room.";
-					mes "don't go out faraway to find Porings.";
+					mes "That's my assignment for you.";
+					mes "You can definitely use Envenom on the Porings in this room.";
+					mes "No need to wander far off to find Porings.";
 					setquest 7485;
 					next;
 					cutin "nov_lumin02.bmp", 2;
 					mes "[Lumin]";
 					mes "Eummm.";
-					mes "It's sad..";
-					mes "Please accept my condolence in advance, as you can't experience envenom... hehehe...";
+					mes "Pity..";
+					mes "Please accept my condolences in advance, as I don't believe you'll Envenom properly... hehehe...";
 					next;
 					select("What are you talking about?");
 					mes "[Lumin]";
-					mes "From now, I am going to hunt Poring..";
-					mes "...Don't misunderstand me for challenging you, as such I  want to make a bet with you.";
+					mes "Instead, I'll be the one to hunt the Porings..";
+					mes "...Don't misunderstand me on this challenge, I actually want to make a bet with you.";
 					cutin "nov_lumin03.bmp", 2;
 					next;
 					cutin "", 255;
-					mes "Lumin is betting win or loose.";
+					mes "Lumin is betting, win or lose.";
 					close;
 				} else if (isbegin_quest(7485) == 1) {
 					if (checkquest(7485,HUNTING) == 2) {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "You are doing well.";
-						mes "Envenom has the poison effect and can damage from venom itself.";
+						mes "You're doing well.";
+						mes "Envenom has the effect of poison creates the continual damage characteristics of venom.";
 						next;
 						mes "[Verkhasel]";
-						mes "The skill experience is now enough.";
-						mes "Check it with Mayssel.";
+						mes "Your skill experience is sufficien.";
+						mes "Check in with Mayssel.";
 						completequest 7485;
 						getexp 800,0;
 						close2;
@@ -11694,24 +11694,24 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					} else {
 						cutin "gc_verkhasel01.bmp", 0;
 						mes "[Verkhasel]";
-						mes "Come close to a poring cage and use envenom to poring.";
-						mes "You must do it only to porings in this room.";
+						mes "Get close to the Poring enclosure and use Envenom on the Porings.";
+						mes "Worry only about the Porings in this room.";
 						next;
 						if (select("I see..", "I won't do it.") == 1) {
 							mes "[Verkhasel]";
-							mes "OK. Until you kill all the porings in the cage, attack them with venom.";
+							mes "Keep attacking with venom until you kill all the Porings in an encloser.";
 							percentheal 0,100;
 							close2;
 							cutin "", 255;
 							end;
 						}
 						mes "[Verkhasel]";
-						mes "These are not your aptitude.";
-						mes "I will cancel my assignment, and the other assignments from Mayssel to be cancelled by her.";
+						mes "Perhaps this is not for you.";
+						mes "I will cancel your assignment with me, though any assignments from Mayssel should be cancelled through her.";
 						next;
 						if (select("Cancel.", "I will continue..") == 1) {
 							mes "[Verkhasel]";
-							mes "Cancel the mission to hunt poring with envenom.";
+							mes "The assignment to hunt Porings with Envenom has been cancelled.";
 							erasequest 7485;
 							close2;
 							cutin "", 255;
@@ -11719,7 +11719,7 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 						}
 						mes "[Verkhasel]";
 						mes "Have you changed your mind?";
-						mes "Then, until you kill all the poring in the cage, keep attacking them with envenom.";
+						mes "Then, keep attacking with venom until you kill all the Porings in an encloser.";
 						percentheal 0,100;
 						close2;
 						cutin "", 255;
@@ -11727,8 +11727,8 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					}
 				} else {
 					mes "[Verkhasel]";
-					mes "Now you fully understand what skill venom is..";
-					mes "As you completed my assignment, go and check it with Mayssel.";
+					mes "Now you fully understand the Envenom skill works..";
+					mes "You have completed your assignment, now go check in with Mayssel.";
 					cutin "gc_verkhasel01.bmp", 0;
 					close2;
 					cutin "", 255;
@@ -11736,14 +11736,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 				}
 			} else {
 				mes "[Verkhasel]";
-				mes "You are the bung finished Mayssel's class complete.";
-				mes "Any more questions, ask Mayssel.";
-				mes "It is the end of my class.";
+				mes "You have completed Mayssel's lessons.";
+				mes "If you have any more questions, ask Mayssel.";
+				mes "Your lessons here with me are done as well.";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				mes "[Verkhasel]";
-				mes "If you become a thief, we may meet together in far future..";
-				mes "If you become an assassin.";
+				mes "If you become a Thief, we'll meet again in the distant future..";
+				mes "should you turn to Assassin.";
 				close2;
 				cutin "", 255;
 				end;
@@ -11752,14 +11752,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 	} else {
 		if (!isbegin_quest(4269)) {
 			mes "[Verkhasel]";
-			mes "There is no words to tell you guy not belonging to our academy.";
-			mes "In fact, I pulled out here unwillingly, I don't have mind to be kind of you...";
+			mes "I don't have anything to say to someone not registerd with our Academy.";
+			mes "In fact I was pressured into this position against my will, so I don't have a mind to be kind...";
 			cutin "gc_verkhasel01.bmp", 0;
 			next;
 			mes "[Mayssel]";
 			mes "Wait, Verkhasel.....";
-			mes "Don't get even with other innocent....";
-			mes "How about helping my class for me?";
+			mes "Don't take things out on an innocent....";
+			mes "How about just helping with my lessons for students?";
 			cutin "gc_mayssel03.bmp", 1;
 			next;
 			cutin "", 255;
@@ -11768,14 +11768,14 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 		} else {
 			if (Class == Job_Thief) {
 				mes "[Verkhasel]";
-				mes "Yo~ You...";
-				mes "What do you want to be?";
+				mes "Yo~ Thief. You...";
+				mes "what do you want to be?";
 				cutin "gc_verkhasel01.bmp", 0;
 				next;
 				if (select("An Assassin!", "A Rogue!") == 1) {
 					mes "[Lumin]";
-					mes "Welcome to your joining in the way of bloody darness.";
-					mes "My comrad.";
+					mes "Joining the bloody path full of darkness. Welcome...";
+					mes "my comrad.";
 					cutin "nov_lumin03.bmp", 2;
 					next;
 					cutin "gc_verkhasel02.bmp", 0;
@@ -11790,29 +11790,29 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 					close;
 				} else {
 					mes "[Verkhasel]";
-					mes "Go over there.";
+					mes "Move over there, then.";
 					cutin "gc_verkhasel01.bmp", 0;
 					next;
 					cutin "sc_vicente04.bmp", 2;
 					mes "[Vicente]";
 					mes "Oh... Mr. Verkhasel...";
-					mes "Don't play like this among a family.";
-					mes "Why are you dividing us into teams?";
+					mes "Don't be like this among family.";
+					mes "Why are you having us pick sides?";
 					next;
 					cutin "gc_verkhasel01.bmp", 0;
 					mes "[Verkhasel]";
-					mes "I've never been in your family.";
-					mes "Originally, you are not a Rogue.";
+					mes "I've never been your family.";
+					mes "Originally, you weren't even a Rogue.";
 					mes "You were only a merchant.";
 					next;
 					cutin "sc_vicente02.bmp", 2;
 					mes "[Vicente]";
-					mes "Oh.. No.. What a dirty word.";
-					mes "Have I asked you for buying something from me?";
+					mes "Oh.. What a foul sentiments.";
+					mes "Have I ever even asked you to buying something from me?";
 					next;
 					cutin "gc_mayssel03.bmp", 1;
 					mes "[Mayssel]";
-					mes "..........You look friendly.. Two of you...";
+					mes "..........You should be friends.. The two of you...";
 					next;
 					cutin "", 255;
 					mes "The mood has become tense.";
@@ -11821,9 +11821,9 @@ iz_ac02,55,134,3	script	Verkhasel#ac	4_M_GUILLOTINE,{
 			} else {
 				cutin "gc_verkhasel01.bmp", 0;
 				mes "[Verkhasel]";
-				mes "You are the guy knows everything you need.";
-				mes "Are you coming to watch only? Emmm?";
-				mes "Why don't you help the juniors without watch only?";
+				mes "You already know everything you need.";
+				mes "Are you here just to observe? Hmmm?";
+				mes "Why don't you help your juniors, rather than just watch?";
 				close2;
 				cutin "", 255;
 				end;
@@ -11855,17 +11855,17 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	if (checkquest(7487,HUNTING) == -1) {
 		if (isbegin_quest(7485) == 2) {
 			mes "[Lumin]";
-			mes "Your eagerness and efforst to complete mission moved me to offer something.";
+			mes "Your efforts and eagernes to complete your assignments moved me to offer a challenge.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "^4d4dff It is to hunt all 4 Porings here within 30 seconds^000000.";
-			mes "If you do, I will yield to you all the earned item in my hand.";
+			mes "^4d4dffDefeat 4 Porings in this room within 30 seconds^000000.";
+			mes "If you succeed, I will will hand over all the earned items in my hand.";
 			next;
 			select("If I fail?");
 			mes "[Lumin]";
-			mes "It is our bet. You have to give up yours as you lost.";
-			mes "Emmm. As I am generous, I will receive ^4d4dff10 beginner's red potions^000000.";
+			mes "Well, it's a bet. If you fail, you give up your items instead.";
+			mes "Emmm. But as I am generous, I will take only ^4d4dff10 beginner's red potions^000000.";
 			next;
 			if (select("Give Up.", "I Accept.") == 1) {
 				mes "[Lumin]";
@@ -11878,7 +11878,7 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			} else {
 				mes "[Lumin]";
 				mes ".... Good!";
-				mes "Now, ^4d4dffspeak to me once you finish hunting 4 porings in 30 seconds.^000000";
+				mes "Now, ^4d4dffspeak to me once you have defeated 4 Porings within 30 seconds.^000000";
 				setquest 7487;
 				close2;
 				cutin "", 255;
@@ -11886,8 +11886,8 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			}
 		} else {
 			mes "[Lumin]";
-			mes "The intoxicated enemies won't die only from poisoning.";
-			mes "They only come close to death.";
+			mes "Evenomed enemies won't die just from poisoning.";
+			mes "They can come close to death, but still you much finish them off another way.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
@@ -11899,21 +11899,21 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else if (checkquest(7487,HUNTING) == 1) {
 		if (checkquest(7487,PLAYTIME) == 2) {
 			mes "[Lumin]";
-			mes "... 30 seconds have passed and you have not yet hunted 4 porings.";
-			mes "Then, it is not interesting.";
+			mes "... 30 seconds have passed and you have not yet defeated 4 Porings.";
+			mes "This wasn't much fun.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "If you don't like do it... no way.";
-			mes "As I am generous, I disregard the bet this time.";
+			mes "If you don't to do it... well.";
+			mes "As I am generous, I'll disregard the bet this time.";
 			erasequest 7487;
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "You may be too busy in^4d4dff hunting 4 porings in 30 seconds.^000000";
-			mes "Hey, time passes now...";
+			mes "You may be too slow^4d4dff defeating 4 Porings in 30 seconds.^000000";
+			mes "Hey, time goes fast...";
 			cutin "nov_lumin01.bmp", 2;
 			close2;
 			cutin "", 255;
@@ -11922,12 +11922,12 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else if (checkquest(7487,HUNTING) == 2) {
 		if (checkquest(7487,PLAYTIME) == 0) {
 			mes "[Lumin]";
-			mes "Oh... You are very powerful!";
-			mes "Now then, as agreed I will give you everything I have.";
+			mes "Oh... quite powerful!";
+			mes "As agreed I will give you everything I have.";
 			cutin "nov_lumin03.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "I've had a lot of fun because of you!";
+			mes "I've had a lot of fun here, thanks to you!";
 			cutin "nov_lumin05.bmp", 2;
 			completequest 7487;
 			getexp 800,50;
@@ -11940,13 +11940,13 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "Regretfully, 30 seconds has passed.";
+			mes "Unfortunately, 30 seconds has passed.";
 			cutin "nov_lumin02.bmp", 2;
 			mes ".....";
 			next;
 			mes "[Lumin]";
-			mes "I will give them to you anyways.";
-			mes "Come on, take it.";
+			mes "I will give you something anyway.";
+			mes "Go on, take it.";
 			cutin "nov_lumin03.bmp", 2;
 			completequest 7487;
 			getexp 800,50;
@@ -11955,7 +11955,7 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 			select("Why are you treating me like this?", "Didn't I loose?");
 			mes "[Lumin]";
 			mes "You spent time with me.";
-			mes "Get it free. I stole them from Porings.";
+			mes "It's yours. I stole them from Porings.";
 			cutin "nov_lumin05.bmp", 2;
 			close2;
 			cutin "", 255;
@@ -11964,34 +11964,34 @@ iz_ac02,62,139,3	script	Lumin#ac	4_M_NOV_RUMIN,{
 	} else {
 		if (Class == Job_Novice) {
 			mes "[Lumin]";
-			mes "We may meet again.";
-			mes "Becoming familiar with others is pleasrue and sad.";
+			mes "Perhaps we'll meet again.";
+			mes "Getting to know others is bitter and sweet.";
 			cutin "nov_lumin02.bmp", 2;
 			next;
 			mes "[Lumin]";
-			mes "... It may be in trouble if it dies upfront...";
+			mes "... It may be bad if one dies first...";
 			close2;
 			cutin "", 255;
 			end;
 		} else {
 			mes "[Lumin]";
-			mes "At last, the day comes.";
+			mes "At last, it's time.";
 			cutin "nov_lumin01.bmp", 2;
 			next;
 			cutin "", 255;
-			mes "Lumin changing clothes piece by piece.";
+			mes "Lumin changes clothes, piece by piece.";
 			specialeffect2 EF_SPHERE;
 			specialeffect2 EF_SPHERE;
 			setnpcdisplay( "Lumin#"+strnpcinfo(2), 4_M_THIEF_RUMIN );
 			next;
 			cutin "thf_lumin01.bmp", 2;
 			mes "[Lumin]";
-			mes "I was carrying out my mission.";
+			mes "I was carrying out a mission.";
 			next;
-			select("No need to make an excuse....");
+			select("No need to make excuses....");
 			mes "[Lumin]";
-			mes "At least to you, I don't want to be a stranger.";
-			mes "Forget what you saw today, as I have to introduce to the way of Thief Guild as many people as possible.";
+			mes "At least to you, I don't want to be someone else.";
+			mes "Forget what you saw today, as it was for my purpose of introducing to the way of the Thief Guild to as many people as possible.";
 			cutin "thf_lumin05.bmp", 2;
 			close2;
 			specialeffect2 EF_SPHERE;
@@ -12122,12 +12122,12 @@ iz_ac02_d,1,1,0	duplicate(#nbacStone03)	#nbacStone03_d	CLEAR_NPC
 iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 	if (isbegin_quest(4269) < 1) {
 		mes "[Alice Yisha]";
-		mes "Did you ^ff0000register with the Criatura Academy^000000?";
-		mes "You can register at ^ff0000information center of Criatura Academy^000000.";
+		mes "Did you ^ff0000register with Criatura Academy^000000?";
+		mes "You can register with the ^ff0000information center for Criatura Academy^000000.";
 		cutin "acact_03.bmp", 2;
 		next;
 		mes "[Alice Yisha]";
-		mes "It is annoying... but you need to register so you can receive ^ff0000lots of education and service of Criatura Academy^000000.";
+		mes "It's a bother... but you need to register in order to get access to our ^ff0000many services and educational courses for Criatura Academy^000000.";
 		cutin "acact_01.bmp", 2;
 		close2;
 		cutin "", 255;
@@ -12135,9 +12135,9 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 	} else {
 		if (isbegin_quest(11343) == 0) {
 			mes "[Alice Yisha]";
-			mes "oh Odin!";
+			mes "By Odin!";
 			mes "Nice to meet you.";
-			mes "I am Alice Yisha ^ff0000in charge of Acolytes^000000.";
+			mes "I am Alice Yisha ^ff0000in charge of Acolyte education^000000.";
 			cutin "acact_01.bmp", 2;
 			setquest 11343;
 			completequest 11343;
@@ -12145,7 +12145,7 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		} else {
 			mes "[Alice Yisha]";
 			mes "Welcome~";
-			mes "Glad to meet you again.";
+			mes "It's nice to see you again.";
 			cutin "acact_01.bmp", 2;
 			if (isbegin_quest(11343) == 1)
 				completequest 11343;
@@ -12153,13 +12153,13 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		}
 		if (Class == Job_Novice) {
 			mes "[Alice Yisha]";
-			mes "If you did not select Acolyte as a job, why don't you study more about it?";
+			mes "If you haven't chosen a job for yourself yet, why don't you learn about Acolyte?";
 			cutin "acact_01.bmp", 2;
 			next;
 			.@menu$ = "What is an Acolyte?:Battle Acolyte:Support Acolyte:Change job class to Acolyte.:End Conversation";
 		} else {
 			mes "[Alice Yisha]";
-			mes "I guess you do not need my help any more.";
+			mes "I guess there's not much else I can help you with.";
 			mes "Do you have any questions about Acolytes?";
 			cutin "acact_03.bmp", 2;
 			next;
@@ -12168,57 +12168,57 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 		switch(select(.@menu$)) {
 			case 1:
 				mes "[Alice Yisha]";
-				mes "An acolyte serves ^ff0000Odin^000000 so it can use ^ff0000Holy skills^000000 according to the will of Odin.";
+				mes "An acolyte serves ^ff0000Odin^000000 so it can use ^ff0000Holy^000000 skills according to the will of Odin.";
 				cutin "acact_02.bmp", 2;
 				next;
 				mes "[Alice Yisha]";
-				mes "Most skills are based on ^ff0000the purpose of treatment or aid^000000 so it is a very important job for ^ff0000party hunting^000000.";
+				mes "The purposes of most skills ^ff0000are treatment and aid^000000, so it is a very important role for ^ff0000party hunting^000000.";
 				cutin "acact_03.bmp", 2;
 				next;
 				mes "[Alice Yisha]";
-				mes "It is a ^ff0000hybrid job^000000 which can change ^ff0000attack type^000000 depends on increased status, but the range of weapon is narrow because they don't use fatal killing weapons for religious reason.";
+				mes "Acolyte is also a ^ff0000hybrid job^000000 that can change ^ff0000attack type^000000 depending on their status, but their weapon range is narrow because for religious reasons, they use less leathal weapons.";
 				close2;
 				cutin "", 255;
 				end;
 			case 2:
 				mes "[Alice Yisha]";
-				mes "An acolyte is categorized as ^ff0000support type^000000 and ^ff0000physical attack type^000000.";
+				mes "An Acolyte can be a ^ff0000support type^000000 or a ^ff0000physical attack type^000000. Which do you want to hear about?";
 				next;
 				switch(select("Support type", "Attack type", "Stop.")) {
 				case 1:
 					mes "[Alice Yisha]";
-					mes "^ff0000INT^000000 is important status for ^ff0000support type Acolytes^000000.";
-					mes "^ff0000INT^000000 enhances ^ff0000treatment function^000000 and increases ^ff0000SP^000000 which is necessary for using skills.";
-					mes "It also helps ^ff0000SP recovery^000000.";
+					mes "^ff0000INT^000000 is a very important stat for ^ff0000support type Acolytes^000000.";
+					mes "^ff0000INT^000000 enhances ^ff0000healing ability^000000 and increases ^ff0000SP^000000, which you'll need a lot of for the use of skills.";
+					mes "It also helps with ^ff0000SP recovery^000000.";
 					cutin "acact_02.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "But  aid type acolyte has a weakness point such as ^ff0000It is difficult to hunt alone^000000.";
-					mes "So it goes huning with ^ff0000party^000000 or use ^ff0000heal^000000 skill to monsters with ^ff0000fire-attribute^000000.";
+					mes "But going the support route has its weak points, such as ^ff0000making it difficult to hunt alone^000000.";
+					mes "So it's a good idea to hunt with ^ff0000party^000000 or to use ^ff0000healing^000000 skill on monsters that have ^ff0000fire-attribute^000000.";
 					next;
 					mes "[Alice Yisha]";
-					mes "It is like ^ff0000heal skill with holly power is fatal to undead with fire-attribute^000000.";
+					mes "^ff0000A heal skill with holly power is powerful against undead monsters with fire-attribute^000000.";
 					cutin "acact_01.bmp", 2;
 					close2;
 					cutin "", 255;
 					end;
 				case 2:
 					mes "[Alice Yisha]";
-					mes "The important status FOR ^ff0000physical attack type^000000 acolyte is ^ff0000STR, VIT, AGI, DEX^000000.";
-					mes "The status seem to be complicated compare to support type but it is simple indeed.";
+					mes "The important stats for a ^ff0000physical attack type^000000 Acolyte are ^ff0000STR, VIT, AGI, DEX^000000.";
+					mes "This may seem complicated in comparison to support type, but it's simpler than it seems.";
 					cutin "acact_02.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "^ff0000STR is the power, increases attack power, VIT is physical power, AGI is attack , speed and dodge, DEX increases hitting rate and skill casting speed.";
+					mes "^ff0000STR is the strength for increasing attack power, VIT is vitality for endurance, AGI is agility for attack speed and evasion, DEX is dexterity for increasing hit rate and skill casting speed.";
 					cutin "acact_01.bmp", 2;
 					next;
 					mes "[Alice Yisha]";
-					mes "For the character of ^ff0000Attack type^000000, ^ff0000DEX^000000 will be most important status...no?";
-					mes "If the attack does not hit the enemy, the attack is meaningless.";
-					mes "You may increase STR, VIT, AGI according to your style.";
+					mes "For the ^ff0000attack type^000000 character, ^ff0000DEX^000000 should be prioritized first...don't you think?";
+					mes "If the attack misses the enemy, it becomes meaningless.";
+					mes "As for the others, STR, VIT, and AGI, prioritize them according to your fighting style.";
 					next;
 					mes "[Alice Yisha]";
-					mes "You might think an Acolyte is not strong enough because it has no attack type skill, it enables use of sub essential skills which enhance the powers as much as you want. It helps your stable hunting.";
+					mes "Though you might think an Acolyte is weak because it lacks a physical attack skill, other skills can be used in a way to meanigfully enhance battle performance. It can result in real stability in hunting.";
 					close2;
 					cutin "", 255;
 					end;
@@ -12231,30 +12231,30 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 				}
 			case 3:
 				mes "[Alice Yisha]";
-				mes "An acolyte has lots of skills.";
-				mes "All those skills are useful.";
+				mes "An Acolyte has lots of skills.";
+				mes "All skills are useful.";
 				next;
 				mes "[Alice Yisha]";
-				mes "^ff0000Heal^000000 is for the wounds, It is also used to attack undead with opposite attribute.";
-				mes "Increase the power related to ^ff0000speed^000000 and ^ff0000[Increase Agi]^000000 to increase  ^ff0000movement speed^000000";
-				mes "^ff0000[Blessing]^000000 can ^ff0000enhance^000000 ^ff0000STR, INT, DEX^000000 at the same time.";
+				mes "^ff0000Heal^000000 is for treating damage, and can also be used to attack undead that have the opposite attribute to heal.";
+				mes "^ff0000[Increase Agi]^000000 powers up skills that depend on ^ff0000speed^000000 and also increases  ^ff0000movement speed^000000";
+				mes "^ff0000[Blessing]^000000 will ^ff0000enhance^000000 ^ff0000STR, INT, DEX^000000 simultaneously.";
 				next;
 				mes "[Alice Yisha]";
-				mes "^ff0000[Teleport]^000000 is to ^ff0000move^000000 to other places.";
-				mes "^ff0000[Warp Portal]^000000 can open a gate to the ^ff0000Places saved in memory^000000.";
-				mes "There are still more skills as well.";
+				mes "^ff0000[Teleport]^000000 is to instantly ^ff0000warp^000000 to a different point on the current map.";
+				mes "^ff0000[Warp Portal]^000000 will open a gate to ^ff0000Save points in recent memory^000000.";
+				mes "And there are still more skills beyond this.";
 				next;
 				mes "[Alice Yisha]";
-				mes "Ask ^ff0000if you want to experience skills of an Acolyte, ask the sister next to you^000000.";
-				mes "Now I am reading an introductory skill.";
+				mes "^ff0000If you want to experience the skills of an Acolyte, talk the nun next to you^000000.";
+				mes "I'll be here reading about introductory skill.";
 				emotion ET_HUK, getnpcid(0, "A Nun#"+strnpcinfo(2));
 				close2;
 				cutin "", 255;
 				end;
 			case 4:
 				mes "[Alice Yisha]";
-				mes "oh my!";
-				mes "So.. you decided to be an Acolyte?";
+				mes "Oh my!";
+				mes "So.. you have decided to be an Acolyte?";
 				mes "Odin welcomes you.";
 				cutin "acact_02.bmp", 2;
 				next;
@@ -12265,22 +12265,22 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 				if (BaseLevel > 14) {
 					mes "[Alice Yisha]";
 					mes "Please visit ^ff0000Father Mareusis^000000 at the church in the ^ff0000northeast corner^000000 of ^ff0000Prontera.^000000";
-					mes "At ^ff0000Job Level 10^000000 you can join the ministry.";
+					mes "If you are at ^ff0000Job Level 10^000000 or above, you will be able to join the ministry.";
 					cutin "acact_01.bmp", 2;
 					close2;
 					cutin "", 255;
 					end;
 				} else if (JobLevel < 10) {
 					mes "[Alice Yisha]";
-					mes "Oh my?! You haven't accomplished the basic practice yet?! You have long way to go! Come again after increasing your job level!";
+					mes "Oh my?! You haven't done basic leveling yet?! You have a long way to go! Come back after increasing your job level!";
 					close2;
 					cutin "", 255;
 					end;
 				} else {
 					mes "[Alice Yisha]";
-					mes "Wonderful! I'll transfer you to the local ministry at Prontera.";
+					mes "Wonderful! I'll send you to the local ministry in Prontera.";
 					mes "^ff0000Please visit Father Mareusis at the church in the northeast corner of Prontera.^000000";
-					mes "At ^ff0000Job Level 10^000000 you can join the ministry.";
+					mes "If you've reached ^ff0000Job Level 10^000000 or above, you will be able to join the ministry.";
 					cutin "acact_01.bmp", 2;
 					next;
 					if (select("Go to the field south of Prontera", "End Conversation") == 2) {
@@ -12291,7 +12291,7 @@ iz_ac02,156,169,5	script	Acolyte Leader Alice#2	4_F_ACOLYTE,{
 						end;
 					}
 					mes "[Alice Yisha]";
-					mes "Good, I wish you luck~";
+					mes "Wonderful, I wish you luck~";
 					mes "Let's go~";
 					close2;
 					cutin "", 255;
@@ -12318,8 +12318,8 @@ iz_ac02_d,156,169,5	duplicate(Acolyte Leader Alice#2)	Acolyte Leader Alice#2_d	4
 iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 	if (JobLevel > 10 || Class != Job_Novice) {
 		mes "[A nun]";
-		mes "Wow... this academy is amazing?";
-		mes "It was not like this when I used to train in the past.";
+		mes "Wow... isn't this Academy amazing?";
+		mes "It wasn't like this when I used to train here in the past.";
 		close;
 	} else {
 		if (!checkweight(1119,3)) {
@@ -12328,25 +12328,25 @@ iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 		}
 		if (!isbegin_quest(4269)) {
 			mes "[A nun]";
-			mes "Wow... this academy is amazing?";
-			mes "It was not like this when I used to train in the past.";
+			mes "Wow... isn't this Academy amazing?";
+			mes "It wasn't like this when I used to train here in the past.";
 			next;
 			mes "[A nun]";
-			mes "You can ^ff0000register^000000 at the ^ff0000information center of the Criatura Academy^000000, it will be a great help.";
+			mes "You should ^ff0000register^000000 at the ^ff0000information center for Criatura Academy^000000. It will be a great help.";
 			close;
 		} else {
 			mes "[A nun]";
 			mes "Ahem..~";
 			mes "Who are you?";
-			mes "Are you interested in this ^ff0000introductory course^000000?";
+			mes "Are you interested in our ^ff0000introductory course^000000?";
 			next;
 			mes "[A nun]";
-			mes "This introductory manual is mysterious! It enables the ^ff0000use a couple of an Acolyte's skill^000000.";
+			mes "This introductory Manual is a blessing! It enables the ^ff0000use of a few Acolyte's skills^000000.";
 			mes "Will you borrow it?";
 			next;
 			if (select("Take the Acolyte Course.", "Stop.") == 2) {
 				mes "[A nun]";
-				mes "Well.. if you are not interested.. fine.";
+				mes "Well.. if you are not interested.. that's fine.";
 				mes "murmuring";
 				close;
 			}
@@ -12357,8 +12357,8 @@ iz_ac02,152,165,5	script	A Nun#2	4_F_SISTER,{
 				close;
 			} else {
 				mes "[A nun]";
-				mes "Then, use it for good.";
-				mes "^ff0000Equip (double click or drag to equipment window)^000000 and open the ^ff0000skill window(Alt+S)^000000 to see the skills in manual.";
+				mes "Use it for good, okay?";
+				mes "^ff0000Equip the Manual (double click or drag to equipment window)^000000 and open the ^ff0000skill window(Alt+S)^000000 to the 'ETC' tab to see the skills provided by the manual.";
 				getitem 2821,1;// Acolyte_Manual
 				close;
 			}
@@ -12391,14 +12391,14 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 			if (Class == Job_Ninja) {
 				if (!isbegin_quest(4268)) {
 					mes "[Ninja Guide]";
-					mes "If you want to be trained as a Ninja, just visit Hono O, who is at the room next to where you upgraded.";
+					mes "If you want to be trained as a Ninja just visit Hono O, who can be found in the room next to where you upgraded.";
 					setquest 4268;
 					close2;
 					cutin "", 255;
 					end;
 				} else if (isbegin_quest(4268) == 1) {
 					mes "[Ko Ori]";
-					mes "If you want to be trained as a Ninja, just visit Hono O, who is at the room next to where you upgraded.";
+					mes "If you want to be trained as a Ninja just visit Hono O, who can be found in the room next to where you upgraded.";
 					close2;
 					cutin "", 255;
 					end;
@@ -12412,10 +12412,10 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				}
 			} else {
 				mes "[Ninja Guide]";
-				mes "I am the guide to the way of the Ninja for newcomers.";
+				mes "I am the new adventurer's guide to the way of the Ninja.";
 				next;
 				mes "[Ninja Guide]";
-				mes "I am not interested in the people who are already on their path.";
+				mes "I am not interested in the people who are already on a different path.";
 				mes "Take your leave now...";
 				close2;
 				cutin "", 255;
@@ -12425,22 +12425,22 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 	} else {
 		if (Upper == 2) {
 			mes "[Ninja Guide]";
-			mes "A child cannot accept the life of the Ninja.";
-			mes "It is not easy to qualify for such a life, so do not feel sorry...";
+			mes "A child is not able to accept the life of the Ninja.";
+			mes "It is not easy to qualify this life, so do not feel too bad...";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		if (isbegin_quest(4269) != 2) {
 			mes "[Ninja Guide]";
-			mes "First of all, you must enroll in the Academy and visit me again.";
-			mes "Everything has to follow the correct procedures and being clumsy is no excuse.";
+			mes "First you must register with the Academy, then come and visit me again.";
+			mes "Everything must follow an order, and being clumsy is no excuse.";
 			close2;
 			cutin "", 255;
 			end;
 		}
 		mes "[Ninja Guide]";
-		mes "Hmmm. So a new beginner has come eh?";
+		mes "Hmmm. So a new beginner has appeared, eh?";
 		mes "Why are you here?";
 		next;
 		switch(select("Explanation about the Ninja.", "I decided to be a Ninja.", "I don't have any business here.")) {
@@ -12450,80 +12450,80 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				mes "A beginner wishing to be a Ninja....";
 				mes "Ask me what you are curious about.";
 				next;
-				switch(select("What can I do if I become a Ninja?", "What is required to become a Ninja?", "I want to experience Ninja skills.", "I don't have any worries about Ninjas.")) {
+				switch(select("What can I do if I become a Ninja?", "What is required to become a Ninja?", "I want to experience Ninja skills.", "I am not curious about Ninjas.")) {
 				case 1:
 					mes "[Ninja Guide]";
-					mes "Ninja is a profession that allows you to attack while sneaking for maximum damage.";
-					mes "As Ninja has various kinds of deception skills, which is good for soloing.";
+					mes "Ninja is a profession that allows you to attack with stealth for maximum damage.";
+					mes "Ninja has various kinds of skills of deception, which is good for hunting alone.";
 					next;
 					mes "[Ninja Guide]";
-					mes "Not only can you learn Ninja technique similarly as magic, you can also make direct attacks, deal critical damage or throw knives at enemies.";
+					mes "Not only can you learn Ninja techniques that are similar to magic, you can also strike physical attacks, deal critical damage, or throw knives at enemies.";
 					next;
 					mes "[Ninja Guide]";
-					mes "But you can't do all of these things perfectly without sufficient equipment.";
-					mes "You will take more damage than others if you are hit.";
+					mes "But you won't get far if you don't equip yourself with properly.";
+					mes "Otherwise, you will take more damage than others if you are hit.";
 					next;
 					mes "[Ninja Guide]";
-					mes "Therefore, if the person who is not completely weary of this world chooses this job, with no discretion, they will not fail.";
+					mes "Therefore if a person who does not have a keen sense of the workings of the world chooses this job without discretion, they are destined to fail.";
 					next;
 					break;
 				case 2:
 					mes "[Ninja Guide]";
-					mes "Ninja can be trained in a variety of courses.";
-					mes "Everything has both one merit and one demerit.";
-					mes "You would better make your own decision after profound consideration.";
+					mes "Ninjas can be trained in a variety of ways.";
+					mes "As with everything, there are merits and detriments.";
+					mes "So choosing your course is best done after profound consideration.";
 					next;
 					mes "[Ninja Guide]";
-					mes "There are two major status which affect the degree of damages.";
-					mes "One is ^ff0000Power^000000, the other is ^ff0000Intelligence^000000,";
-					mes "Power affects the damages by^8E2323 physical attacks^000000 and^8E2323 throwing attacks^000000.";
-					mes "Intelligence affects the damage by ^8E2323Ninja's skill ^000000";
+					mes "There are two major stats to enhance damage inflicted.";
+					mes "One is ^ff0000Strength^000000, the other is ^ff0000Intelligence^000000,";
+					mes "Strength affects damage by^8E2323 physical attacks^000000 and^8E2323 throwing attacks^000000.";
+					mes "Intelligence affects damage by ^8E2323a Ninja's skills.^000000";
 					next;
 					mes "[Ninja Guide]";
-					mes "In addition to these, you can learn";
-					mes "other statuses not from the professional trainers like us";
-					mes "but from the trainers teaching the basic skills for battle.";
+					mes "In addition what you learn here, you can learn";
+					mes "other possibilities for stats not from professional trainers like us,";
+					mes "but from the trainers that teach basic skills for battle.";
 					next;
 					mes "[Ninja Guide]";
-					mes "For example, to raise up the hit rate,";
-					mes "What should you do?";
-					mes "To raise the defense, what do you wear? Etc...";
+					mes "For example, to increase your hit rate,";
+					mes "what stat should you work on?";
+					mes "To raise defense, what gear should you choose? And so on...";
 					next;
 					break;
 				case 3:
 					if (countitem(2940) > 0) {
 						mes "[Ninja Guide]";
-						mes "You can equip this manual to experience some skills.";
-						mes "Open up your skill window by pressing <Alt+S> and find the skills in the Misc TAB.";
+						mes "You can equip this Manual to test out some skills.";
+						mes "Open up your skill window by pressing <Alt+S> and find the skills in the 'MISC' tab.";
 						next;
 						mes "[Ninja Guide]";
-						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him and train your skills.";
+						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him to get a chance to try out your skills.";
 						next;
 						mes "[Ninja Guide]";
-						mes "He will give you some quests to complete. Use the Manual to help you in battle.";
+						mes "He will provide quests to complete. Use the Manual to help you in battle.";
 						if (countitem(13295) < 10)
 							getitem 13295,10;// Light_Shuriken
 						next;
 					} else {
 						mes "[Ninja Guide]";
-						mes "Make every useful moment count.";
-						mes "You can equip this manual to experience some skills.";
-						mes "Open up your skill window by pressing <Alt+S> and find the skills in the Misc TAB.";
+						mes "Make every moment count.";
+						mes "You can equip this Manual to test out some skills.";
+						mes "Open up your skill window by pressing <Alt+S> and find the skills in the 'MISC' tab.";
 						getitem 2940,1;// Ninja_Manual
 						getitem 13295,10;// Light_Shuriken
 						next;
 						mes "[Ninja Guide]";
-						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him and train your skills.";
+						mes "The Academy has a trainer downstairs who will give you battle field training. Meet him to get a chance to try out your skills.";
 						next;
 						mes "[Ninja Guide]";
-						mes "He will give you some quests to complete. Use the Manual to help you in battle.";
+						mes "He will provide quests to complete. Use the Manual to help you in battle.";
 						next;
 					}
 					break;
 				case 4:
 					mes "[Ninja Guide]";
 					mes "Do you understand everything I told you?";
-					mes "That's all... You don't have any questions?";
+					mes "That's all, then... You don't have any questions?";
 					close2;
 					cutin "", 255;
 					end;
@@ -12533,32 +12533,32 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 		case 2:
 			if (!callfunc("F_CanChangeJob")) {
 				mes "[Ninja Guide]";
-				mes "I appreciate your braveness but, first of all, you have to be familiar with the current profession.";
+				mes "I appreciate your bravery but first of all, you have to be familiar with your current profession.";
 				next;
 				mes "[Ninja Guide]";
-				mes "Before you decide to become a Ninja,";
-				mes "you need to come back after reaching the novice's job level 9. Then, I will accept you.";
+				mes "Before you can decide to become a Ninja,";
+				mes "you need to reach job level 9 for Novice. Only then will I accept you.";
 				close2;
 				cutin "", 255;
 				end;
 			} else {
 				mes "[Ninja Guide]";
-				mes "This may be your last warning.";
+				mes "Let this be a last warning.";
 				mes "Becoming a Ninja means leading a difficult life.";
 				next;
 				mes "[Ninja Guide]";
-				mes "As Ninja don't belong to a guild, it is easily obtainable to Novices.";
-				mes "Make sure your decision is final!";
+				mes "As Ninjas don't belong to a guild, it is easily obtainable to Novices, but...";
+				mes "make sure your decision is one you will not regret!";
 				next;
 				if (select("I will reconsider.", "I already made up my mind.") == 1) {
 					mes "[Ninja Guide]";
-					mes "Well thought actions can often bring good results.";
+					mes "Well thought-out decisions bring the best results.";
 					close2;
 					cutin "", 255;
 					end;
 				}
 				mes "[Ninja Guide]";
-				mes "If you're so assertive, I have no choice but to guide you there.";
+				mes "If you're so certain, I have no choice but to guide you there.";
 				next;
 				mes "[Ninja Guide]";
 				mes "I will send you close to where you can change your job.";
@@ -12568,10 +12568,10 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 				mes "Amatsu town is where you are going to arrive. Find the hidden tunnel in a vacant house.";
 				next;
 				mes "[Ninja Guide]";
-				mes "There you will meet a person who will guide you to becoming a Ninja.";
+				mes "There, you will meet a person who will guide you to becoming a Ninja.";
 				next;
 				mes "[Ninja Guide]";
-				mes "If you get lost in the town, well there is no way... Being ninja requires a level of observation power.";
+				mes "If you get lost in the town, well that is too bad... Being ninja requires a certain level of observation power.";
 				next;
 				mes "-Select ^ff0000Confirm^000000 to go to Amatsu.";
 				cutin "", 255;
@@ -12589,7 +12589,7 @@ iz_ac02,140,139,5	script	Ninja Guide#ac	4_M_NINJA_BLUE,{
 			mes "......";
 			next;
 			mes "[Ninja Guide]";
-			mes "I have no words to say, if you don't have any business with me.";
+			mes "I have nothing to say, if you don't have any business with me.";
 			close2;
 			cutin "", 255;
 			end;
